@@ -1,4 +1,5 @@
 import { NewsCard } from "../ui/NewsCard";
+import markWhite from "@/assets/images/Mark-White 1.png";
 
 const NewsSection = () => {
   const news = [
@@ -21,9 +22,25 @@ const NewsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#22305C] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-16 uppercase">TIN TỨC MỚI NHẤT</h2>
+    <section className="relative overflow-hidden bg-gray-100 pt-20 pb-24">
+      {/* Dark Blue Background (Upper part) */}
+      <div className="absolute top-0 left-0 right-0 h-[80%] md:h-[75%] bg-[#22305C]">
+        {/* Left Mark (Top Left) */}
+        <img 
+          src={markWhite} 
+          alt="" 
+          className="absolute top-[-5%] left-[-10%] md:left-[-2%] h-[80%] object-contain opacity-40 pointer-events-none"
+        />
+        {/* Right Mark (Bottom Right) */}
+        <img 
+          src={markWhite} 
+          alt="" 
+          className="absolute bottom-[-5%] right-[-10%] md:right-[-2%] h-[80%] object-contain opacity-40 pointer-events-none rotate-180"
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 uppercase text-white">TIN TỨC MỚI NHẤT</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {news.map((item, index) => (
