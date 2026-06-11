@@ -25,7 +25,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
         <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white drop-shadow-lg mb-4 leading-tight">
-          Khám phá. Sáng tạo. <span className="text-[#E5B034]">Đột phá.</span>
+          Khám phá. <span className="whitespace-nowrap">Sáng tạo. <span className="text-[#E5B034]">Đột phá.</span></span>
         </h1>
         <p className="text-base sm:text-xl md:text-2xl font-medium text-gray-100 drop-shadow-md mb-8 max-w-3xl">
           Giải pháp giáo dục công nghệ tiên tiến, mang đến trải nghiệm thực tế
