@@ -20,7 +20,7 @@ const programs = [
   {
     title: "TRẢI NGHIỆM QUỐC TẾ",
     image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop",
     lines: [
       "Trại hè quốc tế và giao lưu văn hóa",
       "Chương trình trao đổi học sinh, sinh viên",
@@ -57,17 +57,29 @@ const ProgramSliderSection = () => {
       <style>{`
         /* --- Desktop: Side-by-side layout --- */
         .program-slide {
-          width: 850px !important;
+          width: 750px !important;
           max-width: 90vw !important;
+          display: flex;
+          justify-content: center;
+        }
+        
+        .program-slide .slide-inner {
+          width: 100%;
+          transition: width 0.6s ease;
         }
 
         .program-slide .text-box {
           width: 0;
           opacity: 0;
-          transition: all 0.6s ease;
+          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .program-slide .vertical-bar-prev,
-        .program-slide .vertical-bar-next {
+        .program-slide .text-content {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: all 0.4s ease 0s;
+        }
+        .program-slide .vertical-bar-left,
+        .program-slide .vertical-bar-right {
           width: 0;
           opacity: 0;
           transition: all 0.6s ease;
@@ -79,15 +91,35 @@ const ProgramSliderSection = () => {
 
         /* Desktop active: show text-box panel */
         @media (min-width: 769px) {
+          .program-slide .slide-inner {
+            width: 300px; /* Shrink inactive slides so outer edge is visible */
+          }
+          .swiper-slide-active .slide-inner {
+            width: 100%;
+          }
+          .swiper-slide-prev {
+            justify-content: flex-end;
+          }
+          .swiper-slide-next {
+            justify-content: flex-start;
+          }
+
           .swiper-slide-active .text-box {
             width: 50%;
             opacity: 1;
           }
-          .swiper-slide-prev .vertical-bar-prev {
+          .swiper-slide-active .text-content {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.4s;
+          }
+          /* PREV slide (left side) shows its left bar (outside edge) */
+          .swiper-slide-prev .vertical-bar-left {
             width: 64px;
             opacity: 1;
           }
-          .swiper-slide-next .vertical-bar-next {
+          /* NEXT slide (right side) shows its right bar (outside edge) */
+          .swiper-slide-next .vertical-bar-right {
             width: 64px;
             opacity: 1;
           }
@@ -101,8 +133,8 @@ const ProgramSliderSection = () => {
           .program-slide .text-box {
             display: none !important;
           }
-          .program-slide .vertical-bar-prev,
-          .program-slide .vertical-bar-next {
+          .program-slide .vertical-bar-left,
+          .program-slide .vertical-bar-right {
             display: none !important;
           }
           .swiper-slide-active .mobile-overlay {
@@ -111,19 +143,19 @@ const ProgramSliderSection = () => {
         }
       `}</style>
 
-      <div className="w-full relative max-w-[1600px] mx-auto px-4">
+      <div className="w-full relative max-w-[1600px] mx-auto px-4 md:px-24">
         {/* Navigation Buttons */}
         <button
           onClick={() => swiperInstance?.slidePrev()}
-          className="absolute left-1 md:left-12 top-1/2 -translate-y-1/2 z-20 bg-white/80 backdrop-blur hover:bg-white text-[#22305C] p-2 md:p-3 rounded-full shadow-xl transition-all"
+          className="absolute left-2 md:left-2 top-1/2 -translate-y-1/2 z-20 text-[#22305C] hover:opacity-70 transition-opacity"
         >
-          <ChevronLeft className="w-5 h-5 md:w-9 md:h-9" />
+          <ChevronLeft className="w-12 h-12 md:w-20 md:h-20" strokeWidth={2.5} />
         </button>
         <button
           onClick={() => swiperInstance?.slideNext()}
-          className="absolute right-1 md:right-12 top-1/2 -translate-y-1/2 z-20 bg-white/80 backdrop-blur hover:bg-white text-[#22305C] p-2 md:p-3 rounded-full shadow-xl transition-all"
+          className="absolute right-2 md:right-2 top-1/2 -translate-y-1/2 z-20 text-[#22305C] hover:opacity-70 transition-opacity"
         >
-          <ChevronRight className="w-5 h-5 md:w-9 md:h-9" />
+          <ChevronRight className="w-12 h-12 md:w-20 md:h-20" strokeWidth={2.5} />
         </button>
 
         <Swiper
@@ -151,10 +183,10 @@ const ProgramSliderSection = () => {
         >
           {programs.map((program, idx) => (
             <SwiperSlide key={idx} className="program-slide">
-              <div className="relative flex h-[320px] md:h-[450px] shadow-2xl rounded-2xl overflow-hidden bg-white">
-                {/* Vertical Bar for NEXT slide (Left side) — Desktop only */}
+              <div className="slide-inner relative flex h-[320px] md:h-[450px] shadow-2xl rounded-2xl overflow-hidden bg-white">
+                {/* Vertical Bar (Left side) — Desktop only */}
                 <div
-                  className="vertical-bar-next bg-[#22305C] flex items-center justify-center overflow-hidden shrink-0"
+                  className="vertical-bar-left bg-[#22305C] flex items-center justify-center overflow-hidden shrink-0"
                   style={{ writingMode: "vertical-rl" }}
                 >
                   <span className="text-white py-4 px-2 text-sm font-bold tracking-widest whitespace-nowrap">
@@ -171,9 +203,9 @@ const ProgramSliderSection = () => {
                   />
                 </div>
 
-                {/* Vertical Bar for PREV slide (Right side) — Desktop only */}
+                {/* Vertical Bar (Right side) — Desktop only */}
                 <div
-                  className="vertical-bar-prev bg-[#22305C] flex items-center justify-center rotate-180 overflow-hidden shrink-0"
+                  className="vertical-bar-right bg-[#22305C] flex items-center justify-center rotate-180 overflow-hidden shrink-0"
                   style={{ writingMode: "vertical-rl" }}
                 >
                   <span className="text-white py-4 px-2 text-sm font-bold tracking-widest whitespace-nowrap">
@@ -183,8 +215,8 @@ const ProgramSliderSection = () => {
 
                 {/* Text Box — Desktop only (side panel) */}
                 <div className="text-box bg-[#22305C] text-white flex flex-col justify-center overflow-hidden shrink-0">
-                  <div className="w-[425px] p-10">
-                    <h3 className="text-3xl font-bold mb-6 leading-tight">
+                  <div className="text-content w-[375px] shrink-0 p-8 lg:p-10">
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 leading-tight">
                       {program.title}
                     </h3>
                     <div className="flex flex-col gap-4 mb-8">
