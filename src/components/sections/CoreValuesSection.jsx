@@ -33,10 +33,10 @@ const CoreValuesSection = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 lg:divide-x divide-gray-600">
           {values.map((item, index) => (
-            <div key={index} className="flex flex-col items-center px-4 py-8 lg:py-0">
+            <div key={index} className="flex flex-col items-center px-2 md:px-4 py-4 md:py-8 lg:py-0">
               {item.icon}
-              <h4 className="font-bold text-lg mb-4 h-14 flex items-center justify-center">{item.title}</h4>
-              <p className="text-sm text-gray-300 leading-relaxed text-center">
+              <h4 className="font-bold text-sm md:text-lg mb-2 md:mb-4 h-10 md:h-14 flex items-center justify-center text-center">{item.title}</h4>
+              <p className="hidden sm:block text-sm text-gray-300 leading-relaxed text-center line-clamp-3 lg:line-clamp-none">
                 {item.description}
               </p>
             </div>

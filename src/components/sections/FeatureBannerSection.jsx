@@ -17,25 +17,29 @@ const FeatureBannerSection = () => {
                 alt="Video Thumbnail" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#22305C]/90 to-transparent"></div>
+              {/* Desktop: gradient from left */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#22305C]/90 to-transparent"></div>
+              {/* Mobile: gradient from bottom for clean text area */}
+              <div className="md:hidden absolute inset-0 bg-gradient-to-t from-[#22305C] via-[#22305C]/60 to-transparent"></div>
             </div>
 
             {/* Content */}
-            <div className="absolute inset-0 flex items-center">
-              <div className="p-6 md:p-16 w-full md:w-2/3 flex flex-col items-start text-white relative z-10">
-                <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 leading-tight drop-shadow-lg line-clamp-3 md:line-clamp-4">
+            <div className="absolute inset-0 flex items-end md:items-center">
+              <div className="p-5 md:p-16 w-full md:w-2/3 flex flex-col items-start text-white relative z-10">
+                <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 leading-tight drop-shadow-lg line-clamp-2 md:line-clamp-4">
                   Chơi Chess.com KHÔNG Cần Dùng ĐIỆN THOẠI? Tính Năng Kết Nối Online Trên Bàn Cờ ChessUp V2
                 </h2>
-                <button className="mt-3 md:mt-6 border-2 border-white rounded-full px-5 md:px-8 py-2 md:py-3 text-sm md:text-base font-semibold hover:bg-white hover:text-[#22305C] transition-colors shadow-lg">
+                <button className="mt-2 md:mt-6 border-2 border-white rounded-full px-5 md:px-8 py-2 md:py-3 text-xs md:text-base font-semibold hover:bg-white hover:text-[#22305C] transition-colors shadow-lg flex items-center gap-2">
+                  <Play className="w-4 h-4 md:hidden" fill="currentColor" />
                   XEM NGAY
                 </button>
               </div>
             </div>
 
-            {/* Play Button Overlay */}
-            <div className="absolute top-1/2 left-[75%] md:left-[80%] -translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="w-16 h-16 md:w-32 md:h-32 rounded-full border-4 border-white/50 flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:bg-white/20 transition-all group-hover:scale-110 shadow-2xl">
-                <Play className="text-white ml-1 md:ml-3 w-6 h-6 md:w-12 md:h-12" fill="currentColor" />
+            {/* Play Button Overlay — Desktop only */}
+            <div className="hidden md:flex absolute top-1/2 left-[80%] -translate-x-1/2 -translate-y-1/2 z-10">
+              <div className="w-32 h-32 rounded-full border-4 border-white/50 flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:bg-white/20 transition-all group-hover:scale-110 shadow-2xl">
+                <Play className="text-white ml-3 w-12 h-12" fill="currentColor" />
               </div>
             </div>
           </div>
