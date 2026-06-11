@@ -19,7 +19,7 @@ const CoreValuesSection = () => {
     },
     {
       icon: <Scale className="text-white mb-4 md:mb-6 w-10 h-10 md:w-16 md:h-16" strokeWidth={1.5} />,
-      title: "Trao quyền trẻ em qua thể thao",
+      title: "Trao quyền trẻ em qua thể\u00A0thao",
       description: "Tổ chức các dự án giáo dục, hoạt động CSR hướng tới cộng đồng, các sự kiện và giải đấu trao quyền cho trẻ em có hoàn cảnh đặc biệt được tham gia thể thao, nâng cao sức khỏe và sự tự tin. Góp phần xây dựng một xã hội bền vững."
     }
   ];
