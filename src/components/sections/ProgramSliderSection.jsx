@@ -53,15 +53,14 @@ const ProgramSliderSection = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden program-slider-container">
-      {/* CSS overrides for the internal layout transitions based on Swiper active states */}
+    <section className="py-12 md:py-24 bg-gray-50 relative overflow-hidden program-slider-container">
       <style>{`
+        /* --- Desktop: Side-by-side layout --- */
         .program-slide {
           width: 850px !important;
           max-width: 90vw !important;
         }
-        
-        /* Default states for internal elements */
+
         .program-slide .text-box {
           width: 0;
           opacity: 0;
@@ -73,28 +72,42 @@ const ProgramSliderSection = () => {
           opacity: 0;
           transition: all 0.6s ease;
         }
-
-        /* Active slide: Show text box */
-        .swiper-slide-active .text-box {
-          width: 50%;
-          opacity: 1;
+        .program-slide .mobile-overlay {
+          opacity: 0;
+          transition: opacity 0.6s ease;
         }
-        @media (max-width: 768px) {
+
+        /* Desktop active: show text-box panel */
+        @media (min-width: 769px) {
           .swiper-slide-active .text-box {
-            width: 100%;
+            width: 50%;
+            opacity: 1;
+          }
+          .swiper-slide-prev .vertical-bar-prev {
+            width: 64px;
+            opacity: 1;
+          }
+          .swiper-slide-next .vertical-bar-next {
+            width: 64px;
+            opacity: 1;
           }
         }
 
-        /* Prev slide: Show vertical bar on the right */
-        .swiper-slide-prev .vertical-bar-prev {
-          width: 64px;
-          opacity: 1;
-        }
-
-        /* Next slide: Show vertical bar on the left */
-        .swiper-slide-next .vertical-bar-next {
-          width: 64px;
-          opacity: 1;
+        /* --- Mobile: Overlay layout --- */
+        @media (max-width: 768px) {
+          .program-slide {
+            width: 85vw !important;
+          }
+          .program-slide .text-box {
+            display: none !important;
+          }
+          .program-slide .vertical-bar-prev,
+          .program-slide .vertical-bar-next {
+            display: none !important;
+          }
+          .swiper-slide-active .mobile-overlay {
+            opacity: 1;
+          }
         }
       `}</style>
 
@@ -102,15 +115,15 @@ const ProgramSliderSection = () => {
         {/* Navigation Buttons */}
         <button
           onClick={() => swiperInstance?.slidePrev()}
-          className="absolute left-2 md:left-12 top-1/2 -translate-y-1/2 z-20 bg-white/80 backdrop-blur hover:bg-white text-[#22305C] p-3 rounded-full shadow-xl transition-all"
+          className="absolute left-1 md:left-12 top-1/2 -translate-y-1/2 z-20 bg-white/80 backdrop-blur hover:bg-white text-[#22305C] p-2 md:p-3 rounded-full shadow-xl transition-all"
         >
-          <ChevronLeft size={36} />
+          <ChevronLeft className="w-5 h-5 md:w-9 md:h-9" />
         </button>
         <button
           onClick={() => swiperInstance?.slideNext()}
-          className="absolute right-2 md:right-12 top-1/2 -translate-y-1/2 z-20 bg-white/80 backdrop-blur hover:bg-white text-[#22305C] p-3 rounded-full shadow-xl transition-all"
+          className="absolute right-1 md:right-12 top-1/2 -translate-y-1/2 z-20 bg-white/80 backdrop-blur hover:bg-white text-[#22305C] p-2 md:p-3 rounded-full shadow-xl transition-all"
         >
-          <ChevronRight size={36} />
+          <ChevronRight className="w-5 h-5 md:w-9 md:h-9" />
         </button>
 
         <Swiper
@@ -134,14 +147,14 @@ const ProgramSliderSection = () => {
             slideShadows: false,
           }}
           onSwiper={setSwiperInstance}
-          className="w-full py-12"
+          className="w-full py-8 md:py-12"
         >
           {programs.map((program, idx) => (
             <SwiperSlide key={idx} className="program-slide">
-              <div className="flex h-[450px] shadow-2xl rounded-2xl overflow-hidden bg-white">
-                {/* Vertical Bar for NEXT slide (Left side) */}
+              <div className="relative flex h-[320px] md:h-[450px] shadow-2xl rounded-2xl overflow-hidden bg-white">
+                {/* Vertical Bar for NEXT slide (Left side) — Desktop only */}
                 <div
-                  className="vertical-bar-next bg-[#22305C] flex items-center justify-center overflow-hidden"
+                  className="vertical-bar-next bg-[#22305C] flex items-center justify-center overflow-hidden shrink-0"
                   style={{ writingMode: "vertical-rl" }}
                 >
                   <span className="text-white py-4 px-2 text-sm font-bold tracking-widest whitespace-nowrap">
@@ -150,7 +163,7 @@ const ProgramSliderSection = () => {
                 </div>
 
                 {/* Main Image */}
-                <div className="relative h-full flex-1">
+                <div className="relative h-full flex-1 min-w-0">
                   <img
                     src={program.image}
                     alt={program.title}
@@ -158,9 +171,9 @@ const ProgramSliderSection = () => {
                   />
                 </div>
 
-                {/* Vertical Bar for PREV slide (Right side) */}
+                {/* Vertical Bar for PREV slide (Right side) — Desktop only */}
                 <div
-                  className="vertical-bar-prev bg-[#22305C] flex items-center justify-center rotate-180 overflow-hidden"
+                  className="vertical-bar-prev bg-[#22305C] flex items-center justify-center rotate-180 overflow-hidden shrink-0"
                   style={{ writingMode: "vertical-rl" }}
                 >
                   <span className="text-white py-4 px-2 text-sm font-bold tracking-widest whitespace-nowrap">
@@ -168,13 +181,13 @@ const ProgramSliderSection = () => {
                   </span>
                 </div>
 
-                {/* Text Box (Only visible when active) */}
-                <div className="text-box bg-[#22305C] text-white flex flex-col justify-center overflow-hidden">
+                {/* Text Box — Desktop only (side panel) */}
+                <div className="text-box bg-[#22305C] text-white flex flex-col justify-center overflow-hidden shrink-0">
                   <div className="w-[425px] p-10">
-                    <h3 className="text-3xl font-bold mb-6 truncate text-wrap">
+                    <h3 className="text-3xl font-bold mb-6 leading-tight">
                       {program.title}
                     </h3>
-                    <div className="flex-col gap-4 mb-8 hidden md:flex">
+                    <div className="flex flex-col gap-4 mb-8">
                       {program.lines.map((line, lineIdx) => (
                         <p
                           key={lineIdx}
@@ -191,6 +204,18 @@ const ProgramSliderSection = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Mobile Overlay — shown only on mobile when active */}
+                <div className="mobile-overlay absolute inset-0 flex flex-col justify-end pointer-events-none md:hidden">
+                  <div className="bg-gradient-to-t from-[#22305C] via-[#22305C]/80 to-transparent p-5 pt-16">
+                    <h3 className="text-lg font-bold text-white mb-2 leading-tight">
+                      {program.title}
+                    </h3>
+                    <button className="pointer-events-auto border-2 border-white rounded-full px-5 py-2 text-xs font-semibold text-white hover:bg-white hover:text-[#22305C] transition-colors">
+                      TÌM HIỂU THÊM
+                    </button>
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
           ))}
@@ -201,3 +226,4 @@ const ProgramSliderSection = () => {
 };
 
 export default ProgramSliderSection;
+

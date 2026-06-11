@@ -12,7 +12,9 @@ export const NewsCard = ({ image, title, className }) => {
 
       {/* Content */}
       <div className="absolute inset-0 p-6 flex flex-col justify-end">
-        <h3 className="font-semibold text-lg line-clamp-3 leading-snug mb-4">{title}</h3>
+        <h3 className="text-lg md:text-xl font-bold leading-snug line-clamp-3 mb-4">
+          {title}
+        </h3>
         <div className="flex justify-end">
           <div className="border-[1.5px] border-white/70 p-1.5 rounded-full group-hover:bg-white group-hover:text-[#22305C] group-hover:border-white transition-all">
             <ArrowUpRight size={18} strokeWidth={2.5} />
