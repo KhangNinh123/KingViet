@@ -26,25 +26,25 @@ const Header = () => {
               
               {/* Dropdown */}
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-80 bg-white shadow-2xl rounded-xl p-4 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 flex flex-col gap-3">
-                <Link to="#" className="flex items-center gap-4 p-3 bg-[#EBF0F6] rounded-xl hover:bg-[#D9E2F0] transition-colors relative z-10">
+                <Link to="/cong-nghe-giao-duc" className="flex items-center gap-4 p-3 bg-[#EBF0F6] rounded-xl hover:bg-[#D9E2F0] transition-colors relative z-10">
                   <div className="w-12 h-12 bg-[#22305C] text-white flex items-center justify-center rounded-xl flex-shrink-0 shadow-md">
                     <Microscope size={24} strokeWidth={1.5} />
                   </div>
                   <span className="font-semibold text-[#22305C] text-[15px]">Công nghệ trong giáo dục</span>
                 </Link>
-                <Link to="#" className="flex items-center gap-4 p-3 bg-[#EBF0F6] rounded-xl hover:bg-[#D9E2F0] transition-colors relative z-10">
+                <Link to="/trai-nghiem-quoc-te" className="flex items-center gap-4 p-3 bg-[#EBF0F6] rounded-xl hover:bg-[#D9E2F0] transition-colors relative z-10">
                   <div className="w-12 h-12 bg-[#22305C] text-white flex items-center justify-center rounded-xl flex-shrink-0 shadow-md">
                     <Globe size={24} strokeWidth={1.5} />
                   </div>
                   <span className="font-semibold text-[#22305C] text-[15px]">Trải nghiệm quốc tế</span>
                 </Link>
-                <Link to="#" className="flex items-center gap-4 p-3 bg-[#EBF0F6] rounded-xl hover:bg-[#D9E2F0] transition-colors relative z-10">
+                <Link to="/sach-va-tap-chi" className="flex items-center gap-4 p-3 bg-[#EBF0F6] rounded-xl hover:bg-[#D9E2F0] transition-colors relative z-10">
                   <div className="w-12 h-12 bg-[#22305C] text-white flex items-center justify-center rounded-xl flex-shrink-0 shadow-md">
                     <Lightbulb size={24} strokeWidth={1.5} />
                   </div>
                   <span className="font-semibold text-[#22305C] text-[15px]">Sách & Tạp chí</span>
                 </Link>
-                <Link to="#" className="flex items-center gap-4 p-3 bg-[#EBF0F6] rounded-xl hover:bg-[#D9E2F0] transition-colors relative z-10">
+                <Link to="/trao-quyen-tre-em-trong-the-thao" className="flex items-center gap-4 p-3 bg-[#EBF0F6] rounded-xl hover:bg-[#D9E2F0] transition-colors relative z-10">
                   <div className="w-12 h-12 bg-[#22305C] text-white flex items-center justify-center rounded-xl flex-shrink-0 shadow-md">
                     <Scale size={24} strokeWidth={1.5} />
                   </div>
@@ -95,19 +95,19 @@ const Header = () => {
               </button>
               {mobileSubOpen && (
                 <div className="pl-4 space-y-1 mt-1">
-                  <Link to="#" className="flex items-center gap-3 p-3 bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>
+                  <Link to="/cong-nghe-giao-duc" className="flex items-center gap-3 p-3 bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>
                     <Microscope size={20} className="text-[#22305C]" />
                     <span className="text-sm font-medium text-[#22305C]">Công nghệ trong giáo dục</span>
                   </Link>
-                  <Link to="#" className="flex items-center gap-3 p-3 bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>
+                  <Link to="/trai-nghiem-quoc-te" className="flex items-center gap-3 p-3 bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>
                     <Globe size={20} className="text-[#22305C]" />
                     <span className="text-sm font-medium text-[#22305C]">Trải nghiệm quốc tế</span>
                   </Link>
-                  <Link to="#" className="flex items-center gap-3 p-3 bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>
+                  <Link to="/sach-va-tap-chi" className="flex items-center gap-3 p-3 bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>
                     <Lightbulb size={20} className="text-[#22305C]" />
                     <span className="text-sm font-medium text-[#22305C]">Sách & Tạp chí</span>
                   </Link>
-                  <Link to="#" className="flex items-center gap-3 p-3 bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>
+                  <Link to="/trao-quyen-tre-em-trong-the-thao" className="flex items-center gap-3 p-3 bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>
                     <Scale size={20} className="text-[#22305C]" />
                     <span className="text-sm font-medium text-[#22305C]">Trao quyền trẻ em trong thể thao</span>
                   </Link>

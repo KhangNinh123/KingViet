@@ -1,0 +1,90 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
+import markWhite from "../../assets/images/Mark-White 1.png";
+
+const InnerPageHero = ({ title, description, image, breadcrumbs }) => {
+  return (
+    <section className="relative w-full bg-[#22305C] overflow-hidden py-16 md:py-24 min-h-[400px] md:min-h-[500px] flex items-center">
+      {/* Watermark Backgrounds */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        {/* Top Left Watermark */}
+        <img
+          src={markWhite}
+          alt=""
+          className="absolute top-[-10%] left-[-5%] md:left-[-2%] h-[40%] md:h-[60%] object-contain opacity-40"
+        />
+        {/* Right Watermark */}
+        <img
+          src={markWhite}
+          alt=""
+          className="absolute bottom-[-5%] md:top-1/2 md:-translate-y-1/2 right-[-10%] md:right-[-2%] h-[80%] md:h-[120%] object-contain opacity-40 rotate-180"
+        />
+      </div>
+
+      {/* Desktop Image (Absolute positioned to bottom of section) */}
+      {image && (
+        <div className="hidden md:block absolute right-[2%] lg:right-[10%] bottom-0 h-[85%] lg:h-[95%] z-10 pointer-events-none">
+          <img 
+            src={image} 
+            alt={title} 
+            className="h-full w-auto object-contain object-bottom drop-shadow-2xl"
+          />
+        </div>
+      )}
+
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Breadcrumbs */}
+        {breadcrumbs && breadcrumbs.length > 0 && (
+          <nav className="flex items-center space-x-2 text-sm text-gray-300 mb-8">
+            <Link to="/" className="hover:text-white transition-colors">
+              Kingviet
+            </Link>
+            {breadcrumbs.map((crumb, index) => (
+              <React.Fragment key={index}>
+                <ChevronRight size={14} className="text-gray-400" />
+                {crumb.path ? (
+                  <Link
+                    to={crumb.path}
+                    className="hover:text-white transition-colors"
+                  >
+                    {crumb.label}
+                  </Link>
+                ) : (
+                  <span className="text-white font-medium">{crumb.label}</span>
+                )}
+              </React.Fragment>
+            ))}
+          </nav>
+        )}
+
+        <div className="relative">
+          {/* Content */}
+          <div className={image ? 'md:w-1/2 lg:w-3/5' : 'max-w-3xl'}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              {title}
+            </h1>
+            {description && (
+              <p className="text-base md:text-lg text-gray-200 leading-relaxed whitespace-pre-line">
+                {description}
+              </p>
+            )}
+          </div>
+          
+          {/* Mobile Image */}
+          {image && (
+            <div className="md:hidden w-full flex justify-center mt-10 relative z-10 -mb-8">
+              <img 
+                src={image} 
+                alt={title} 
+                className="max-h-[350px] object-contain object-bottom drop-shadow-2xl"
+              />
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default InnerPageHero;
