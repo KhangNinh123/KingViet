@@ -1,6 +1,7 @@
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import InnerPageHero from "../../components/sections/InnerPageHero";
+import charImg from "../../assets/images/char-traoquyentreem.png";
 
 const EmpoweringChildren = () => {
   return (
@@ -15,6 +16,7 @@ const EmpoweringChildren = () => {
             { label: "Lĩnh vực", path: "#" },
             { label: "Trao quyền trẻ em trong thể thao", path: "" }
           ]}
+          image={charImg}
         />
         {/* Placeholder for page content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
