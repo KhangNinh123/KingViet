@@ -20,6 +20,13 @@ import {
   Lightbulb,
   Brain,
   Globe,
+  Wifi,
+  BatteryFull,
+  ShieldCheck,
+  Zap,
+  Eye,
+  Swords,
+  ChartLine,
 } from "lucide-react";
 
 const EducationTech = () => {
@@ -319,8 +326,10 @@ const EducationTech = () => {
         {/* --- CHESSUP V2 SECTION --- */}
         <section className="bg-white py-20 lg:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-              {/* Left Image */}
+
+            {/* Row 1: Image + Intro */}
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-16">
+              {/* Left: Image */}
               <div className="lg:w-1/2 relative w-full">
                 <img
                   src={chessupBoard}
@@ -333,102 +342,130 @@ const EducationTech = () => {
                 </div>
               </div>
 
-              {/* Right Content */}
+              {/* Right: Title + Badge + Intro + Tags */}
               <div className="lg:w-1/2 w-full">
-                <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-[#1E2954] mb-6 leading-[1.15]">
+                <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-[#1E2954] mb-4 leading-[1.15]">
                   Bàn cờ thông minh
                   <br />
                   ChessUp V2
                 </h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                  Sự kết hợp hoàn hảo giữa bàn cờ vật lý truyền thống và sức
-                  mạnh của công nghệ AI hiện đại. Đồng hành cùng Chess.com &
-                  Lichess.
-                </p>
 
-                <div className="space-y-8 mb-10">
-                  <div className="flex gap-5">
-                    <div className="w-12 h-12 shrink-0 bg-[#FDECC8] rounded-xl flex items-center justify-center">
-                      <Lightbulb
-                        className="w-6 h-6 text-[#1E2954]"
-                        strokeWidth={2.5}
-                      />
-                    </div>
-                    <div>
-                      <h4 className="text-[#1E2954] font-bold text-lg mb-1">
-                        LED Guidance
-                      </h4>
-                      <p className="text-gray-600 text-[15px]">
-                        Hướng dẫn nước đi thông minh qua đèn LED với 3 cấp độ
-                        màu sắc.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-5">
-                    <div className="w-12 h-12 shrink-0 bg-[#FDECC8] rounded-xl flex items-center justify-center">
-                      <Brain
-                        className="w-6 h-6 text-[#1E2954]"
-                        strokeWidth={2.5}
-                      />
-                    </div>
-                    <div>
-                      <h4 className="text-[#1E2954] font-bold text-lg mb-1">
-                        AI Analysis
-                      </h4>
-                      <p className="text-gray-600 text-[15px]">
-                        Tích hợp Stockfish 16 giúp phân tích nước đi sâu và
-                        chính xác.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-5">
-                    <div className="w-12 h-12 shrink-0 bg-[#FDECC8] rounded-xl flex items-center justify-center">
-                      <Globe
-                        className="w-6 h-6 text-[#1E2954]"
-                        strokeWidth={2.5}
-                      />
-                    </div>
-                    <div>
-                      <h4 className="text-[#1E2954] font-bold text-lg mb-1">
-                        Online Connectivity
-                      </h4>
-                      <p className="text-gray-600 text-[15px]">
-                        Chơi trực tuyến với hàng triệu người dùng trên Chess.com
-                        ngay trên bàn cờ thật.
-                      </p>
-                    </div>
-                  </div>
+                {/* Chess.com Badge */}
+                <div className="flex items-center gap-2 mb-6 bg-[#F8F9FC] border border-gray-200 rounded-xl px-4 py-2.5 w-fit">
+                  <span className="text-gray-500 text-sm font-medium">Đồng hành hỗ trợ chính thức bởi</span>
+                  <span className="text-[#1E2954] font-bold text-sm">Chess.com</span>
                 </div>
 
-                {/* Stats Box */}
-                <div className="bg-[#2B355A] rounded-2xl p-6 lg:p-8 flex flex-col sm:flex-row justify-between items-center shadow-xl gap-6 sm:gap-0">
-                  <div className="flex-1 text-center sm:text-left w-full">
-                    <p className="text-[#E5B034] font-bold text-xl mb-1">
-                      6 Giờ liên tục
-                    </p>
-                    <p className="text-gray-300 text-sm">
-                      Dung lượng Pin mạnh mẽ
-                    </p>
-                  </div>
-                  <div className="hidden sm:block w-px h-12 bg-white/10 mx-4"></div>
-                  <div className="flex-1 text-center w-full">
-                    <p className="text-[#E5B034] font-bold text-xl mb-1">
-                      Chip Tech
-                    </p>
-                    <p className="text-gray-300 text-sm">Nhận diện quân cờ</p>
-                  </div>
-                  <div className="hidden sm:block w-px h-12 bg-white/10 mx-4"></div>
-                  <div className="flex-1 text-center sm:text-right w-full">
-                    <p className="text-[#E5B034] font-bold text-xl mb-1">
-                      WiFi/BT
-                    </p>
-                    <p className="text-gray-300 text-sm">Kết nối không dây</p>
-                  </div>
+                <p className="text-gray-600 text-base leading-relaxed mb-8">
+                  ChessUp V2 là bàn cờ thông minh thế hệ mới, mang đến trải nghiệm luyện tập – học tập – thi đấu cờ vua hoàn toàn mới.
+                </p>
+
+                {/* Quick highlight tags */}
+                <div className="flex flex-wrap gap-2.5">
+                  {["Đèn LED hướng dẫn", "AI Stockfish", "Chess.com & Lichess", "HDMI / AirPlay", "Bot nhiều cấp độ"].map((tag) => (
+                    <span key={tag} className="inline-flex items-center gap-1.5 bg-[#FDECC8] text-[#1E2954] text-[13px] font-semibold px-3 py-1.5 rounded-full">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#E5B034] inline-block" />
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
+
+            {/* Row 2: 5 Feature Cards Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+              <div className="bg-[#F8F9FC] rounded-2xl p-6 flex gap-4">
+                <div className="w-10 h-10 shrink-0 bg-[#FDECC8] rounded-xl flex items-center justify-center">
+                  <Lightbulb className="w-5 h-5 text-[#1E2954]" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h4 className="text-[#1E2954] font-bold text-sm mb-2">Tính năng nổi bật</h4>
+                  <ul className="text-gray-500 text-[13px] space-y-1">
+                    <li>• Hướng dẫn nước đi bằng đèn LED</li>
+                    <li>• Hiển thị các nước đi hợp lệ</li>
+                    <li>• Hỗ trợ người mới học cờ</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-[#F8F9FC] rounded-2xl p-6 flex gap-4">
+                <div className="w-10 h-10 shrink-0 bg-[#FDECC8] rounded-xl flex items-center justify-center">
+                  <Brain className="w-5 h-5 text-[#1E2954]" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h4 className="text-[#1E2954] font-bold text-sm mb-2">AI phân tích ván cờ</h4>
+                  <ul className="text-gray-500 text-[13px] space-y-1">
+                    <li>• Phân tích nước đi thời gian thực</li>
+                    <li>• Đánh giá chất lượng nước đi</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-[#F8F9FC] rounded-2xl p-6 flex gap-4">
+                <div className="w-10 h-10 shrink-0 bg-[#FDECC8] rounded-xl flex items-center justify-center">
+                  <BrainCircuit className="w-5 h-5 text-[#1E2954]" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h4 className="text-[#1E2954] font-bold text-sm mb-2">Bot AI luyện tập</h4>
+                  <ul className="text-gray-500 text-[13px] space-y-1">
+                    <li>• Nhiều cấp độ</li>
+                    <li>• Mô phỏng phong cách các kỳ thủ</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-[#F8F9FC] rounded-2xl p-6 flex gap-4">
+                <div className="w-10 h-10 shrink-0 bg-[#FDECC8] rounded-xl flex items-center justify-center">
+                  <Globe className="w-5 h-5 text-[#1E2954]" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h4 className="text-[#1E2954] font-bold text-sm mb-2">Kết nối cờ vua online</h4>
+                  <ul className="text-gray-500 text-[13px] space-y-1">
+                    <li>• Chess.com</li>
+                    <li>• Lichess</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-[#F8F9FC] rounded-2xl p-6 flex gap-4 sm:col-span-2">
+                <div className="w-10 h-10 shrink-0 bg-[#FDECC8] rounded-xl flex items-center justify-center">
+                  <MonitorPlay className="w-5 h-5 text-[#1E2954]" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h4 className="text-[#1E2954] font-bold text-sm mb-2">Kết nối lớp học</h4>
+                  <ul className="text-gray-500 text-[13px] flex flex-wrap gap-x-6 gap-y-1">
+                    <li>• HDMI</li>
+                    <li>• Chromecast</li>
+                    <li>• AirPlay</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 3: Full-width 4-card Specs Bar */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-[#1E2954] rounded-2xl px-4 py-5 flex flex-col items-center text-center">
+                <Eye className="w-7 h-7 text-[#E5B034] mb-3" strokeWidth={1.5} />
+                <p className="text-white font-bold text-sm leading-tight">Quân cờ gắn chip</p>
+                <p className="text-gray-400 text-xs mt-1">Nhận diện thông minh</p>
+              </div>
+              <div className="bg-[#1E2954] rounded-2xl px-4 py-5 flex flex-col items-center text-center">
+                <MonitorPlay className="w-7 h-7 text-[#E5B034] mb-3" strokeWidth={1.5} />
+                <p className="text-white font-bold text-sm leading-tight">Màn hình cảm ứng</p>
+                <p className="text-gray-400 text-xs mt-1">Trực quan hiện đại</p>
+              </div>
+              <div className="bg-[#1E2954] rounded-2xl px-4 py-5 flex flex-col items-center text-center">
+                <ShieldCheck className="w-7 h-7 text-[#E5B034] mb-3" strokeWidth={1.5} />
+                <p className="text-white font-bold text-sm leading-tight">Thiết kế bền vững</p>
+                <p className="text-gray-400 text-xs mt-1">Chất liệu cao cấp</p>
+              </div>
+              <div className="bg-[#1E2954] rounded-2xl px-4 py-5 flex flex-col items-center text-center">
+                <BatteryFull className="w-7 h-7 text-[#E5B034] mb-3" strokeWidth={1.5} />
+                <p className="text-white font-bold text-sm leading-tight">Thời lượng pin</p>
+                <p className="text-gray-400 text-xs mt-1">Lên đến 6 giờ</p>
+              </div>
+            </div>
+
           </div>
         </section>
 
