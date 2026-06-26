@@ -1,25 +1,27 @@
+import { useState, useEffect } from "react";
 import { NewsCard } from "../ui/NewsCard";
 import markWhite from "../../assets/images/Mark-White 1.png";
+import { api } from "../../services/api";
 
 const NewsSection = () => {
-  const news = [
-    {
-      image: "https://images.unsplash.com/photo-1525011268546-bf3f9b007f6a?q=80&w=2070&auto=format&fit=crop",
-      title: "Kỳ thủ cờ vua năng động, thi đấu kết hợp cùng nhảy zumba tại giải phong trào"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop",
-      title: "105 kỳ thủ nhí Trường THCS An Phú tranh tài sôi nổi giải Cờ Vua Mùa Xuân"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=1974&auto=format&fit=crop",
-      title: "Vietnamese youth take chess to new heights with smart board technology"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
-      title: "Giải cờ vua Trí tuệ và yêu thương 2026: Sân chơi ý nghĩa cho trẻ em"
+  const [news, setNews] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchLatestNews();
+  }, []);
+
+  const fetchLatestNews = async () => {
+    try {
+      // Limit to 4 articles for the homepage
+      const data = await api.get('/news?is_published=true&limit=4'); 
+      setNews(data.data || []);
+    } catch (error) {
+      console.error("Lỗi khi tải tin tức:", error);
+    } finally {
+      setLoading(false);
     }
-  ];
+  };
 
   return (
     <section className="relative overflow-hidden bg-gray-100 pt-12 md:pt-20 pb-16 md:pb-24">
@@ -43,13 +45,19 @@ const NewsSection = () => {
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 md:mb-12 uppercase text-white">TIN TỨC MỚI NHẤT</h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {news.map((item, index) => (
-            <NewsCard 
-              key={index}
-              image={item.image}
-              title={item.title}
-            />
-          ))}
+          {loading ? (
+            <div className="col-span-full text-center py-10 text-white">Đang tải...</div>
+          ) : news.length === 0 ? (
+            <div className="col-span-full text-center py-10 text-white">Chưa có bài viết nào</div>
+          ) : (
+            news.map((item) => (
+              <NewsCard 
+                key={item.id}
+                image={item.thumbnail ? `http://localhost:5001${item.thumbnail}` : "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"}
+                title={item.title}
+              />
+            ))
+          )}
         </div>
       </div>
     </section>

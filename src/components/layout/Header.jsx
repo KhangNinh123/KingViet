@@ -55,6 +55,7 @@ const Header = () => {
                 </div>
               </div>
               <Link to="/collection" className="text-sm lg:text-[15px] font-bold hover:text-[#E5B034] py-8 transition-colors">Collection</Link>
+              <Link to="/tin-tuc" className="text-sm lg:text-[15px] font-bold hover:text-[#E5B034] py-8 transition-colors">Tin tức</Link>
               <Link to="/về-chúng-tôi" className="text-sm lg:text-[15px] font-bold hover:text-[#E5B034] py-8 transition-colors">Về chúng tôi</Link>
               <Link to="/liên-hệ" className="text-sm lg:text-[15px] font-bold hover:text-[#E5B034] py-8 transition-colors">Liên hệ</Link>
             </nav>
@@ -122,6 +123,7 @@ const Header = () => {
             </div>
 
             <Link to="/collection" className="block py-3 px-4 text-sm font-semibold text-gray-900 hover:bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>Collection</Link>
+            <Link to="/tin-tuc" className="block py-3 px-4 text-sm font-semibold text-gray-900 hover:bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>Tin tức</Link>
             <Link to="/về-chúng-tôi" className="block py-3 px-4 text-sm font-semibold text-gray-900 hover:bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>Về chúng tôi</Link>
             <Link to="/liên-hệ" className="block py-3 px-4 text-sm font-semibold text-gray-900 hover:bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>Liên hệ</Link>
 

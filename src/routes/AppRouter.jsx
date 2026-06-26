@@ -5,6 +5,16 @@ import InternationalExperience from "../pages/InternationalExperience";
 import BooksAndMagazines from "../pages/BooksAndMagazines";
 import EmpoweringChildren from "../pages/EmpoweringChildren";
 import Contact from "../pages/Contact";
+import NewsPage from "../pages/News";
+import NewsDetail from "../pages/News/NewsDetail";
+
+// Admin Imports
+import ProtectedRoute from "../components/ProtectedRoute";
+import AdminLayout from "../components/layout/AdminLayout";
+import Login from "../pages/admin/Login";
+import Dashboard from "../pages/admin/Dashboard";
+import NewsList from "../pages/admin/news/NewsList";
+import NewsForm from "../pages/admin/news/NewsForm";
 
 const AppRouter = () => {
   return (
@@ -44,7 +54,24 @@ const AppRouter = () => {
           </div>
         }
       />
+      <Route path="/tin-tuc" element={<NewsPage />} />
+      <Route path="/tin-tuc/:slug" element={<NewsDetail />} />
       <Route path="/liên-hệ" element={<Contact />} />
+      {/* Admin Routes */}
+      <Route path="/admin/login" element={<Login />} />
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute>
+            <AdminLayout />
+          </ProtectedRoute>
+        }
+      >
+        <Route index element={<Dashboard />} />
+        <Route path="news" element={<NewsList />} />
+        <Route path="news/create" element={<NewsForm />} />
+        <Route path="news/edit/:id" element={<NewsForm />} />
+      </Route>
     </Routes>
   );
 };
