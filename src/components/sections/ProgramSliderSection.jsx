@@ -6,11 +6,15 @@ import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
+import imgGiaoDuc from "@/assets/images/home_page/gduc cong nghe.JPG";
+import imgTraiNghiem from "@/assets/images/home_page/trai nghiem qte.jpg";
+import imgSach from "@/assets/images/home_page/Sach tap chi.png";
+import imgTreEm from "@/assets/images/home_page/tre em.JPG";
+
 const programs = [
   {
     title: "CÔNG NGHỆ TRONG GIÁO DỤC",
-    image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+    image: imgGiaoDuc,
     lines: [
       "Nhà phân phối độc quyền ChessUp V2 tại Việt Nam",
       "Giải pháp giáo dục STEM trong cờ vua",
@@ -19,8 +23,7 @@ const programs = [
   },
   {
     title: "TRẢI NGHIỆM QUỐC TẾ",
-    image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop",
+    image: imgTraiNghiem,
     lines: [
       "Trại hè quốc tế và giao lưu văn hóa",
       "Chương trình trao đổi học sinh, sinh viên",
@@ -29,8 +32,7 @@ const programs = [
   },
   {
     title: "SÁCH & TẠP CHÍ",
-    image:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=2098&auto=format&fit=crop",
+    image: imgSach,
     lines: [
       "Xuất bản tài liệu chuyên sâu",
       "Sách tham khảo giáo dục và thể thao",
@@ -39,8 +41,7 @@ const programs = [
   },
   {
     title: "TRAO QUYỀN TRẺ EM",
-    image:
-      "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop",
+    image: imgTreEm,
     lines: [
       "Tổ chức các dự án giáo dục cộng đồng",
       "Hoạt động CSR hướng tới trẻ em",

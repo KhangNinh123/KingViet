@@ -34,15 +34,42 @@ const Dashboard = () => {
           </Link>
         </div>
 
-        {/* Future Widget Placeholder */}
-        <div className="bg-gray-50 p-6 rounded-lg border border-dashed border-gray-300 flex flex-col items-center text-center justify-center min-h-[240px]">
-          <div className="p-4 text-gray-400 mb-4">
+        {/* Contact Management Placeholder */}
+        <div className="bg-gray-50 p-6 rounded-lg border border-dashed border-gray-300 flex flex-col items-center text-center justify-center min-h-[240px] relative">
+          <div className="absolute top-4 right-4 bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
+            Coming Soon
+          </div>
+          <div className="p-4 bg-gray-200 text-gray-400 rounded-full mb-4">
             <Users size={32} />
           </div>
-          <h3 className="text-lg font-medium text-gray-500 mb-2">Tính năng khác</h3>
+          <h3 className="text-lg font-medium text-gray-500 mb-2">Quản lý Liên hệ</h3>
           <p className="text-gray-400 mb-4 text-sm">
-            Sẽ cập nhật trong tương lai (Ví dụ: Collection, Liên hệ).
+            Xem và phản hồi các tin nhắn, yêu cầu tư vấn từ khách hàng.
           </p>
+          <button disabled className="mt-auto px-4 py-2 bg-gray-200 text-gray-400 rounded-md cursor-not-allowed text-sm font-medium">
+            Đang phát triển
+          </button>
+        </div>
+
+        {/* Collection Management Placeholder */}
+        <div className="bg-gray-50 p-6 rounded-lg border border-dashed border-gray-300 flex flex-col items-center text-center justify-center min-h-[240px] relative">
+          <div className="absolute top-4 right-4 bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
+            Coming Soon
+          </div>
+          <div className="p-4 bg-gray-200 text-gray-400 rounded-full mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3 className="text-lg font-medium text-gray-500 mb-2">Quản lý Sản phẩm</h3>
+          <p className="text-gray-400 mb-4 text-sm">
+            Thêm, sửa, xóa các sản phẩm trong trang Collection (Bộ sưu tập).
+          </p>
+          <button disabled className="mt-auto px-4 py-2 bg-gray-200 text-gray-400 rounded-md cursor-not-allowed text-sm font-medium">
+            Đang phát triển
+          </button>
         </div>
       </div>
     </div>

@@ -1,9 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { cn } from "@/utils";
 
-export const NewsCard = ({ image, title, className }) => {
+export const NewsCard = ({ image, title, slug, className }) => {
   return (
-    <div className={cn("group cursor-pointer rounded-2xl overflow-hidden text-white relative h-[380px] shadow-lg hover:-translate-y-2 transition-transform duration-300", className)}>
+    <Link to={`/tin-tuc/${slug}`} className={cn("group cursor-pointer rounded-2xl overflow-hidden text-white relative h-[380px] shadow-lg hover:-translate-y-2 block transition-transform duration-300", className)}>
       {/* Background Image */}
       <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
       
@@ -21,6 +22,6 @@ export const NewsCard = ({ image, title, className }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

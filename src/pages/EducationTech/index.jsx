@@ -36,7 +36,7 @@ const EducationTech = () => {
 
       <main className="flex-grow">
         <InnerPageHero
-          title="Công nghệ cờ vua trong giáo dục"
+          title="Công nghệ trong giáo dục"
           description="Giải pháp STEM hiện đại giúp học sinh phát triển tư duy chiến lược, logic và khả năng giải quyết vấn đề thông qua bàn cờ thông minh ChessUp V2."
           breadcrumbs={[
             { label: "Lĩnh vực", path: "#" },

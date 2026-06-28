@@ -131,7 +131,7 @@ const InternationalExperience = () => {
 
       <main className="flex-grow">
         <InnerPageHero
-          title="TRẢI NGHIỆM GIÁO DỤC QUỐC TẾ CÙNG KingViet Education"
+          title="Trải nghiệm giáo dục quốc tế cùng KingViet Education"
           description={
             "Cơ hội học tập tại các trường đại học quốc tế với chương trình đào tạo chất lượng, học bổng hấp dẫn và lộ trình hỗ trợ toàn diện."
           }
@@ -206,7 +206,7 @@ const InternationalExperience = () => {
             <div className="border-2 border-[#22305C] rounded-2xl overflow-hidden bg-white">
               <div className="bg-[#22305C] py-4 px-6 md:py-6 md:px-8 relative overflow-hidden">
                 <h3 className="text-white text-lg md:text-2xl font-bold uppercase relative z-10">
-                  Bậc cử nhân
+                  Bậc tiến sĩ
                 </h3>
                 <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none text-white">
                   <Globe size={80} strokeWidth={1} />
@@ -216,19 +216,19 @@ const InternationalExperience = () => {
                 <ul className="space-y-4 text-[#22305C] font-semibold text-base md:text-lg">
                   <li className="flex items-start gap-2">
                     <CheckIcon dark={false} />
-                    <span>Thời gian đào tạo: 3 – 4 năm</span>
+                    <span>Thời gian đào tạo: 3 – 5 năm</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon dark={false} />
-                    <span>Chương trình quốc tế</span>
+                    <span>Nghiên cứu chuyên sâu & Công bố quốc tế</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon dark={false} />
-                    <span>Học phí cạnh tranh</span>
+                    <span>Cơ hội nhận học bổng toàn phần (Full funding)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckIcon dark={false} />
-                    <span>Cơ hội trao đổi sinh viên</span>
+                    <span>Định hướng trở thành Giảng viên/Chuyên gia</span>
                   </li>
                 </ul>
               </div>

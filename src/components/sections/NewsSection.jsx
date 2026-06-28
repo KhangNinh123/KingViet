@@ -55,6 +55,7 @@ const NewsSection = () => {
                 key={item.id}
                 image={item.thumbnail ? `http://localhost:5001${item.thumbnail}` : "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"}
                 title={item.title}
+                slug={item.slug}
               />
             ))
           )}

@@ -7,6 +7,7 @@ import EmpoweringChildren from "../pages/EmpoweringChildren";
 import Contact from "../pages/Contact";
 import NewsPage from "../pages/News";
 import NewsDetail from "../pages/News/NewsDetail";
+import Collection from "../pages/Collection";
 
 // Admin Imports
 import ProtectedRoute from "../components/ProtectedRoute";
@@ -38,14 +39,7 @@ const AppRouter = () => {
           </div>
         }
       />
-      <Route
-        path="/collection"
-        element={
-          <div className="p-20 text-center text-2xl">
-            Collection (Coming soon)
-          </div>
-        }
-      />
+      <Route path="/collection" element={<Collection />} />
       <Route
         path="/về-chúng-tôi"
         element={

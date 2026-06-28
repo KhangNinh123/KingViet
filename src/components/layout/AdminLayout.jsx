@@ -1,5 +1,5 @@
 import { Outlet, Link, useNavigate, useLocation } from "react-router-dom";
-import { LayoutDashboard, Newspaper, LogOut, Menu } from "lucide-react";
+import { LayoutDashboard, Newspaper, LogOut, Menu, Users, ShoppingBag } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { useState } from "react";
 
@@ -17,6 +17,8 @@ const AdminLayout = () => {
   const navItems = [
     { name: "Bảng điều khiển", path: "/admin", icon: <LayoutDashboard size={20} /> },
     { name: "Quản lý Tin tức", path: "/admin/news", icon: <Newspaper size={20} /> },
+    { name: "Quản lý Liên hệ", path: "#contact", icon: <Users size={20} />, comingSoon: true },
+    { name: "Quản lý Sản phẩm", path: "#products", icon: <ShoppingBag size={20} />, comingSoon: true },
   ];
 
   return (
@@ -31,15 +33,25 @@ const AdminLayout = () => {
             {navItems.map((item) => (
               <Link
                 key={item.path}
-                to={item.path}
-                className={`flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
-                  location.pathname === item.path
+                to={item.comingSoon ? "#" : item.path}
+                onClick={(e) => {
+                  if (item.comingSoon) e.preventDefault();
+                }}
+                className={`flex items-center justify-between px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                  location.pathname === item.path && !item.comingSoon
                     ? "bg-blue-50 text-blue-700"
                     : "text-gray-700 hover:bg-gray-100"
-                }`}
+                } ${item.comingSoon ? "opacity-60 cursor-not-allowed" : ""}`}
               >
-                {item.icon}
-                <span className="ml-3">{item.name}</span>
+                <div className="flex items-center">
+                  {item.icon}
+                  <span className="ml-3">{item.name}</span>
+                </div>
+                {item.comingSoon && (
+                  <span className="text-[9px] font-bold bg-yellow-100 text-yellow-800 px-1.5 py-0.5 rounded uppercase tracking-wider">
+                    Soon
+                  </span>
+                )}
               </Link>
             ))}
           </nav>
@@ -78,16 +90,26 @@ const AdminLayout = () => {
               {navItems.map((item) => (
                 <Link
                   key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center px-4 py-3 text-base font-medium rounded-md ${
-                    location.pathname === item.path
+                  to={item.comingSoon ? "#" : item.path}
+                  onClick={(e) => {
+                    if (item.comingSoon) e.preventDefault();
+                    else setIsMobileMenuOpen(false);
+                  }}
+                  className={`flex items-center justify-between px-4 py-3 text-base font-medium rounded-md ${
+                    location.pathname === item.path && !item.comingSoon
                       ? "bg-blue-50 text-blue-700"
                       : "text-gray-700 hover:bg-gray-50 text-gray-900"
-                  }`}
+                  } ${item.comingSoon ? "opacity-60 cursor-not-allowed" : ""}`}
                 >
-                  {item.icon}
-                  <span className="ml-3">{item.name}</span>
+                  <div className="flex items-center">
+                    {item.icon}
+                    <span className="ml-3">{item.name}</span>
+                  </div>
+                  {item.comingSoon && (
+                    <span className="text-[10px] font-bold bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded uppercase tracking-wider">
+                      Soon
+                    </span>
+                  )}
                 </Link>
               ))}
               <button
