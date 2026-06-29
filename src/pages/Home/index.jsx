@@ -5,19 +5,21 @@ import PartnerSection from "../../components/sections/PartnerSection";
 import CoreValuesSection from "../../components/sections/CoreValuesSection";
 import ProgramSliderSection from "../../components/sections/ProgramSliderSection";
 import FeatureBannerSection from "../../components/sections/FeatureBannerSection";
+import CollectionSection from "../../components/sections/CollectionSection";
 import NewsSection from "../../components/sections/NewsSection";
 
 const Home = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 font-sans">
       <Header />
-      
+
       <main className="flex-grow">
         <HeroSection />
         <PartnerSection />
         <CoreValuesSection />
         <ProgramSliderSection />
         <FeatureBannerSection />
+        {/* <CollectionSection /> */}
         <NewsSection />
       </main>
 

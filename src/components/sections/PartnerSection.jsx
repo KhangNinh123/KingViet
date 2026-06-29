@@ -1,5 +1,6 @@
 import logoLDCVN from "@/assets/images/LogoLDCVN1.png";
 import logoKingViet from "@/assets/images/LogoKingViet.png";
+import section45Img from "@/assets/images/home_page/section4.5.jpg";
 
 const PartnerSection = () => {
   return (
@@ -18,19 +19,24 @@ const PartnerSection = () => {
             </div>
 
             {/* Vertical Divider */}
-            <div className="hidden md:block w-[2px] h-20 md:h-24 bg-white rounded-full mx-6 lg:mx-8 rotate-[15deg]"></div>
+            <div className="hidden md:flex w-[5px] h-[120px] lg:h-[150px] bg-white rounded-full mx-6 lg:mx-10 rotate-[15deg] translate-x-[15px] shrink-0 self-center"></div>
 
             {/* Right: Description Text */}
             <div className="text-center md:text-left text-white italic text-base md:text-lg lg:text-[19px] flex-1">
-              <p className="leading-[1.7]">
-                KingViet Education là tổ chức giáo dục phi lợi nhuận mang
-                <br className="hidden lg:block" />
-                khát vọng kết nối tri thức và lan tỏa những giá trị tốt đẹp
-                <br className="hidden lg:block" />
-                thông qua giáo dục, trí tuệ và thể thao.
-                <br className="hidden lg:block" />
+              {/* Invisible float to create the 15-degree slanted text wrapping */}
+              <div
+                className="hidden md:block float-left w-[32px] lg:w-[42px] h-[120px] lg:h-[160px]"
+                style={{ shapeOutside: "polygon(100% 0, 0 100%, 0 0)" }}
+              ></div>
+              <p className="leading-relaxed mb-2">
+                KingViet Education là tổ chức giáo dục phi lợi nhuận mang khát
+                vọng kết nối tri thức và lan tỏa những giá trị tốt đẹp thông qua
+                giáo dục, trí tuệ và thể thao.
+              </p>
+              <p className="leading-relaxed">
                 Hệ sinh thái của KingViet Education tập trung vào 4 mảng hoạt
-                động chính:
+                động chính: Sách, tạp chí; Công nghệ trong giáo dục; Trải nghiệm
+                quốc tế; Trao quyền trẻ em qua thể thao.
               </p>
             </div>
           </div>
@@ -61,6 +67,15 @@ const PartnerSection = () => {
             />
           </div>
         </div>
+      </div>
+
+      {/* Banner image added below PartnerSection */}
+      <div className="w-full mb-8 md:mb-14">
+        <img
+          src={section45Img}
+          alt="Banner"
+          className="w-full h-[200px] md:h-[300px] lg:h-[820px] object-cover object-center"
+        />
       </div>
     </section>
   );

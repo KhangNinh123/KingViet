@@ -6,10 +6,10 @@ import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
-import imgGiaoDuc from "@/assets/images/home_page/gduc cong nghe.JPG";
-import imgTraiNghiem from "@/assets/images/home_page/trai nghiem qte.jpg";
-import imgSach from "@/assets/images/home_page/Sach tap chi.png";
-import imgTreEm from "@/assets/images/home_page/tre em.JPG";
+import imgGiaoDuc from "@/assets/images/home_page/section4/giao duc cong nghe.png";
+import imgTraiNghiem from "@/assets/images/home_page/section4/trai nghiem quoc te.png";
+import imgSach from "@/assets/images/home_page/section4/Sách tap chi.png";
+import imgTreEm from "@/assets/images/home_page/section4/tre em.png";
 
 const programs = [
   {
