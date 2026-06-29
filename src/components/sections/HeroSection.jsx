@@ -1,8 +1,8 @@
-import homepageVideo from "../../assets/videos/HOMEPAGE WEB.mp4";
+import homepageVideo from "../../assets/videos/0607.mp4";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full aspect-video md:aspect-auto md:h-[760px] bg-gray-100 overflow-hidden">
+    <section className="relative w-full h-[50vh] md:h-[800px] bg-black overflow-hidden">
       <video
         autoPlay
         loop

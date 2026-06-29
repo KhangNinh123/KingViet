@@ -14,7 +14,10 @@ const PartnerSection = () => {
               Liên Đoàn Cờ Việt Nam
             </h2>
             <p className="text-[15px] md:text-base lg:text-lg text-gray-700 leading-relaxed pr-0 md:pr-10">
-              KingViet Education cam kết đồng hành cùng Liên đoàn Cờ Việt Nam phát triển phong trào cờ vua nước nhà và kiến tạo nên những thế hệ kỳ thủ tài năng, góp phần đưa cờ vua Việt Nam vươn xa trên đấu trường quốc tế.
+              KingViet Education cam kết đồng hành cùng Liên đoàn Cờ Việt Nam
+              phát triển phong trào cờ vua nước nhà và kiến tạo nên những thế hệ
+              kỳ thủ tài năng, góp phần đưa cờ vua Việt Nam vươn xa trên đấu
+              trường quốc tế.
             </p>
           </div>
           <div className="flex shrink-0 justify-center md:justify-end">
@@ -41,23 +44,21 @@ const PartnerSection = () => {
               />
             </div>
 
-            {/* Right Group: Divider + Text */}
-            <div className="flex items-center flex-1 mt-6 md:mt-0 justify-center md:justify-start">
-              {/* Vertical Divider */}
-              <div className="hidden md:block w-[3px] h-32 md:h-[140px] lg:h-[170px] bg-white opacity-90 mx-6 lg:mx-10 rotate-[15deg]"></div>
+            {/* Vertical Divider */}
+            <div className="hidden md:block w-[2px] h-20 md:h-24 bg-white rounded-full mx-6 lg:mx-8 rotate-[15deg]"></div>
 
-              {/* Right: Description Text */}
-              <div className="text-center md:text-left text-white italic text-base md:text-lg lg:text-[19px] flex-1 flex flex-col justify-center">
-                <p className="leading-[1.7]">
-                  KingViet Education là tổ chức giáo dục phi lợi nhuận mang
-                  <br className="hidden lg:block" />
-                  khát vọng kết nối tri thức và lan tỏa những giá trị tốt đẹp
-                  <br className="hidden lg:block" />
-                  thông qua giáo dục, trí tuệ và thể thao.
-                  <br className="hidden lg:block" />
-                  Hệ sinh thái của KingViet Education tập trung vào 4 mảng hoạt động chính:
-                </p>
-              </div>
+            {/* Right: Description Text */}
+            <div className="text-center md:text-left text-white italic text-base md:text-lg lg:text-[19px] flex-1">
+              <p className="leading-[1.7]">
+                KingViet Education là tổ chức giáo dục phi lợi nhuận mang
+                <br className="hidden lg:block" />
+                khát vọng kết nối tri thức và lan tỏa những giá trị tốt đẹp
+                <br className="hidden lg:block" />
+                thông qua giáo dục, trí tuệ và thể thao.
+                <br className="hidden lg:block" />
+                Hệ sinh thái của KingViet Education tập trung vào 4 mảng hoạt
+                động chính:
+              </p>
             </div>
           </div>
 
