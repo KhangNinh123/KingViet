@@ -2,7 +2,7 @@ import homepageVideo from "../../assets/videos/0607.mp4";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full h-[50vh] md:h-[800px] bg-black overflow-hidden">
+    <section className="relative w-full h-[50vh] md:h-[780px] bg-black overflow-hidden">
       <video
         autoPlay
         loop
