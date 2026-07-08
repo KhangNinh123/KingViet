@@ -68,9 +68,9 @@ const ZaloIcon = () => (
 
 const Footer = () => {
   return (
-    <footer className="bg-[#22305C] text-white py-10 md:py-16">
+    <footer className="bg-[#22305C] text-white py-8 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
           {/* Column 1: Info */}
           <div className="flex flex-col gap-6">
             <div className="bg-white p-3 rounded-xl w-max">
@@ -217,7 +217,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-8 md:mt-16 pt-6 md:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} KingViet Education. All rights
             reserved.

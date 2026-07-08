@@ -6,7 +6,7 @@ const FeatureBannerSection = () => {
   const videoId = "Km-iLs7UlfQ";
 
   return (
-    <section className="py-12 md:py-24 bg-white px-4 sm:px-6 lg:px-8">
+    <section className="py-8 md:py-24 bg-white px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden relative shadow-2xl">
         {!isPlaying ? (
           <div className="group cursor-pointer w-full h-[280px] md:h-[600px] relative" onClick={() => setIsPlaying(true)}>

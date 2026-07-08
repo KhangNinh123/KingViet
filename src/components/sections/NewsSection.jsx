@@ -24,7 +24,7 @@ const NewsSection = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gray-100 pt-12 md:pt-20 pb-16 md:pb-24">
+    <section className="relative overflow-hidden bg-gray-100 pt-8 md:pt-20 pb-12 md:pb-24">
       {/* Dark Blue Background (Upper part) */}
       <div className="absolute top-0 left-0 right-0 h-[80%] md:h-[75%] bg-[#22305C]">
         {/* Left Mark (Top Left) */}
@@ -42,9 +42,9 @@ const NewsSection = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 md:mb-12 uppercase text-white">TIN TỨC MỚI NHẤT</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-12 uppercase text-white">TIN TỨC MỚI NHẤT</h2>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {loading ? (
             <div className="col-span-full text-center py-10 text-white">Đang tải...</div>
           ) : news.length === 0 ? (

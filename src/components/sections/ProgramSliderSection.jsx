@@ -54,7 +54,7 @@ const ProgramSliderSection = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
-    <section className="py-12 md:py-24 bg-gray-50 relative overflow-hidden program-slider-container">
+    <section className="py-8 md:py-24 bg-gray-50 relative overflow-hidden program-slider-container">
       <style>{`
         /* --- Desktop: Side-by-side layout --- */
         .program-slide {
@@ -144,19 +144,19 @@ const ProgramSliderSection = () => {
         }
       `}</style>
 
-      <div className="w-full relative max-w-[1600px] mx-auto px-4 md:px-24">
+      <div className="w-full relative max-w-[1600px] mx-auto px-8 sm:px-10 md:px-24">
         {/* Navigation Buttons */}
         <button
           onClick={() => swiperInstance?.slidePrev()}
-          className="absolute left-2 md:left-2 top-1/2 -translate-y-1/2 z-20 text-[#22305C] hover:opacity-70 transition-opacity"
+          className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-20 text-[#22305C] hover:opacity-70 transition-opacity"
         >
-          <ChevronLeft className="w-12 h-12 md:w-20 md:h-20" strokeWidth={2.5} />
+          <ChevronLeft className="w-7 h-7 sm:w-10 sm:h-10 md:w-20 md:h-20" strokeWidth={2.5} />
         </button>
         <button
           onClick={() => swiperInstance?.slideNext()}
-          className="absolute right-2 md:right-2 top-1/2 -translate-y-1/2 z-20 text-[#22305C] hover:opacity-70 transition-opacity"
+          className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-20 text-[#22305C] hover:opacity-70 transition-opacity"
         >
-          <ChevronRight className="w-12 h-12 md:w-20 md:h-20" strokeWidth={2.5} />
+          <ChevronRight className="w-7 h-7 sm:w-10 sm:h-10 md:w-20 md:h-20" strokeWidth={2.5} />
         </button>
 
         <Swiper
@@ -184,7 +184,7 @@ const ProgramSliderSection = () => {
         >
           {programs.map((program, idx) => (
             <SwiperSlide key={idx} className="program-slide">
-              <div className="slide-inner relative flex h-[320px] md:h-[450px] shadow-2xl rounded-2xl overflow-hidden bg-white">
+              <div className="slide-inner relative flex h-[260px] sm:h-[320px] md:h-[450px] shadow-2xl rounded-2xl overflow-hidden bg-white">
                 {/* Vertical Bar (Left side) — Desktop only */}
                 <div
                   className="vertical-bar-left bg-[#22305C] flex items-center justify-center overflow-hidden shrink-0"

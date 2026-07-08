@@ -53,9 +53,9 @@ const CoreValuesSection = () => {
 
   return (
     <section className="w-full bg-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full">
+      <div className="grid grid-cols-2 lg:grid-cols-4 w-full">
         {values.map((item, index) => (
-          <div key={index} className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden group">
+          <div key={index} className="relative w-full h-[220px] sm:h-[320px] md:h-[500px] lg:h-[600px] overflow-hidden group">
             {/* Image */}
             <img 
               src={item.image} 
@@ -67,8 +67,8 @@ const CoreValuesSection = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
             
             {/* Text Overlay */}
-            <div className="absolute bottom-0 left-0 w-full p-6 pb-8 md:pb-12 flex flex-col justify-end items-center text-center">
-              <h4 className="text-white font-bold text-2xl md:text-3xl lg:text-4xl italic tracking-wide leading-tight drop-shadow-md">
+            <div className="absolute bottom-0 left-0 w-full p-3 pb-5 sm:p-6 sm:pb-8 md:pb-12 flex flex-col justify-end items-center text-center">
+              <h4 className="text-white font-bold text-base sm:text-2xl md:text-3xl lg:text-4xl italic tracking-wide leading-tight drop-shadow-md">
                 {item.title}
               </h4>
             </div>
