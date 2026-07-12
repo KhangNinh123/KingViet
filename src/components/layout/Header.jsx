@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, ChevronDown, Menu, X, Microscope, Globe, Lightbulb, Scale } from "lucide-react";
+import { Search, ChevronDown, Menu, X, Microscope, Globe, BookOpen, Baby } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoKV from "../../assets/icons/Logo KV 1.png";
 
@@ -42,13 +42,13 @@ const Header = () => {
                   </Link>
                   <Link to="/sach-va-tap-chi" className="flex items-center gap-4 p-3 bg-[#EBF0F6] rounded-xl hover:bg-[#D9E2F0] transition-colors relative z-10">
                     <div className="w-12 h-12 bg-[#22305C] text-white flex items-center justify-center rounded-xl flex-shrink-0 shadow-md">
-                      <Lightbulb size={24} strokeWidth={1.5} />
+                      <BookOpen size={24} strokeWidth={1.5} />
                     </div>
                     <span className="font-semibold text-[#22305C] text-[15px]">Sách & Tạp chí</span>
                   </Link>
                   <Link to="/trao-quyen-tre-em-trong-the-thao" className="flex items-center gap-4 p-3 bg-[#EBF0F6] rounded-xl hover:bg-[#D9E2F0] transition-colors relative z-10">
                     <div className="w-12 h-12 bg-[#22305C] text-white flex items-center justify-center rounded-xl flex-shrink-0 shadow-md">
-                      <Scale size={24} strokeWidth={1.5} />
+                      <Baby size={24} strokeWidth={1.5} />
                     </div>
                     <span className="font-semibold text-[#22305C] text-[15px]">Trao quyền trẻ em trong thể thao</span>
                   </Link>
@@ -111,11 +111,11 @@ const Header = () => {
                     <span className="text-sm font-medium text-[#22305C]">Trải nghiệm quốc tế</span>
                   </Link>
                   <Link to="/sach-va-tap-chi" className="flex items-center gap-3 p-3 bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>
-                    <Lightbulb size={20} className="text-[#22305C]" />
+                    <BookOpen size={20} className="text-[#22305C]" />
                     <span className="text-sm font-medium text-[#22305C]">Sách & Tạp chí</span>
                   </Link>
                   <Link to="/trao-quyen-tre-em-trong-the-thao" className="flex items-center gap-3 p-3 bg-[#EBF0F6] rounded-xl" onClick={() => setMobileMenuOpen(false)}>
-                    <Scale size={20} className="text-[#22305C]" />
+                    <Baby size={20} className="text-[#22305C]" />
                     <span className="text-sm font-medium text-[#22305C]">Trao quyền trẻ em trong thể thao</span>
                   </Link>
                 </div>
