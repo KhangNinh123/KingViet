@@ -1,168 +1,165 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import { ChevronRight } from "lucide-react";
 
 const Collection = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+
   // Dữ liệu giả lập (Mock data) dựa trên thiết kế bạn cung cấp
   const products = [
     {
-      id: 1,
-      name: "Bàn cờ thông minh ChessUp V2",
-      price: "3.590.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1580541832626-2a7151ee6010?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?q=80&w=800&auto=format&fit=crop",
-      isNew: true,
-      hasPromo: false,
-      colors: ["#000000", "#ffffff", "#8b5a2b"],
-      activeColor: 0,
+        "id": 1,
+        "name": "Bàn cờ thông minh ChessUp Version 2",
+        "price": "13.500.000đ",
+        "desc": "Bàn cờ thông minh tích hợp AI đến từ Mỹ phân tích nước đi tức thời bằng hệ thống đèn LED, hỗ trợ chơi online, chơi với máy mượt mà đa thể loại.",
+        "imgDefault": "/images/products/ban-co-thong-minh-chessup-v2.png"
     },
     {
-      id: 2,
-      name: "Bộ Kit lắp ráp STEM Robotics",
-      price: "850.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
-      isNew: false,
-      hasPromo: true,
-      colors: ["#3b82f6", "#ef4444"],
-      activeColor: 0,
+        "id": 2,
+        "name": "Áo Happy Chess trắng cổ tròn",
+        "price": "290.000đ",
+        "desc": "Chất liệu cotton cao cấp, tone trắng cực kỳ dễ phối đồ. Phiên bản cổ tròn trẻ trung thoải mái.",
+        "imgDefault": "/images/products/ao-happy-chess-trang-co-tron-1.png",
+        "imgHover": "/images/products/ao-happy-chess-trang-co-tron-2.png"
     },
     {
-      id: 3,
-      name: "Sách: Tư duy chiến lược cho trẻ em",
-      price: "150.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=800&auto=format&fit=crop",
-      isNew: true,
-      hasPromo: true,
-      colors: ["#22305c"],
-      activeColor: 0,
+        "id": 3,
+        "name": "Áo Happy Chess trắng polo",
+        "price": "290.000đ",
+        "desc": "Chất liệu cotton cao cấp, tone trắng cực kỳ dễ phối đồ. Phiên bản polo lịch sự, phù hợp đi học, thi đấu, và sự kiện.",
+        "imgDefault": "/images/products/ao-happy-chess-trang-polo-1.png",
+        "imgHover": "/images/products/ao-happy-chess-trang-polo-2.png"
     },
     {
-      id: 4,
-      name: "Tạp chí Giáo dục số KingViet (Tháng 10)",
-      price: "85.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=800&auto=format&fit=crop",
-      isNew: false,
-      hasPromo: false,
-      colors: ["#ffffff", "#f3f4f6"],
-      activeColor: 0,
+        "id": 4,
+        "name": "Áo Happy Chess Mùa 5 - Xanh",
+        "price": "290.000đ",
+        "desc": "BST Hè 2026 mang phong cách thể thao, chất liệu vải thoáng mát phối màu xanh trắng hiện đại, tôn lên sự trẻ trung và bản lĩnh của kỳ thủ Việt.",
+        "imgDefault": "/images/products/ao-happy-chess-mua-5-xanh-1.png",
+        "imgHover": "/images/products/ao-happy-chess-mua-5-xanh-2.png"
     },
     {
-      id: 5,
-      name: "Khóa học Lập trình Kids (Online)",
-      price: "1.200.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=800&auto=format&fit=crop",
-      isNew: true,
-      hasPromo: true,
-      colors: [],
-      activeColor: 0,
+        "id": 5,
+        "name": "Áo Happy Chess Mùa 5 - Hồng",
+        "price": "290.000đ",
+        "desc": "BST Hè 2026 mang phong cách thể thao, chất liệu vải thoáng mát phối màu hồng đen hiện đại, tôn lên sự trẻ trung và bản lĩnh của kỳ thủ Việt.",
+        "imgDefault": "/images/products/ao-happy-chess-mua-5-hong-1.png",
+        "imgHover": "/images/products/ao-happy-chess-mua-5-hong-2.png"
     },
     {
-      id: 6,
-      name: "Đồng phục KingViet - Phiên bản Mùa hè",
-      price: "250.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800&auto=format&fit=crop",
-      isNew: false,
-      hasPromo: false,
-      colors: [],
-      activeColor: 0,
+        "id": 6,
+        "name": "Áo Rise - Đỏ",
+        "price": "290.000đ",
+        "desc": "Áo polo phối màu đỏ trắng, chất liệu cotton thoáng mát, lưu niệm Giải Vô địch Cúp Cờ vua Quốc gia năm 2026.",
+        "imgDefault": "/images/products/ao-rise-do-1.png",
+        "imgHover": "/images/products/ao-rise-do-2.png"
     },
     {
-      id: 7,
-      name: "Sách: Toán tư duy 1",
-      price: "120.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1513001900722-370f803f498d?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800&auto=format&fit=crop",
-      isNew: false,
-      hasPromo: false,
-      colors: [],
-      activeColor: 0,
+        "id": 7,
+        "name": "Áo Live Well Your Way - Đen",
+        "price": "290.000đ",
+        "desc": "Áo polo phối màu đen xanh mang đậm nét cờ vua cá tính cùng thông điệp sống khỏe theo cách của bạn.",
+        "imgDefault": "/images/products/ao-live-well-your-way-den-1.png",
+        "imgHover": "/images/products/ao-live-well-your-way-den-2.png"
     },
     {
-      id: 8,
-      name: "Balo KingViet chống gù",
-      price: "450.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?q=80&w=800&auto=format&fit=crop",
-      isNew: true,
-      hasPromo: false,
-      colors: [],
-      activeColor: 0,
+        "id": 8,
+        "name": "Áo Knight Move - Trắng",
+        "price": "150.000đ",
+        "desc": "Áo polo trắng lưu niệm Giải vô địch Cờ vua Cúp CLB Quốc gia Năm 2026, chất liệu cotton cao cấp thoáng mát, phù hợp đi học và thi đấu.",
+        "imgDefault": "/images/products/ao-knight-move-trang-1.png",
+        "imgHover": "/images/products/ao-knight-move-trang-2.png"
     },
     {
-      id: 9,
-      name: "Kính thực tế ảo (VR) Giáo dục",
-      price: "1.890.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=800&auto=format&fit=crop",
-      isNew: true,
-      hasPromo: true,
-      colors: [],
-      activeColor: 0,
+        "id": 9,
+        "name": "Áo Knight Move - Xanh dương",
+        "price": "150.000đ",
+        "desc": "Áo polo xanh lưu niệm Giải vô địch Cờ vua Cúp CLB Quốc gia Năm 2026, chất liệu cá sấu bền bỉ, thoáng mát, phù hợp đi học và thi đấu.",
+        "imgDefault": "/images/products/ao-knight-move-xanh-duong-1.png",
+        "imgHover": "/images/products/ao-knight-move-xanh-duong-2.png"
     },
     {
-      id: 10,
-      name: "Bộ cờ vua nam châm tiêu chuẩn",
-      price: "350.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1586165368502-1bad197a6461?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=800&auto=format&fit=crop",
-      isNew: false,
-      hasPromo: false,
-      colors: [],
-      activeColor: 0,
+        "id": 10,
+        "name": "Áo Knight Move - Xanh lá",
+        "price": "150.000đ",
+        "desc": "Áo cổ tròn xanh lá lưu niệm Giải vô địch Cờ vua Cúp CLB Quốc gia Năm 2026, chất liệu cotton thoáng mát, dễ mặc, phù hợp đi chơi, đi thi đấu.",
+        "imgDefault": "/images/products/ao-knight-move-xanh-la-1.png",
+        "imgHover": "/images/products/ao-knight-move-xanh-la-2.png"
     },
     {
-      id: 11,
-      name: "Flycam Mini - Thực hành Robotics",
-      price: "990.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?q=80&w=800&auto=format&fit=crop",
-      isNew: false,
-      hasPromo: true,
-      colors: [],
-      activeColor: 0,
+        "id": 11,
+        "name": "Túi tote- Xanh Rêu",
+        "price": "150.000đ",
+        "desc": "Túi tote kỷ niệm Giải vô địch Cờ vua Cúp CLB Quốc gia Năm 2026, chất liệu canvas dày dặn, rộng rãi, phối màu xanh rêu thời trang, phù hợp đi thư viện, cà phê hẹn hò cuối tuần.",
+        "imgDefault": "/images/products/tui-tote-xanh-reu.png"
     },
     {
-      id: 12,
-      name: "Thẻ hội viên KingViet VIP",
-      price: "500.000đ",
-      imgDefault:
-        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop",
-      imgHover:
-        "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=800&auto=format&fit=crop",
-      isNew: true,
-      hasPromo: false,
-      colors: [],
-      activeColor: 0,
+        "id": 12,
+        "name": "Túi đeo Happy Chess - Be",
+        "price": "150.000đ",
+        "desc": "Túi đeo phối màu be trung tính, thiết kế hiện đại, tiện lợi mang cả thế giới đi theo.",
+        "imgDefault": "/images/products/tui-deo-happy-chess-be.png"
+    },
+    {
+        "id": 13,
+        "name": "Bàn cờ gấp gọn nâm châm",
+        "price": "250.000đ",
+        "desc": "Bàn cờ nhỏ gọn, thiết kế thông minh tiện lợi, dễ dàng mang đi cà phê, du lịch.",
+        "imgDefault": "/images/products/ban-co-gap-gon-nam-cham-1.png",
+        "imgHover": "/images/products/ban-co-gap-gon-nam-cham-2.png"
+    },
+    {
+        "id": 14,
+        "name": "Nón Live Well Your Way - Trắng",
+        "price": "190.000đ",
+        "desc": "Hoàn thiện outfit với nón lưỡi trai Live Well Your Way. Form nón cứng cáp, che nắng tốt, phù hợp du lịch, thể thao và sử dụng hằng ngày.",
+        "imgDefault": "/images/products/non-live-well-your-way-trang.png"
+    },
+    {
+        "id": 15,
+        "name": "Nón Live Well Your Way - Xanh",
+        "price": "190.000đ",
+        "desc": "Hoàn thiện outfit với nón lưỡi trai Live Well Your Way. Form nón cứng cáp, che nắng tốt, phù hợp du lịch, thể thao và sử dụng hằng ngày.",
+        "imgDefault": "/images/products/non-live-well-your-way-xanh.png"
+    },
+    {
+        "id": 16,
+        "name": "Bình giữ nhiệt USFD",
+        "price": "190.000đ",
+        "desc": "Bình giữ nhiệt thuộc BST A Unified System Fitness Design, thiết kế thời trang thể thao cá tính, giữ lạnh cả ngày dài.",
+        "imgDefault": "/images/products/binh-giu-nhiet-usfd.png"
+    },
+    {
+        "id": 17,
+        "name": "Khăn thể thao hiệu Polo Beverly Hills",
+        "price": "200.000đ",
+        "desc": "Khăn lông mềm mịn, thấm hút tốt. Mang lại cảm giác thoải mái và tiện dụng trong mọi hoạt động hằng ngày.",
+        "imgDefault": "/images/products/khan-the-thao-polo-beverly-hills.png"
+    },
+    {
+        "id": 18,
+        "name": "Huy hiệu Happy Chess",
+        "price": "25.000đ",
+        "desc": "Pin cài balo, túi xách, các bé nhỏ xinh, sành điệu, lan tỏa tinh thần Happy Chess: vui, tự tin, yêu cờ.",
+        "imgDefault": "/images/products/huy-hieu-happy-chess.png"
+    },
+    {
+        "id": 19,
+        "name": "Móc khóa Happy Chess",
+        "price": "35.000đ",
+        "desc": "Móc khóa Happy Chess – nhỏ xinh, tiện dụng, mang năng lượng tích cực và tinh thần yêu cờ mỗi ngày.",
+        "imgDefault": "/images/products/moc-khoa-happy-chess.png"
     }
-  ];
+];
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentProducts = products.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className="min-h-screen flex flex-col bg-white font-sans">
@@ -185,7 +182,7 @@ const Collection = () => {
 
           {/* Product Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {products.map((product) => (
+            {currentProducts.map((product) => (
               <div key={product.id} className="flex flex-col cursor-default group">
                 {/* Image Container */}
                 <div className="relative w-full aspect-[4/5] bg-[#f0f0f0] rounded-xl overflow-hidden mb-4">
@@ -193,20 +190,24 @@ const Collection = () => {
                   <img
                     src={product.imgDefault}
                     alt={product.name}
-                    className="absolute inset-0 w-full h-full object-cover mix-blend-multiply transition-opacity duration-300 ease-in-out opacity-100 group-hover:opacity-0"
+                    className={`absolute inset-0 w-full h-full object-cover mix-blend-multiply transition-opacity duration-300 ease-in-out opacity-100 ${product.imgHover ? 'group-hover:opacity-0' : ''}`}
                   />
-                  {/* Hover Image */}
-                  <img
-                    src={product.imgHover}
-                    alt={`${product.name} hover`}
-                    className="absolute inset-0 w-full h-full object-cover mix-blend-multiply transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100"
-                  />
+                  {/* Hover Image or Text */}
+                  {product.imgHover ? (
+                    <img
+                      src={product.imgHover}
+                      alt={`${product.name} hover`}
+                      className="absolute inset-0 w-full h-full object-cover mix-blend-multiply transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-white/40 backdrop-blur-[6px] p-4 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex items-center justify-center pointer-events-none z-10">
+                      <p className="text-[13px] md:text-[14px] text-gray-900 text-center font-bold line-clamp-6 leading-relaxed px-1 mb-8 drop-shadow-sm">{product.desc}</p>
+                    </div>
+                  )}
 
                   {/* Bottom Popup Panel (On Hover) */}
-                  <div className="absolute bottom-0 inset-x-0 pt-8 pb-4 px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-20 pointer-events-none bg-gradient-to-t from-white/95 via-white/70 to-transparent backdrop-blur-[4px] rounded-b-xl">
-                    <div className="text-center font-bold text-gray-800 text-xs sm:text-sm mb-3">
-                      Tư vấn & Mua nhanh +
-                    </div>
+                  <div className="absolute bottom-0 inset-x-0 pt-8 pb-4 px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-20 pointer-events-none bg-gradient-to-t from-white/90 via-white/70 to-transparent backdrop-blur-[2px] rounded-b-xl">
+
                     <a
                       href="https://zalo.me/0988666888" // Replace with actual Zalo link
                       target="_blank"
@@ -219,7 +220,7 @@ const Collection = () => {
                         <path d="M9.13 10.655H7.369V8.78H5.958V12.531H7.719L9.13 10.655Z" fill="white"/>
                         <path d="M10.871 12.531H12.632L15.434 8.78H13.62L11.536 11.584V8.78H10.125V12.531H10.871Z" fill="white"/>
                       </svg>
-                      Chat Zalo
+                      Mua ngay
                     </a>
                   </div>
 
@@ -268,6 +269,41 @@ const Collection = () => {
               </div>
             ))}
           </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center mt-12 gap-2">
+              <button
+                onClick={() => paginate(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                <ChevronRight className="w-5 h-5 rotate-180" />
+              </button>
+              
+              {[...Array(totalPages)].map((_, index) => (
+                <button
+                  key={index + 1}
+                  onClick={() => paginate(index + 1)}
+                  className={`w-10 h-10 flex items-center justify-center rounded-lg text-sm font-semibold transition-colors ${
+                    currentPage === index + 1
+                      ? "bg-blue-600 text-white border-blue-600"
+                      : "border border-gray-300 text-gray-600 hover:bg-gray-100"
+                  }`}
+                >
+                  {index + 1}
+                </button>
+              ))}
+
+              <button
+                onClick={() => paginate(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+          )}
         </div>
       </main>
 
