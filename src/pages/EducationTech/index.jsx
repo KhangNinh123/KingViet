@@ -58,7 +58,7 @@ const EducationTech = () => {
                 />
               </div>
               <h3 className="text-xl lg:text-2xl font-bold text-[#22305C] mb-4 whitespace-pre-line leading-tight">
-                Nhà phân phối{"\n"}độc quyền
+                Nhà phân phối{"\n"}chính hãng
               </h3>
               <p className="text-gray-600 leading-relaxed text-[15px] lg:text-base">
                 KingViet Education tự hào là đơn vị cung cấp giải pháp ChessUp

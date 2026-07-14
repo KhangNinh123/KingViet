@@ -192,35 +192,33 @@ const Collection = () => {
                     alt={product.name}
                     className={`absolute inset-0 w-full h-full object-cover mix-blend-multiply transition-opacity duration-300 ease-in-out opacity-100 ${product.imgHover ? 'group-hover:opacity-0' : ''}`}
                   />
-                  {/* Hover Image or Text */}
-                  {product.imgHover ? (
+                  {/* Hover Image */}
+                  {product.imgHover && (
                     <img
                       src={product.imgHover}
                       alt={`${product.name} hover`}
                       className="absolute inset-0 w-full h-full object-cover mix-blend-multiply transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100"
                     />
-                  ) : (
-                    <div className="absolute inset-0 bg-white/40 backdrop-blur-[6px] p-4 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out flex items-center justify-center pointer-events-none z-10">
-                      <p className="text-[13px] md:text-[14px] text-gray-900 text-center font-bold line-clamp-6 leading-relaxed px-1 mb-8 drop-shadow-sm">{product.desc}</p>
-                    </div>
                   )}
 
-                  {/* Bottom Popup Panel (On Hover) */}
-                  <div className="absolute bottom-0 inset-x-0 pt-8 pb-4 px-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 z-20 pointer-events-none bg-gradient-to-t from-white/90 via-white/70 to-transparent backdrop-blur-[2px] rounded-b-xl">
-
+                  {/* Bottom Text and Gradient */}
+                  {product.desc && (
+                    <div className="absolute bottom-0 inset-x-0 pt-20 pb-4 px-4 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-20 flex flex-col justify-end transition-all duration-300 group-hover:pb-[3.5rem] rounded-b-xl pointer-events-none opacity-0 group-hover:opacity-100">
+                      <p className="text-[11px] md:text-[13px] text-white text-center font-medium line-clamp-4 leading-relaxed drop-shadow-md italic translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                        {product.desc}
+                      </p>
+                    </div>
+                  )}
+                  
+                  {/* Button */}
+                  <div className="absolute bottom-0 inset-x-0 p-3 z-30 translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                     <a
                       href="https://zalo.me/0988666888" // Replace with actual Zalo link
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 rounded-lg shadow-md pointer-events-auto flex items-center justify-center gap-2 transition-colors"
+                      className="w-full bg-[#00BFFF] hover:bg-[#0099CC] text-white text-sm md:text-base font-bold py-2 rounded-lg shadow-md flex items-center justify-center uppercase transition-colors"
                     >
-                      {/* Zalo Icon SVG */}
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.127 9.873C21.127 5.525 17.067 2 12.063 2C7.06 2 3 5.525 3 9.873C3 12.553 4.605 14.947 7.004 16.333V21.111L10.742 18.221C11.173 18.283 11.613 18.318 12.063 18.318C17.067 18.318 21.127 14.793 21.127 9.873Z" fill="currentColor"/>
-                        <path d="M9.13 10.655H7.369V8.78H5.958V12.531H7.719L9.13 10.655Z" fill="white"/>
-                        <path d="M10.871 12.531H12.632L15.434 8.78H13.62L11.536 11.584V8.78H10.125V12.531H10.871Z" fill="white"/>
-                      </svg>
-                      Mua ngay
+                      MUA NGAY
                     </a>
                   </div>
 

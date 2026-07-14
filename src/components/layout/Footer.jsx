@@ -107,7 +107,7 @@ const Footer = () => {
             <div className="w-full h-48 rounded-xl overflow-hidden bg-gray-200 relative">
               {/* Google Maps iframe wrapper */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.7845700818296!2d106.804107!3d10.827798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752731176b07b1%3A0xb752b24b379bae5e!2sMega%20Residence!5e0!3m2!1sen!2svn!4v1700000000000!5m2!1sen!2svn"
+                src="https://maps.google.com/maps?q=KDC%20Mega%20Residence%20Khang%20%C4%90i%E1%BB%81n%2C%20P.%20Long%20Tr%C6%B0%E1%BB%9Dng%2C%20TP.%20HCM&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

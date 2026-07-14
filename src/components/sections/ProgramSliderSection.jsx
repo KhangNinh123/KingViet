@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
 
 import "swiper/css";
@@ -15,8 +16,9 @@ const programs = [
   {
     title: "CÔNG NGHỆ TRONG GIÁO DỤC",
     image: imgGiaoDuc,
+    link: "/cong-nghe-giao-duc",
     lines: [
-      "Nhà phân phối độc quyền ChessUp V2 tại Việt Nam",
+      "Nhà phân phối chính hãng ChessUp V2 tại Việt Nam",
       "Giải pháp giáo dục STEM trong cờ vua",
       "Giải pháp công nghệ dành cho trường học và câu lạc bộ",
     ],
@@ -24,6 +26,7 @@ const programs = [
   {
     title: "TRẢI NGHIỆM QUỐC TẾ",
     image: imgTraiNghiem,
+    link: "/trai-nghiem-quoc-te",
     lines: [
       "Trại hè quốc tế và giao lưu văn hóa",
       "Chương trình trao đổi học sinh, sinh viên",
@@ -33,6 +36,7 @@ const programs = [
   {
     title: "SÁCH & TẠP CHÍ",
     image: imgSach,
+    link: "/sach-va-tap-chi",
     lines: [
       "Xuất bản tài liệu chuyên sâu",
       "Sách tham khảo giáo dục và thể thao",
@@ -42,6 +46,7 @@ const programs = [
   {
     title: "TRAO QUYỀN TRẺ EM",
     image: imgTreEm,
+    link: "/trao-quyen-tre-em-trong-the-thao",
     lines: [
       "Tổ chức các dự án giáo dục cộng đồng",
       "Hoạt động CSR hướng tới trẻ em",
@@ -231,9 +236,9 @@ const ProgramSliderSection = () => {
                       ))}
                     </div>
                     <div>
-                      <button className="border-2 border-white rounded-full px-8 py-3 font-semibold hover:bg-white hover:text-[#22305C] transition-colors whitespace-nowrap">
+                      <Link to={program.link} className="inline-block border-2 border-white rounded-full px-8 py-3 font-semibold hover:bg-white hover:text-[#22305C] transition-colors whitespace-nowrap text-center">
                         TÌM HIỂU THÊM
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -244,9 +249,9 @@ const ProgramSliderSection = () => {
                     <h3 className="text-lg font-bold text-white mb-2 leading-tight">
                       {program.title}
                     </h3>
-                    <button className="pointer-events-auto border-2 border-white rounded-full px-5 py-2 text-xs font-semibold text-white hover:bg-white hover:text-[#22305C] transition-colors">
+                    <Link to={program.link} className="inline-block pointer-events-auto border-2 border-white rounded-full px-5 py-2 text-xs font-semibold text-white hover:bg-white hover:text-[#22305C] transition-colors text-center">
                       TÌM HIỂU THÊM
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
