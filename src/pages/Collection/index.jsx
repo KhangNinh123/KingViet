@@ -251,16 +251,14 @@ const Collection = () => {
                 </div>
 
                 {/* Product Details (Below Image) */}
-                <div className="flex flex-col px-1">
-
-
+                <div className="flex flex-col px-1 flex-grow">
                   {/* Title */}
                   <h3 className="text-[13px] md:text-[15px] font-medium text-gray-900 leading-snug mb-1.5 line-clamp-2">
                     {product.name}
                   </h3>
 
                   {/* Price */}
-                  <p className="text-sm md:text-base font-bold text-gray-900">
+                  <p className="text-sm md:text-base font-bold text-gray-900 mt-auto">
                     {product.price}
                   </p>
                 </div>
