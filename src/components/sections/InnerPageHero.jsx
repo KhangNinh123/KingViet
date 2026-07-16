@@ -36,7 +36,7 @@ const InnerPageHero = ({ title, description, image, backgroundImage, breadcrumbs
           <img 
             src={image} 
             alt={title} 
-            className="h-full w-auto object-contain object-bottom drop-shadow-2xl"
+            className="h-full w-auto object-contain object-bottom drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)] hover:scale-105 hover:drop-shadow-[0_35px_65px_rgba(0,0,0,0.95)] transition-all duration-500 pointer-events-auto cursor-default"
           />
         </div>
       )}
@@ -44,22 +44,22 @@ const InnerPageHero = ({ title, description, image, backgroundImage, breadcrumbs
       <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumbs */}
         {breadcrumbs && breadcrumbs.length > 0 && (
-          <nav className="flex items-center space-x-2 text-sm text-gray-300 mb-8">
-            <Link to="/" className="hover:text-white transition-colors">
+          <nav className="flex items-center space-x-2 text-sm text-white mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium">
+            <Link to="/" className="hover:text-gray-200 transition-colors">
               KingViet Edu
             </Link>
             {breadcrumbs.map((crumb, index) => (
               <React.Fragment key={index}>
-                <ChevronRight size={14} className="text-gray-400" />
+                <ChevronRight size={14} className="text-gray-200" />
                 {crumb.path ? (
                   <Link
                     to={crumb.path}
-                    className="hover:text-white transition-colors"
+                    className="hover:text-gray-200 transition-colors"
                   >
                     {crumb.label}
                   </Link>
                 ) : (
-                  <span className="text-white font-medium">{crumb.label}</span>
+                  <span className="text-white font-bold">{crumb.label}</span>
                 )}
               </React.Fragment>
             ))}
@@ -68,12 +68,12 @@ const InnerPageHero = ({ title, description, image, backgroundImage, breadcrumbs
 
         <div className="relative">
           {/* Content */}
-          <div className={image ? 'md:w-1/2 lg:w-3/5' : 'max-w-3xl'}>
+          <div className={`${image ? 'md:w-1/2 lg:w-3/5' : 'max-w-3xl'} drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]`}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold italic text-white mb-6 leading-tight">
               {title}
             </h1>
             {description && (
-              <p className="text-base md:text-lg text-gray-200 leading-relaxed whitespace-pre-line">
+              <p className="text-base md:text-lg text-white font-medium leading-relaxed whitespace-pre-line">
                 {description}
               </p>
             )}
@@ -85,7 +85,7 @@ const InnerPageHero = ({ title, description, image, backgroundImage, breadcrumbs
               <img 
                 src={image} 
                 alt={title} 
-                className="max-h-[350px] object-contain object-bottom drop-shadow-2xl"
+                className="max-h-[350px] object-contain object-bottom drop-shadow-[0_25px_45px_rgba(0,0,0,0.85)] hover:scale-105 hover:drop-shadow-[0_35px_65px_rgba(0,0,0,0.95)] transition-all duration-500 cursor-default"
               />
             </div>
           )}
