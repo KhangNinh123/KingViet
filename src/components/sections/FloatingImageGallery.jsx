@@ -1,5 +1,5 @@
 import React from "react";
-import demoImg from "../../assets/images/char-traoquyentreem.png";
+import demoImg from "../../assets/images/characters/char-trao-quyen-tre-em.png";
 
 const FloatingImageGallery = () => {
   const images = [

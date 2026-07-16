@@ -1,7 +1,7 @@
   import Header from "../../components/layout/Header";
   import Footer from "../../components/layout/Footer";
   import InnerPageHero from "../../components/sections/InnerPageHero";
-  import charImg from "../../assets/images/char-traoquyentreem.png";
+  import charImg from "../../assets/images/characters/char-trao-quyen-tre-em.png";
 
   import FloatingImageGallery from "../../components/sections/FloatingImageGallery";
 

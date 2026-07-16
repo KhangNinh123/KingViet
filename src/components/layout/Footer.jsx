@@ -107,7 +107,7 @@ const Footer = () => {
             <div className="w-full h-48 rounded-xl overflow-hidden bg-gray-200 relative">
               {/* Google Maps iframe wrapper */}
               <iframe
-                src="https://maps.google.com/maps?q=KDC%20Mega%20Residence%20Khang%20%C4%90i%E1%BB%81n%2C%20P.%20Long%20Tr%C6%B0%E1%BB%9Dng%2C%20TP.%20HCM&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=C%C3%B4ng%20ty%20TNHH%20KingViet%20Education&t=&z=17&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

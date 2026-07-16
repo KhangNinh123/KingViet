@@ -1,7 +1,64 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import img1 from '@/assets/images/gallery-lop-hoc/lop-hoc-01.jpg';
+import img2 from '@/assets/images/gallery-lop-hoc/lop-hoc-02.jpg';
+import img3 from '@/assets/images/gallery-lop-hoc/lop-hoc-03.jpg';
+import img4 from '@/assets/images/gallery-lop-hoc/lop-hoc-04.jpg';
+import img5 from '@/assets/images/gallery-lop-hoc/lop-hoc-05.jpg';
+import img6 from '@/assets/images/gallery-lop-hoc/lop-hoc-06.jpg';
+import img7 from '@/assets/images/gallery-lop-hoc/lop-hoc-07.jpg';
+import img8 from '@/assets/images/gallery-lop-hoc/lop-hoc-08.jpg';
 
-const ImageGallerySection = ({ title }) => {
+const ImageGallerySection = ({ title, images }) => {
+  const defaultImages = [img1, img2, img3, img4, img5, img6, img7, img8];
+  const displayImages = images || defaultImages;
+
+  const renderPattern = () => {
+    const groups = [];
+    for (let j = 0; j < displayImages.length; j += 5) {
+      const groupImages = displayImages.slice(j, j + 5);
+      
+      // Group 1: Wide top, 2 Squares bottom (requires 3 images)
+      if (groupImages.length >= 3) {
+        groups.push(
+          <div key={`g1-${j}`} className="flex flex-col gap-4 snap-center shrink-0">
+            <img src={groupImages[0]} alt="Gallery" className="w-[280px] md:w-[516px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg object-cover" />
+            <div className="flex gap-4">
+              <img src={groupImages[1]} alt="Gallery" className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg object-cover" />
+              <img src={groupImages[2]} alt="Gallery" className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg object-cover" />
+            </div>
+          </div>
+        );
+      } else if (groupImages.length > 0) {
+        // Fallback if less than 3 images in this chunk
+        groups.push(
+          <div key={`g1-fb-${j}`} className="flex flex-col gap-4 snap-center shrink-0">
+            {groupImages.map((img, idx) => (
+              <img key={idx} src={img} alt="Gallery" className="w-[280px] md:w-[516px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg object-cover" />
+            ))}
+          </div>
+        );
+      }
+
+      // Group 2: 2 Squares (requires up to 2 images)
+      if (groupImages.length >= 5) {
+        groups.push(
+          <div key={`g2-${j}`} className="flex flex-col gap-4 snap-center shrink-0">
+            <img src={groupImages[3]} alt="Gallery" className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg object-cover" />
+            <img src={groupImages[4]} alt="Gallery" className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg object-cover" />
+          </div>
+        );
+      } else if (groupImages.length === 4) {
+        groups.push(
+          <div key={`g2-${j}`} className="flex flex-col gap-4 snap-center shrink-0">
+            <img src={groupImages[3]} alt="Gallery" className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg object-cover" />
+          </div>
+        );
+      }
+    }
+    return groups;
+  };
+
   return (
     <div className="w-full">
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22305C] mb-12 mt-16 md:mt-32 text-center">
@@ -40,38 +97,7 @@ const ImageGallerySection = ({ title }) => {
             }}
           />
 
-          {/* Group 1: Wide top, 2 Squares bottom */}
-          <div className="flex flex-col gap-4 snap-center shrink-0">
-            <div className="w-[280px] md:w-[516px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-            <div className="flex gap-4">
-              <div className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-              <div className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-            </div>
-          </div>
-
-          {/* Group 2: 2 Squares */}
-          <div className="flex flex-col gap-4 snap-center shrink-0">
-            <div className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-            <div className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-          </div>
-
-          {/* Group 3: 2 Squares */}
-          <div className="flex flex-col gap-4 snap-center shrink-0">
-            <div className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-            <div className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-          </div>
-
-          {/* Group 4: Wide top, Wide bottom */}
-          <div className="flex flex-col gap-4 snap-center shrink-0">
-            <div className="w-[280px] md:w-[516px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-            <div className="w-[280px] md:w-[516px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-          </div>
-
-          {/* Group 5: 2 Squares */}
-          <div className="flex flex-col gap-4 snap-center shrink-0">
-            <div className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-            <div className="w-[132px] md:w-[250px] h-[160px] md:h-[250px] bg-[#E5E7EB] rounded-lg"></div>
-          </div>
+          {renderPattern()}
         </div>
 
         {/* Right Arrow */}

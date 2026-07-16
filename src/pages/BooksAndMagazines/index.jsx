@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import InnerPageHero from "../../components/sections/InnerPageHero";
-import charImg from "../../assets/images/char-sachtapchi.png";
+import bannerSach from "../../assets/images/banners/banner-sach-tap-chi.png";
+import routledgeLogo from "../../assets/images/logos/routledge.png";
+import bookUSFDImg from "../../assets/images/products/sach-usfd.png";
 import {
   BookOpen,
   BookMarked,
@@ -135,19 +137,17 @@ const BooksAndMagazines = () => {
         <InnerPageHero
           title={
             <>
-              Sách & Tạp chí
+              Sách, tạp chí
               <br />
-              chuyên sâu về giáo dục,
-              <br />
-              thể thao và khoa học
+              chuyên sâu về khoa học
             </>
           }
           description="KingViet Education phát triển và xuất bản các tài liệu chuyên môn nhằm phục vụ nghiên cứu, giảng dạy và học tập trong lĩnh vực giáo dục, thể thao và khoa học ứng dụng."
           breadcrumbs={[
             { label: "Lĩnh vực", path: "#" },
-            { label: "Sách & Tạp chí", path: "" },
+            { label: "Sách, tạp chí", path: "" },
           ]}
-          image={charImg}
+          backgroundImage={bannerSach}
         />
 
         {/* Highlights Bar */}
@@ -191,6 +191,52 @@ const BooksAndMagazines = () => {
               <Mail size={18} strokeWidth={2} />
               Đăng ký nhận thông tin
             </a>
+          </div>
+        </section>
+
+        {/* Featured Publication: USFD Book */}
+        <section className="w-full bg-white py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+              {/* Left Content */}
+              <div className="flex flex-col items-start">
+                <div className="inline-block bg-[#22305C] text-white px-5 py-1.5 rounded-full text-sm font-bold tracking-wide mb-6">
+                  Ấn phẩm nổi bật
+                </div>
+                <h3 className="text-[#FFC107] text-2xl md:text-3xl font-bold mb-2">
+                  Ra mắt sách
+                </h3>
+                <h2 className="text-[#22305C] text-3xl md:text-4xl font-bold mb-6 leading-tight">
+                  A UNIFIED SYSTEM FITNESS DESIGN
+                  <br />
+                  (USFD)
+                </h2>
+                <div className="mb-8 w-full">
+                  <img src={routledgeLogo} alt="Routledge" className="float-right h-16 md:h-20 object-contain ml-6 mb-2" />
+                  <p className="text-[#333333] text-base leading-relaxed text-justify">
+                    Chắp bút bởi TS. Nguyễn Trà Giang (Dr. Jane) và chuyên gia Oliver N. Gomez, "USFD" mang đến mô hình giáo dục thể chất toàn diện và cá nhân hóa. Sách tự hào được phát hành bởi Routledge – nhà xuất bản học thuật danh giá toàn cầu, bảo chứng cho chất lượng khoa học chuẩn quốc tế.
+                  </p>
+                </div>
+                
+                <div className="flex flex-wrap gap-4">
+                  <button className="bg-[#22305C] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#1A2548] transition-colors shadow-md">
+                    Tìm hiểu thêm
+                  </button>
+                  <button className="bg-[#FFC107] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#F5B000] transition-colors shadow-md">
+                    Liên hệ mua ngay
+                  </button>
+                </div>
+              </div>
+              
+              {/* Right Content - Book Image */}
+              <div className="flex justify-center md:justify-end relative">
+                <img 
+                  src={bookUSFDImg} 
+                  alt="USFD Book Cover" 
+                  className="w-[280px] md:w-[380px] drop-shadow-[15px_15px_25px_rgba(0,0,0,0.35)] hover:scale-105 transition-transform duration-500" 
+                />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -276,8 +322,10 @@ const BooksAndMagazines = () => {
           </div>
         </section>
 
-        {/* 3. Danh mục sách chuyên ngành */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
+        {false && (
+          <>
+            {/* 3. Danh mục sách chuyên ngành */}
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
           <div className="inline-flex items-center gap-2 bg-[#22305C]/5 rounded-full px-5 py-2 mb-6">
             <Library size={16} className="text-[#22305C]" />
             <span className="text-[#22305C] font-semibold text-sm uppercase tracking-wider">
@@ -659,6 +707,8 @@ const BooksAndMagazines = () => {
             ))}
           </div>
         </section>
+          </>
+        )}
 
         {/* 8. Hợp tác xuất bản */}
         <section className="w-full bg-[#F1F3F5] py-16 md:py-24">

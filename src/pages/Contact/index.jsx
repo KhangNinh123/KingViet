@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import { MapPin, Mail, Phone, ArrowRight } from 'lucide-react';
-import bannerLienHe from '../../assets/images/image-Photoroom.png';
+import bannerLienHe from '../../assets/images/banners/banner-lien-he.png';
 
 const Contact = () => {
   return (
@@ -55,7 +55,7 @@ const Contact = () => {
                   Số 2, Đường N1, KDC Mega Residence Khang Điền, P. Long Trường, TP. HCM.
                 </p>
                 <a 
-                  href="https://maps.google.com/?q=Mega+Residence+Khang+Dien+Long+Truong+HCM" 
+                  href="https://www.google.com/maps/place/Công+ty+TNHH+KingViet+Education/@10.7995475,106.7931162,17z/data=!4m6!3m5!1s0x31752b2b052eb8bd:0xb33769dfe4b0a776!8m2!3d10.7995475!4d106.7931162!16s%2Fg%2F11xw3pjg6b?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDcwOC4wIKXMDSoASAFQAw%3D%3D" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[#A78B3F] font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all mt-auto"

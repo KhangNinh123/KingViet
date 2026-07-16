@@ -1,9 +1,10 @@
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import InnerPageHero from "../../components/sections/InnerPageHero";
-import charImg from "../../assets/images/char-congnghecovua.png";
-import stemLogo from "../../assets/images/stem-logo.png";
-import chessupBoard from "../../assets/images/chessup-board.png";
+import charImg from "../../assets/images/banners/banner-cong-nghe-giao-duc.png";
+import stemLogo from "../../assets/images/logos/stem.png";
+import trustMarkImg from "../../assets/images/logos/trustmark-stem.png";
+import chessupBoard from "../../assets/images/products/chessup.webp";
 import ImageGallerySection from "../../components/sections/ImageGallerySection";
 import {
   BadgeCheck,
@@ -36,13 +37,13 @@ const EducationTech = () => {
 
       <main className="flex-grow">
         <InnerPageHero
-          title="Công nghệ trong giáo dục"
-          description="Giải pháp STEM hiện đại giúp học sinh phát triển tư duy chiến lược, logic và khả năng giải quyết vấn đề thông qua bàn cờ thông minh ChessUp V2."
+          title={<>Công Nghệ<br />Trong Giáo Dục</>}
+          description="KingViet Education luôn tìm kiếm và hướng đến các giải pháp công nghệ tiên tiến trong giáo dục, không ngừng cập nhật để nâng tầm phương pháp giảng dạy truyền thống và tối ưu hóa trải nghiệm học tập."
           breadcrumbs={[
             { label: "Lĩnh vực", path: "#" },
             { label: "Công nghệ trong giáo dục", path: "" },
           ]}
-          image={charImg}
+          backgroundImage={charImg}
         />
 
         {/* --- FEATURES SECTION --- */}
@@ -173,14 +174,11 @@ const EducationTech = () => {
                   className="w-full h-auto rounded-3xl object-cover shadow-2xl"
                 />
                 {/* Floating Badge */}
-                <div className="absolute -bottom-6 -right-2 sm:-right-6 bg-[#FDECC8] rounded-xl p-5 shadow-xl border border-white/20">
-                  <p className="text-[#1E2954] font-bold text-xl mb-1">
-                    STEM Certified
-                  </p>
-                  <p className="text-[#1E2954]/80 text-sm font-medium">
-                    Global Educational Standards
-                  </p>
-                </div>
+                <img
+                  src={trustMarkImg}
+                  alt="STEM.org Authenticated"
+                  className="absolute -bottom-6 -right-2 sm:-right-6 w-32 md:w-36 lg:w-40 shadow-xl rounded-2xl"
+                />
               </div>
             </div>
           </div>

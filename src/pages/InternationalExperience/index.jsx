@@ -2,8 +2,27 @@ import React, { useState } from "react";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import InnerPageHero from "../../components/sections/InnerPageHero";
-import charImg from "../../assets/images/char-trainghiemquocte.png";
 import ImageGallerySection from "../../components/sections/ImageGallerySection";
+import logoBangkok from "@/assets/images/logos/bangkok-university.png";
+import logoBurapha from "@/assets/images/logos/burapha-university.svg";
+import bannerTraiNghiem from "@/assets/images/banners/banner-trai-nghiem-quoc-te.png";
+
+import img1 from "@/assets/images/gallery-quoc-te/quoc-te-01.jpg";
+import img2 from "@/assets/images/gallery-quoc-te/quoc-te-02.jpg";
+import img3 from "@/assets/images/gallery-quoc-te/quoc-te-03.jpg";
+import img4 from "@/assets/images/gallery-quoc-te/quoc-te-04.jpg";
+import img5 from "@/assets/images/gallery-quoc-te/quoc-te-05.jpg";
+import img6 from "@/assets/images/gallery-quoc-te/quoc-te-06.jpg";
+import img7 from "@/assets/images/gallery-quoc-te/quoc-te-07.jpg";
+import img8 from "@/assets/images/gallery-quoc-te/quoc-te-08.jpg";
+import img9 from "@/assets/images/gallery-quoc-te/quoc-te-09.jpg";
+import img10 from "@/assets/images/gallery-quoc-te/quoc-te-10.jpg";
+import img11 from "@/assets/images/gallery-quoc-te/quoc-te-11.jpg";
+import img12 from "@/assets/images/gallery-quoc-te/quoc-te-12.jpg";
+import img13 from "@/assets/images/gallery-quoc-te/quoc-te-13.png";
+import img14 from "@/assets/images/gallery-quoc-te/quoc-te-14.png";
+
+const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14];
 import {
   GraduationCap,
   Handshake,
@@ -21,6 +40,7 @@ import {
 const InternationalExperience = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
   const [activeMajorTab, setActiveMajorTab] = useState(0);
+  const [hoveredMajor, setHoveredMajor] = useState(null);
 
   const faqs = [
     {
@@ -131,7 +151,7 @@ const InternationalExperience = () => {
 
       <main className="flex-grow">
         <InnerPageHero
-          title="Trải nghiệm giáo dục quốc tế cùng KingViet Education"
+          title={<>Trải nghiệm<br />giáo dục quốc tế</>}
           description={
             "Cơ hội học tập tại các trường đại học quốc tế với chương trình đào tạo chất lượng, học bổng hấp dẫn và lộ trình hỗ trợ toàn diện."
           }
@@ -139,7 +159,7 @@ const InternationalExperience = () => {
             { label: "Lĩnh vực", path: "#" },
             { label: "Trải nghiệm quốc tế", path: "" },
           ]}
-          image={charImg}
+          backgroundImage={bannerTraiNghiem}
         />
 
         {/* Features Section */}
@@ -172,14 +192,8 @@ const InternationalExperience = () => {
             <div className="flex flex-row justify-center items-center gap-8 md:gap-32">
               {/* Partner 1 */}
               <div className="flex flex-col items-center max-w-[180px] md:max-w-[250px]">
-                <div className="w-24 h-24 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center mb-4 md:mb-6 shadow-xl p-2">
-                  <div className="w-full h-full rounded-full border-4 border-yellow-500 bg-blue-50 flex items-center justify-center overflow-hidden">
-                    <span className="text-[10px] md:text-xs font-bold text-blue-900 text-center uppercase p-2 leading-tight">
-                      Bangkokthonburi
-                      <br />
-                      University
-                    </span>
-                  </div>
+                <div className="w-24 h-24 md:w-40 md:h-40 flex items-center justify-center mb-4 md:mb-6">
+                  <img src={logoBangkok} alt="Bangkokthonburi University" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-white font-semibold text-sm md:text-xl whitespace-pre-line leading-tight">
                   Đại học{"\n"}Bangkokthonburi{"\n"}Thái Lan
@@ -188,11 +202,11 @@ const InternationalExperience = () => {
 
               {/* Partner 2 */}
               <div className="flex flex-col items-center max-w-[180px] md:max-w-[250px]">
-                <div className="w-24 h-24 md:w-40 md:h-40 bg-white/10 border-2 border-white/30 rounded-full flex items-center justify-center mb-4 md:mb-6">
-                  <Globe size={48} strokeWidth={1.5} className="text-white" />
+                <div className="w-24 h-24 md:w-40 md:h-40 flex items-center justify-center mb-4 md:mb-6">
+                  <img src={logoBurapha} alt="Burapha University" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="text-white font-semibold text-sm md:text-xl whitespace-pre-line leading-tight">
-                  Các đối tác giáo dục{"\n"}quốc tế khác
+                <h3 className="text-white font-semibold text-sm md:text-xl whitespace-pre-line leading-tight text-center">
+                  Đại học{"\n"}Burapha{"\n"}Thái Lan
                 </h3>
               </div>
             </div>
@@ -371,45 +385,52 @@ const InternationalExperience = () => {
           </div>
 
           {/* Desktop: 3-column grid */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6 text-left items-stretch">
-            {majors.map((major, i) => (
-              <div
-                key={i}
-                className={`p-8 md:p-10 rounded-lg flex flex-col h-full ${
-                  major.dark
-                    ? "bg-[#22305C] text-white shadow-xl"
-                    : "bg-[#F1F3F5]"
-                }`}
-              >
-                <h3 className={`font-bold text-xl md:text-2xl mb-2 leading-tight ${major.dark ? "text-white" : "text-[#22305C]"}`}>
-                  {major.title}
-                  <br />
-                  <span className="text-base font-medium opacity-70">{major.subtitle}</span>
-                </h3>
-                <p className={`text-sm font-medium mb-6 pb-6 border-b ${major.dark ? "text-white/80 border-white/20" : "text-[#22305C]/80 border-[#22305C]/20"}`}>
-                  {major.desc}
-                </p>
-                <ul className="space-y-4 flex-grow mb-4">
-                  {major.items.map((item, j) => (
-                    <li key={j} className="flex gap-3 text-sm font-bold items-start">
-                      <CheckIcon dark={major.dark} />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className={`text-xs font-bold uppercase tracking-widest mb-3 ${major.dark ? "text-yellow-300" : "text-[#22305C]/60"}`}>
-                  Cơ hội nghề nghiệp:
-                </p>
-                <ul className="space-y-3">
-                  {major.careers.map((c, j) => (
-                    <li key={j} className="flex gap-3 text-sm font-bold items-start">
-                      <CheckIcon dark={major.dark} />
-                      <span>{c}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div 
+            className="hidden md:grid md:grid-cols-3 gap-6 text-left items-stretch"
+            onMouseLeave={() => setHoveredMajor(null)}
+          >
+            {majors.map((major, i) => {
+              const isDark = hoveredMajor !== null ? hoveredMajor === i : major.dark;
+              return (
+                <div
+                  key={i}
+                  onMouseEnter={() => setHoveredMajor(i)}
+                  className={`p-8 md:p-10 rounded-lg flex flex-col h-full transition-colors duration-300 ${
+                    isDark
+                      ? "bg-[#22305C] text-white shadow-xl"
+                      : "bg-[#F1F3F5]"
+                  }`}
+                >
+                  <h3 className={`font-bold text-xl md:text-2xl mb-2 leading-tight transition-colors duration-300 ${isDark ? "text-white" : "text-[#22305C]"}`}>
+                    {major.title}
+                    <br />
+                    <span className="text-base font-medium opacity-70">{major.subtitle}</span>
+                  </h3>
+                  <p className={`text-sm font-medium mb-6 pb-6 border-b transition-colors duration-300 ${isDark ? "text-white/80 border-white/20" : "text-[#22305C]/80 border-[#22305C]/20"}`}>
+                    {major.desc}
+                  </p>
+                  <ul className="space-y-4 flex-grow mb-4">
+                    {major.items.map((item, j) => (
+                      <li key={j} className="flex gap-3 text-sm font-bold items-start">
+                        <CheckIcon dark={isDark} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className={`text-xs font-bold uppercase tracking-widest mb-3 transition-colors duration-300 ${isDark ? "text-yellow-300" : "text-[#22305C]/60"}`}>
+                    Cơ hội nghề nghiệp:
+                  </p>
+                  <ul className="space-y-3">
+                    {major.careers.map((c, j) => (
+                      <li key={j} className="flex gap-3 text-sm font-bold items-start">
+                        <CheckIcon dark={isDark} />
+                        <span>{c}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </section>
 
@@ -571,7 +592,7 @@ const InternationalExperience = () => {
             </div>
           </div>
 
-          <ImageGallerySection title="Hình ảnh trải nghiệm quốc tế" />
+          <ImageGallerySection title="Hình ảnh trải nghiệm quốc tế" images={galleryImages} />
         </section>
 
         {/* FAQ Section */}

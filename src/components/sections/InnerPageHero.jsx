@@ -1,14 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import markWhite from "../../assets/images/Mark-White 1.png";
+import markWhite from "../../assets/images/logos/mark-white.png";
 
-const InnerPageHero = ({ title, description, image, breadcrumbs }) => {
+const InnerPageHero = ({ title, description, image, backgroundImage, breadcrumbs }) => {
   return (
-    <section className="relative w-full bg-[#22305C] overflow-hidden py-16 md:py-24 min-h-[400px] md:min-h-[500px] flex items-center">
+    <section className={`relative w-full overflow-hidden py-16 md:py-24 min-h-[400px] md:min-h-[500px] flex items-center ${backgroundImage ? '' : 'bg-[#22305C]'}`}>
+      {/* Full Width Background Image */}
+      {backgroundImage && (
+        <div className="absolute inset-0 z-0">
+          <img src={backgroundImage} alt={title} className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-black/40 md:bg-black/20 pointer-events-none"></div>
+        </div>
+      )}
       {/* Watermark Backgrounds */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Top Left Watermark */}
+      {!backgroundImage && (
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          {/* Top Left Watermark */}
         <img
           src={markWhite}
           alt=""
@@ -21,7 +29,7 @@ const InnerPageHero = ({ title, description, image, breadcrumbs }) => {
           className="absolute bottom-[-5%] md:top-1/2 md:-translate-y-1/2 right-[-10%] md:right-[-2%] h-[80%] md:h-[120%] object-contain opacity-40 rotate-180"
         />
       </div>
-
+      )}
       {/* Desktop Image (Absolute positioned to bottom of section) */}
       {image && (
         <div className="hidden md:block absolute right-[2%] lg:right-[10%] bottom-0 h-[85%] lg:h-[95%] z-10 pointer-events-none">
@@ -38,7 +46,7 @@ const InnerPageHero = ({ title, description, image, breadcrumbs }) => {
         {breadcrumbs && breadcrumbs.length > 0 && (
           <nav className="flex items-center space-x-2 text-sm text-gray-300 mb-8">
             <Link to="/" className="hover:text-white transition-colors">
-              Kingviet
+              KingViet Edu
             </Link>
             {breadcrumbs.map((crumb, index) => (
               <React.Fragment key={index}>
@@ -61,7 +69,7 @@ const InnerPageHero = ({ title, description, image, breadcrumbs }) => {
         <div className="relative">
           {/* Content */}
           <div className={image ? 'md:w-1/2 lg:w-3/5' : 'max-w-3xl'}>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold italic text-white mb-6 leading-tight">
               {title}
             </h1>
             {description && (

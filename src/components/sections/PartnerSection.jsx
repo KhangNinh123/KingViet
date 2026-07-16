@@ -1,6 +1,6 @@
-import logoLDCVN from "@/assets/images/LogoLDCVN1.png";
-import logoKingViet from "@/assets/images/LogoKingViet.png";
-import section45Img from "@/assets/images/home_page/section4.5.jpg";
+import logoLDCVN from "@/assets/images/logos/ldcvn.png";
+import logoKingViet from "@/assets/images/logos/kingviet.png";
+import section45Img from "@/assets/images/home/partner-banner.jpg";
 
 const PartnerSection = () => {
   return (

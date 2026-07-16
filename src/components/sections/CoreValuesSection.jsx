@@ -1,7 +1,7 @@
-import imgSach from "@/assets/images/home_page/Sach tap chi.png";
-import imgGiaoDuc from "@/assets/images/home_page/gduc cong nghe.JPG";
-import imgTraiNghiem from "@/assets/images/home_page/trai nghiem qte.jpg";
-import imgTreEm from "@/assets/images/home_page/tre em.JPG";
+import imgSach from "@/assets/images/home/sach-tap-chi.png";
+import imgGiaoDuc from "@/assets/images/home/giao-duc-cong-nghe.jpg";
+import imgTraiNghiem from "@/assets/images/home/trai-nghiem-quoc-te.jpg";
+import imgTreEm from "@/assets/images/home/tre-em.jpg";
 
 const CoreValuesSection = () => {
   const values = [

@@ -5,7 +5,6 @@ import PartnerSection from "../../components/sections/PartnerSection";
 import CoreValuesSection from "../../components/sections/CoreValuesSection";
 import ProgramSliderSection from "../../components/sections/ProgramSliderSection";
 import FeatureBannerSection from "../../components/sections/FeatureBannerSection";
-import CollectionSection from "../../components/sections/CollectionSection";
 import NewsSection from "../../components/sections/NewsSection";
 
 const Home = () => {
@@ -19,7 +18,6 @@ const Home = () => {
         <CoreValuesSection />
         <ProgramSliderSection />
         <FeatureBannerSection />
-        {/* <CollectionSection /> */}
         <NewsSection />
       </main>
 
