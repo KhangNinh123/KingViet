@@ -86,7 +86,7 @@ const ImageGallerySection = ({ title, images }) => {
         {/* Scrollable Container */}
         <div
           id="gallery-slider"
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar px-4 md:px-12 w-full"
+          className="w-full overflow-x-auto scroll-smooth hide-scrollbar"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           <style
@@ -96,8 +96,9 @@ const ImageGallerySection = ({ title, images }) => {
           `,
             }}
           />
-
-          {renderPattern()}
+          <div className="flex gap-4 w-max mx-auto px-4 md:px-12 snap-x snap-mandatory">
+            {renderPattern()}
+          </div>
         </div>
 
         {/* Right Arrow */}

@@ -167,17 +167,11 @@ const EducationTech = () => {
               </div>
 
               {/* Right Image */}
-              <div className="lg:w-1/2 relative mt-10 lg:mt-0">
-                <img
-                  src={chessupBoard}
-                  alt="Bàn cờ thông minh ChessUp"
-                  className="w-full h-auto rounded-3xl object-cover shadow-2xl"
-                />
-                {/* Floating Badge */}
+              <div className="lg:w-1/2 flex justify-center items-center mt-10 lg:mt-0">
                 <img
                   src={trustMarkImg}
                   alt="STEM.org Authenticated"
-                  className="absolute -bottom-6 -right-2 sm:-right-6 w-32 md:w-36 lg:w-40 shadow-xl rounded-2xl"
+                  className="w-2/3 sm:w-1/2 lg:w-3/4 max-w-md h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>

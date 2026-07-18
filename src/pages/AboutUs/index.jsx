@@ -8,6 +8,7 @@ import logoKingviet from "../../assets/images/logos/kingviet.png";
 import logoLdcvn from "../../assets/images/logos/ldcvn.png";
 import logoBangkok from "../../assets/images/logos/bangkok-university.png";
 import logoRoutledge from "../../assets/images/logos/routledge.png";
+import drJaneImg from "../../assets/images/home/Dr.Jane 1.png";
 import {
   Globe,
   BookOpen,
@@ -245,66 +246,90 @@ const AboutUs = () => {
 
 
         {/* ── DR. JANE SECTION ── */}
-        <section className="bg-[#22305C] py-20 lg:py-28">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
-              <span className="inline-block text-xs font-bold tracking-[0.2em] text-[#E5B034] uppercase mb-3">
+        <section className="relative overflow-hidden">
+          {/* Background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1a2547] via-[#22305C] to-[#2a3a6e]" />
+          {/* Decorative circles */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#E5B034]/5 rounded-full -translate-y-1/2 translate-x-1/3" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#E5B034]/5 rounded-full translate-y-1/2 -translate-x-1/3" />
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            {/* Section header */}
+            <div className="text-center mb-16">
+              <span className="inline-block text-xs font-bold tracking-[0.25em] text-[#E5B034] uppercase mb-3">
                 Lãnh đạo
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-white mb-4">
                 Giám đốc KingViet Education
               </h2>
-              <div className="w-16 h-1 bg-[#E5B034] mx-auto rounded-full" />
+              <div className="w-20 h-1 bg-gradient-to-r from-[#E5B034] to-[#f0d078] mx-auto rounded-full" />
             </div>
 
-            <div className="bg-white/10 rounded-3xl p-8 lg:p-12 backdrop-blur-sm border border-white/20">
-              <div className="flex flex-col lg:flex-row gap-10 items-start">
-                {/* Left */}
-                <div className="lg:w-1/3 w-full">
-                  <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
-                    <div className="w-20 h-20 bg-[#E5B034]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="w-10 h-10 text-[#E5B034]" strokeWidth={1.5} />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-1">TS. Nguyễn Trà Giang</h3>
-                    <p className="text-[#E5B034] font-semibold text-sm mb-1">Dr. Jane</p>
-                    <p className="text-gray-300 text-xs">Giám đốc KingViet Education</p>
-                  </div>
-                  <div className="mt-6 space-y-3">
-                    {["20+ năm kinh nghiệm", "Giảng dạy tại 35 quốc gia", "Chuyên gia Quản lý Thể thao"].map((t) => (
-                      <div key={t} className="flex items-center gap-3 text-gray-300 text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#E5B034] flex-shrink-0" />
-                        {t}
-                      </div>
-                    ))}
-                  </div>
-                </div>
+            {/* Main content: 2 columns */}
+            <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-0">
 
-                {/* Right */}
-                <div className="lg:w-2/3 w-full">
-                  <p className="text-gray-300 leading-relaxed mb-8">
-                    TS. Nguyễn Trà Giang là chuyên gia xuất sắc trong lĩnh vực Quản lý Thể thao
-                    với hơn 20 năm kinh nghiệm giảng dạy tại 35 quốc gia, đảm nhiệm nhiều vị
-                    trí chiến lược trong các tổ chức thể thao hàng đầu.
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {[
-                      "Phó Chủ tịch Hội Khoa học & TDTT Việt Nam (2026)",
-                      "Phó Chủ tịch Liên đoàn Cờ Việt Nam (2023)",
-                      "Phó Trưởng khoa Khoa học Thể thao — ĐH Bangkokthonburi",
-                      "Tổng thư ký LĐ Khúc côn cầu trên băng Thái Lan",
-                      "Tác giả \"A Unified System Fitness Design\" — Routledge UK (2025)",
-                      "Nhà sáng lập dự án \"Quân cờ hạnh phúc\" (Happy Chess)",
-                    ].map((item) => (
-                      <div key={item} className="flex items-start gap-3 bg-white/5 rounded-xl px-4 py-3 border border-white/10">
-                        <span className="w-5 h-5 rounded-full bg-[#E5B034]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#E5B034]" />
-                        </span>
-                        <span className="text-gray-300 text-sm leading-snug">{item}</span>
-                      </div>
-                    ))}
+              {/* Left: Portrait */}
+              <div className="w-full lg:w-5/12 flex flex-col items-center">
+                <div className="relative w-full max-w-md mx-auto">
+                  {/* Gold accent frame */}
+                  <div className="absolute -inset-3 bg-gradient-to-b from-[#E5B034]/30 via-[#E5B034]/10 to-transparent rounded-[2.5rem] blur-sm" />
+                  
+                  <div className="relative bg-gradient-to-b from-white/10 to-white/5 rounded-[2rem] border border-white/15 overflow-hidden backdrop-blur-sm">
+                    {/* Image container */}
+                    <div className="relative pt-8 px-8 flex justify-center items-end" style={{ aspectRatio: "3/4" }}>
+                      {/* Glow effect */}
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-[#E5B034]/20 blur-[60px] rounded-full" />
+                      <img 
+                        src={drJaneImg} 
+                        alt="TS. Nguyễn Trà Giang" 
+                        className="w-[90%] h-auto object-contain object-bottom relative z-10" 
+                      />
+                    </div>
+                    
+                    {/* Name bar */}
+                    <div className="relative z-10 bg-gradient-to-r from-[#E5B034] to-[#d4a02e] px-6 py-5 text-center">
+                      <h3 className="text-xl lg:text-2xl font-bold text-[#22305C] mb-0.5">
+                        TS. Nguyễn Trà Giang
+                      </h3>
+                      <p className="text-[#22305C]/70 font-semibold text-sm tracking-wide">
+                        Dr. Jane Nguyen
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              {/* Right: Bio + Achievements */}
+              <div className="w-full lg:w-7/12 lg:pl-12 flex flex-col justify-center">
+                {/* Intro text */}
+                <p className="text-gray-300 leading-[1.9] text-base lg:text-[17px] mb-10">
+                  TS. Nguyễn Trà Giang là chuyên gia xuất sắc trong lĩnh vực Quản lý Thể thao với hơn 20 năm kinh nghiệm giảng dạy tại 35 quốc gia, đảm nhiệm nhiều vị trí chiến lược:
+                </p>
+
+                {/* Achievement list */}
+                <div className="space-y-4">
+                  {[
+                    "Phó Chủ tịch Hội Khoa học & Thể dục thể thao Việt Nam (2026).",
+                    "Phó Chủ tịch Liên đoàn Cờ Việt Nam (2023).",
+                    "Phó Trưởng khoa Khoa học Thể thao tại Đại học Bangkokthonburi (Thái Lan) – nơi đào tạo hơn 400 VĐV đội tuyển quốc gia.",
+                    "Tổng thư ký Liên đoàn Khúc côn cầu trên băng Thái Lan.",
+                    "Tác giả người Việt đầu tiên xuất bản sách khoa học thể thao bằng tiếng Anh \"A Unified System Fitness Design\" (Routledge Anh Quốc, 2025).",
+                    "Nhà sáng lập dự án cộng đồng \"Quân cờ hạnh phúc\" (Happy Chess) lan tỏa yêu thương đến trẻ em khó khăn.",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-4 group">
+                      {/* Number badge */}
+                      <div className="w-8 h-8 rounded-xl bg-[#E5B034]/15 border border-[#E5B034]/30 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-[#E5B034]/30 transition-colors duration-300">
+                        <span className="text-[#E5B034] text-xs font-bold">{String(i + 1).padStart(2, "0")}</span>
+                      </div>
+                      {/* Text */}
+                      <p className="text-gray-300 text-[15px] leading-relaxed pt-1">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
@@ -375,100 +400,44 @@ const AboutUs = () => {
 
         {/* ── ROYALCHESS KHANG ĐIỀN ── */}
         <section className="bg-[#F8F9FC] py-20 lg:py-28">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 lg:mb-16">
+              <span className="inline-block text-xs font-bold tracking-[0.2em] text-[#C8102E] uppercase mb-4">
+                Đơn vị trực thuộc
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-[#22305C] mb-6 leading-tight uppercase">
+                RoyalChess Khang Điền
+              </h2>
+              <div className="w-16 h-1 bg-[#E5B034] mx-auto rounded-full mb-8" />
+              <p className="text-gray-600 leading-[1.8] text-[15px] md:text-lg">
+                Đơn vị trực thuộc <strong className="text-[#22305C]">Cờ vua công nghệ - KingViet Education</strong>. Ra đời với sứ mệnh đưa cờ vua đến gần hơn với thế hệ trẻ, Royalchess Khang Điền mang đến trải nghiệm giáo dục toàn diện vượt ra khỏi một lớp học thông thường.
+              </p>
+            </div>
 
-              {/* Left: Text content */}
-              <div className="w-full lg:w-1/2">
-                <span className="inline-block text-xs font-bold tracking-[0.2em] text-[#C8102E] uppercase mb-4">
-                  Đơn vị trực thuộc
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#22305C] mb-5 leading-tight">
-                  RoyalChess<br />Khang Điền
-                </h2>
-                <div className="w-12 h-1 bg-[#E5B034] rounded-full mb-6" />
-                <p className="text-gray-500 leading-relaxed text-base mb-8">
-                  Đơn vị trực thuộc <strong className="text-[#22305C]">Cờ vua công nghệ — KingViet Education</strong>. Ra đời với sứ mệnh đưa cờ vua đến gần hơn với thế hệ trẻ, Royalchess Khang Điền mang đến trải nghiệm giáo dục toàn diện vượt ra khỏi một lớp học thông thường.
-                </p>
-
-                {/* 3 highlight items */}
-                <div className="space-y-4">
-                  {[
-                    {
-                      label: "Cơ sở vật chất",
-                      desc: "Hiện đại, không gian học tập thân thiện và truyền cảm hứng.",
-                      color: "#22305C",
-                    },
-                    {
-                      label: "Đội ngũ Huấn luyện viên",
-                      desc: "Chuyên nghiệp, giàu kinh nghiệm và đồng hành tận tâm.",
-                      color: "#C8102E",
-                    },
-                    {
-                      label: "Phương pháp giảng dạy",
-                      desc: "Tích hợp công nghệ hiện đại và các hoạt động trải nghiệm ngoại khóa đa dạng.",
-                      color: "#E5B034",
-                    },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-4 bg-white rounded-2xl px-5 py-4 border border-gray-100 shadow-sm">
-                      <div
-                        className="w-1 rounded-full flex-shrink-0 self-stretch"
-                        style={{ backgroundColor: item.color }}
-                      />
-                      <div>
-                        <p className="font-bold text-[#22305C] text-sm mb-1">{item.label}</p>
-                        <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+              {[
+                {
+                  label: "Cơ sở vật chất",
+                  desc: "Hiện đại, không gian học tập thân thiện và truyền cảm hứng.",
+                  color: "#22305C",
+                },
+                {
+                  label: "Đội ngũ Huấn luyện viên",
+                  desc: "Chuyên nghiệp, giàu kinh nghiệm và đồng hành tận tâm.",
+                  color: "#C8102E",
+                },
+                {
+                  label: "Phương pháp giảng dạy",
+                  desc: "Tích hợp công nghệ hiện đại và các hoạt động trải nghiệm ngoại khóa đa dạng.",
+                  color: "#E5B034",
+                },
+              ].map((item, i) => (
+                <div key={i} className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center flex flex-col items-center">
+                  <div className="w-12 h-1.5 rounded-full mb-6" style={{ backgroundColor: item.color }} />
+                  <h3 className="font-bold text-[#22305C] text-lg mb-4">{item.label}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
                 </div>
-              </div>
-
-              {/* Right: Big dark card */}
-              <div className="w-full lg:w-1/2">
-                <div className="bg-[#22305C] rounded-3xl p-8 lg:p-10 relative overflow-hidden">
-                  {/* Watermark letter */}
-                  <span
-                    className="absolute -right-4 -bottom-6 font-black select-none pointer-events-none leading-none opacity-[0.08] text-white"
-                    style={{ fontSize: "10rem", fontFamily: "'Arial Black', sans-serif" }}
-                  >
-                    R
-                  </span>
-
-                  <div className="relative z-10">
-                    <div className="inline-flex items-center gap-2 bg-[#E5B034]/20 border border-[#E5B034]/30 rounded-xl px-4 py-2 mb-8">
-                      <span className="w-2 h-2 rounded-full bg-[#E5B034]" />
-                      <span className="text-[#E5B034] text-xs font-bold tracking-widest uppercase">Thuộc KingViet Education</span>
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-white mb-2">RoyalChess Khang Điền</h3>
-                    <p className="text-gray-400 text-sm mb-8 leading-relaxed">
-                      Trung tâm cờ vua công nghệ tiên phong tại khu đô thị Khang Điền, TP.HCM.
-                    </p>
-
-                    <div className="grid grid-cols-3 gap-4 mb-8">
-                      {[
-                        { num: "100+", label: "Học viên" },
-                        { num: "5+", label: "Huấn luyện viên" },
-                        { num: "3+", label: "Năm hoạt động" },
-                      ].map((stat, i) => (
-                        <div key={i} className="bg-white/8 rounded-2xl px-3 py-4 text-center border border-white/10">
-                          <p className="text-2xl font-black text-white leading-none mb-1">{stat.num}</p>
-                          <p className="text-gray-400 text-xs">{stat.label}</p>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="flex items-center gap-3 bg-white/8 rounded-2xl px-5 py-4 border border-white/10">
-                      <Trophy className="w-5 h-5 text-[#E5B034] flex-shrink-0" strokeWidth={2} />
-                      <p className="text-gray-300 text-sm leading-snug">
-                        Tổ chức giải đấu <strong className="text-white">Happy Chess & Friendship Tournament</strong> thường niên
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              ))}
             </div>
           </div>
         </section>

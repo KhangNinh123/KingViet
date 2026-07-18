@@ -6,6 +6,7 @@ import ImageGallerySection from "../../components/sections/ImageGallerySection";
 import logoBangkok from "@/assets/images/logos/bangkok-university.png";
 import logoBurapha from "@/assets/images/logos/burapha-university.svg";
 import bannerTraiNghiem from "@/assets/images/banners/banner-trai-nghiem-quoc-te.png";
+import bannerUni from "@/assets/images/home/cards/banner-uni.png";
 
 import img1 from "@/assets/images/gallery-quoc-te/quoc-te-01.jpg";
 import img2 from "@/assets/images/gallery-quoc-te/quoc-te-02.jpg";
@@ -20,9 +21,8 @@ import img10 from "@/assets/images/gallery-quoc-te/quoc-te-10.jpg";
 import img11 from "@/assets/images/gallery-quoc-te/quoc-te-11.jpg";
 import img12 from "@/assets/images/gallery-quoc-te/quoc-te-12.jpg";
 import img13 from "@/assets/images/gallery-quoc-te/quoc-te-13.png";
-import img14 from "@/assets/images/gallery-quoc-te/quoc-te-14.png";
 
-const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14];
+const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13];
 import {
   GraduationCap,
   Handshake,
@@ -180,8 +180,14 @@ const InternationalExperience = () => {
         </section>
 
         {/* International Opportunities Section */}
-        <section className="w-full bg-[#22305C] py-12 md:py-24">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section 
+          className="w-full bg-[#22305C] bg-cover bg-center bg-no-repeat py-12 md:py-24 relative"
+          style={{ backgroundImage: `url(${bannerUni})` }}
+        >
+          {/* Optional subtle overlay if needed to ensure text readability */}
+          <div className="absolute inset-0 bg-[#22305C]/60 mix-blend-multiply pointer-events-none" />
+          
+          <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 uppercase">
               Cơ hội học tập quốc tế
             </h2>
