@@ -10,7 +10,7 @@ const InnerPageHero = ({ title, description, image, backgroundImage, breadcrumbs
       {backgroundImage && (
         <div className="absolute inset-0 z-0">
           <img src={backgroundImage} alt={title} className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-black/40 md:bg-black/20 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent pointer-events-none"></div>
         </div>
       )}
       {/* Watermark Backgrounds */}

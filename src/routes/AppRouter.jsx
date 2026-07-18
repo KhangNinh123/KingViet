@@ -8,6 +8,7 @@ import Contact from "../pages/Contact";
 import NewsPage from "../pages/News";
 import NewsDetail from "../pages/News/NewsDetail";
 import Collection from "../pages/Collection";
+import AboutUs from "../pages/AboutUs";
 
 // Admin Imports
 import ProtectedRoute from "../components/ProtectedRoute";
@@ -40,14 +41,7 @@ const AppRouter = () => {
         }
       />
       <Route path="/collection" element={<Collection />} />
-      <Route
-        path="/về-chúng-tôi"
-        element={
-          <div className="p-20 text-center text-2xl">
-            Về chúng tôi (Coming soon)
-          </div>
-        }
-      />
+      <Route path="/về-chúng-tôi" element={<AboutUs />} />
       <Route path="/tin-tuc" element={<NewsPage />} />
       <Route path="/tin-tuc/:slug" element={<NewsDetail />} />
       <Route path="/liên-hệ" element={<Contact />} />
