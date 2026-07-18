@@ -19,9 +19,9 @@ const FloatingImageGallery = ({ images = [] }) => {
   ];
 
   return (
-    <section className="w-full py-16 bg-white">
-      {/* Container chiếm toàn màn hình chiều rộng, chiều cao cố định để tạo không gian bay */}
-      <div className="relative w-full h-[600px] md:h-[900px] overflow-hidden">
+    <section className="w-full py-10 md:py-16 bg-white overflow-hidden">
+      {/* Container chiếm toàn màn hình chiều rộng, chiều cao thay đổi theo thiết bị */}
+      <div className="relative w-full h-[400px] md:h-[600px] lg:h-[900px] overflow-hidden">
         {images.map((img, index) => {
           const pos = layout[index];
           return (

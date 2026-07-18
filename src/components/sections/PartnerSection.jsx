@@ -90,14 +90,14 @@ const PartnerSection = () => {
             <h2 className="text-2xl md:text-3xl lg:text-[36px] xl:text-[40px] font-bold mb-6 tracking-tight flex flex-wrap items-center gap-2">
               <span>TS. NGUYỄN TRÀ GIANG</span>
               <span className="hidden md:inline text-gray-500 font-normal">|</span>
-              <span className="font-normal text-gray-500 text-xl md:text-2xl lg:text-[32px] whitespace-nowrap">Dr. Jane Nguyen</span>
+              <span className="font-normal text-gray-500 text-xl md:text-2xl lg:text-[32px] lg:whitespace-nowrap">Dr. Jane Nguyen</span>
             </h2>
             
             <div className="flex flex-wrap lg:flex-nowrap gap-3 md:gap-4 mb-8">
-              <span className="bg-[#22305C] text-white text-xs md:text-sm lg:text-[14px] font-bold italic px-4 py-2 rounded-xl shadow-sm whitespace-nowrap">
+              <span className="bg-[#22305C] text-white text-xs md:text-sm lg:text-[14px] font-bold italic px-4 py-2 rounded-xl shadow-sm lg:whitespace-nowrap text-center">
                 Phó chủ tịch Hội Khoa học TDTT Việt Nam
               </span>
-              <span className="bg-[#22305C] text-white text-xs md:text-sm lg:text-[14px] font-bold italic px-4 py-2 rounded-xl shadow-sm whitespace-nowrap">
+              <span className="bg-[#22305C] text-white text-xs md:text-sm lg:text-[14px] font-bold italic px-4 py-2 rounded-xl shadow-sm lg:whitespace-nowrap text-center">
                 Phó chủ tịch Liên đoàn Cờ Việt Nam
               </span>
             </div>

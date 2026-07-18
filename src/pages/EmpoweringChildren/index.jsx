@@ -100,6 +100,7 @@ const EmpoweringChildren = () => {
             src={iconTot}
             alt=""
             aria-hidden="true"
+            className="hidden lg:block"
             style={{
               position: "absolute",
               left: "36%",
@@ -118,6 +119,7 @@ const EmpoweringChildren = () => {
             src={iconZumba}
             alt=""
             aria-hidden="true"
+            className="hidden lg:block"
             style={{
               position: "absolute",
               left: "63%",
@@ -185,14 +187,14 @@ const EmpoweringChildren = () => {
                   </div>
                   <div className="border-[2px] border-[#334274] rounded-3xl p-6 pt-10 flex flex-col items-center gap-6 bg-white">
                     {/* Hàng trên: 4 logo */}
-                    <div className="flex justify-between items-center gap-4 w-full">
+                    <div className="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between items-center gap-4 w-full">
                       <img src={logoFide} alt="FIDE" className="h-10 md:h-12 w-auto object-contain" />
                       <img src={logoFideSocial} alt="FIDE Social Chess Year" className="h-10 md:h-12 w-auto object-contain" />
                       <img src={logoLdcvn} alt="LĐCVN" className="h-10 md:h-12 w-auto object-contain" />
                       <img src={logoTheGrand} alt="The Grand Ho Tram" className="h-10 md:h-12 w-auto object-contain" />
                     </div>
                     {/* Hàng dưới: 2 logo */}
-                    <div className="flex justify-center items-center gap-10 w-full">
+                    <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-6 lg:gap-10 w-full mt-2 lg:mt-0">
                       <img src={logoChessCom} alt="Chess.com" className="h-9 md:h-11 w-auto object-contain" />
                       <img src={logoKingViet} alt="KingViet" className="h-9 md:h-11 w-auto object-contain" />
                     </div>
@@ -206,7 +208,7 @@ const EmpoweringChildren = () => {
                   <span className="inline-block bg-[#334274] text-white text-[13px] font-bold px-6 py-2 rounded-full mb-6">
                     Dự án tiêu biểu
                   </span>
-                  <h2 className="text-3xl lg:text-4xl xl:text-[40px] font-bold text-[#F4C542] whitespace-nowrap">
+                  <h2 className="text-3xl lg:text-4xl xl:text-[40px] font-bold text-[#F4C542] lg:whitespace-nowrap">
                     Dự án Quân Cờ Hạnh Phúc
                   </h2>
                 </div>
