@@ -1,20 +1,9 @@
 import React from "react";
-import demoImg from "../../assets/images/characters/char-trao-quyen-tre-em.png";
 
-const FloatingImageGallery = () => {
-  const images = [
-    { id: 1, src: "https://images.unsplash.com/photo-1525011268546-bf3f9b007f6a?q=80&w=800&auto=format&fit=crop" },
-    { id: 2, src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" },
-    { id: 3, src: "https://images.unsplash.com/photo-1586182987320-4f376d39d787?q=80&w=800&auto=format&fit=crop" }, 
-    { id: 4, src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" },
-    { id: 5, src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" }, // Center
-    { id: 6, src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" },
-    { id: 7, src: "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=800&auto=format&fit=crop" },
-    { id: 8, src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800&auto=format&fit=crop" }, 
-    { id: 9, src: "https://images.unsplash.com/photo-1472162072942-c94cb1851236?q=80&w=800&auto=format&fit=crop" },
-    { id: 10, src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop" }
-  ];
-
+const FloatingImageGallery = ({ images = [] }) => {
+  if (!images || images.length === 0) {
+    return null; // Không hiển thị nếu không có ảnh
+  }
   // Bố cục tọa độ cho 10 ảnh bay lơ lửng bất đối xứng toàn màn hình
   const layout = [
     { top: "8%", left: "5%", width: "20%", height: "25%", zIndex: 10 }, // Top Left
