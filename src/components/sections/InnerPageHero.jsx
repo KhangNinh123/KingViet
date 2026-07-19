@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import markWhite from "../../assets/images/logos/mark-white.png";
+import markWhite from "../../assets/images/logos/mark-white.webp";
 
 const InnerPageHero = ({ title, description, image, backgroundImage, breadcrumbs }) => {
   return (

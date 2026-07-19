@@ -1,5 +1,5 @@
 import { MapPin, Mail, Phone } from "lucide-react";
-import logoKV from "../../assets/icons/Logo KV 1.png";
+import logoKV from "../../assets/icons/Logo KV 1.webp";
 
 const FacebookIcon = () => (
   <svg

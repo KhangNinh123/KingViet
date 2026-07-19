@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Search, ChevronDown, Menu, X, Microscope, Globe, BookOpen, Baby } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoKV from "../../assets/icons/Logo KV 1.png";
+import logoKV from "../../assets/icons/Logo KV 1.webp";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -2,10 +2,10 @@ import React from 'react';
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import InnerPageHero from "../../components/sections/InnerPageHero";
-import bannerAbout from "../../assets/images/banners/banner-ve-chung-toi.png";
-import imgTamNhin from "../../assets/images/about/tam-nhin.JPG";
-import imgSuMenh from "../../assets/images/about/su-menh.JPG";
-import drJaneImg from "../../assets/images/home/Dr.Jane 1.png";
+import bannerAbout from "../../assets/images/banners/banner-ve-chung-toi.webp";
+import imgTamNhin from "../../assets/images/about/tam-nhin.webp";
+import imgSuMenh from "../../assets/images/about/su-menh.webp";
+import drJaneImg from "../../assets/images/home/Dr.Jane 1.webp";
 
 const AboutUs = () => {
   return (

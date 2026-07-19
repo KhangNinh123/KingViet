@@ -5,37 +5,37 @@ import InnerPageHero from "../../components/sections/InnerPageHero";
 import FloatingImageGallery from "../../components/sections/FloatingImageGallery";
 
 // Images
-import bannerImg from "../../assets/images/banners/banner-trao-quyen-tre-em.png";
-import imgCoVua from "../../assets/images/chilren/TPK_1925.JPG";
-import imgZumba from "../../assets/images/chilren/8P6A5726.jpg";
-import imgBongBan from "../../assets/images/chilren/bong-ban.png";
+import bannerImg from "../../assets/images/banners/banner-trao-quyen-tre-em.webp";
+import imgCoVua from "../../assets/images/chilren/TPK_1925.webp";
+import imgZumba from "../../assets/images/chilren/8P6A5726.webp";
+import imgBongBan from "../../assets/images/chilren/bong-ban.webp";
 
 // Icons
-import iconTot from "../../assets/icons/icon tot.png";
-import iconZumba from "../../assets/icons/icon zumba 1.png";
+import iconTot from "../../assets/icons/icon tot.webp";
+import iconZumba from "../../assets/icons/icon zumba 1.webp";
 
 // Logos
-import logoLdcvn from "../../assets/images/logos/ldcvn.png";
-import logoKingViet from "../../assets/icons/Logo KV 1.png";
+import logoLdcvn from "../../assets/images/logos/ldcvn.webp";
+import logoKingViet from "../../assets/icons/Logo KV 1.webp";
 
 // Happy Chess logos
-import logoHappyChess from "../../assets/images/chilren/bo-logo-happy-chess/8.png";
-import logoFide from "../../assets/images/chilren/bo-logo-happy-chess/9 1.png";
-import logoFideSocial from "../../assets/images/chilren/bo-logo-happy-chess/10 6.png";
-import logoChessCom from "../../assets/images/chilren/bo-logo-happy-chess/11 1.png";
-import logoTheGrand from "../../assets/images/chilren/bo-logo-happy-chess/13 1.png";
+import logoHappyChess from "../../assets/images/chilren/bo-logo-happy-chess/8.webp";
+import logoFide from "../../assets/images/chilren/bo-logo-happy-chess/9 1.webp";
+import logoFideSocial from "../../assets/images/chilren/bo-logo-happy-chess/10 6.webp";
+import logoChessCom from "../../assets/images/chilren/bo-logo-happy-chess/11 1.webp";
+import logoTheGrand from "../../assets/images/chilren/bo-logo-happy-chess/13 1.webp";
 
 // 10 ảnh
-import img1 from "../../assets/images/chilren/10-anh/ban-sao-cua-TPK_3290.jpg";
-import img2 from "../../assets/images/chilren/10-anh/IMG_7526.JPG";
-import img3 from "../../assets/images/chilren/10-anh/IMG_7665.JPG";
-import img4 from "../../assets/images/chilren/10-anh/TPK_0080_1.JPG";
-import img5 from "../../assets/images/chilren/10-anh/TPK_0197.JPG";
-import img6 from "../../assets/images/chilren/10-anh/TPK_2582_2.JPG";
-import img7 from "../../assets/images/chilren/10-anh/TPK_2686_4.JPG";
-import img8 from "../../assets/images/chilren/10-anh/TPK_4608_2.jpg";
-import img9 from "../../assets/images/chilren/10-anh/TPK_4734_2.jpg";
-import img10 from "../../assets/images/chilren/10-anh/TPK_9874_1.JPG";
+import img1 from "../../assets/images/chilren/10-anh/ban-sao-cua-TPK_3290.webp";
+import img2 from "../../assets/images/chilren/10-anh/IMG_7526.webp";
+import img3 from "../../assets/images/chilren/10-anh/IMG_7665.webp";
+import img4 from "../../assets/images/chilren/10-anh/TPK_0080_1.webp";
+import img5 from "../../assets/images/chilren/10-anh/TPK_0197.webp";
+import img6 from "../../assets/images/chilren/10-anh/TPK_2582_2.webp";
+import img7 from "../../assets/images/chilren/10-anh/TPK_2686_4.webp";
+import img8 from "../../assets/images/chilren/10-anh/TPK_4608_2.webp";
+import img9 from "../../assets/images/chilren/10-anh/TPK_4734_2.webp";
+import img10 from "../../assets/images/chilren/10-anh/TPK_9874_1.webp";
 
 const galleryImages = [
   { id: 1, src: img1 },

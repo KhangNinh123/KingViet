@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import InnerPageHero from "../../components/sections/InnerPageHero";
-import bannerSach from "../../assets/images/banners/banner-sach-tap-chi.png";
-import routledgeLogo from "../../assets/images/logos/routledge.png";
-import bookUSFDImg from "../../assets/images/products/sach-usfd.png";
+import bannerSach from "../../assets/images/banners/banner-sach-tap-chi.webp";
+import routledgeLogo from "../../assets/images/logos/routledge.webp";
+import bookUSFDImg from "../../assets/images/products/sach-usfd.webp";
 import videoUSFD from "../../assets/videos/VIDEO PROMOTE BOOK USFD.mp4";
 import {
   BookOpen,

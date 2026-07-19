@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NewsCard } from "../ui/NewsCard";
-import markWhite from "../../assets/images/logos/mark-white.png";
+import markWhite from "../../assets/images/logos/mark-white.webp";
 import { api } from "../../services/api";
 
 const NewsSection = () => {

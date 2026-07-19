@@ -7,10 +7,10 @@ import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 
-import imgGiaoDuc from "@/assets/images/home/cards/giao-duc-cong-nghe.png";
-import imgTraiNghiem from "@/assets/images/home/cards/trai-nghiem-quoc-te.png";
-import imgSach from "@/assets/images/home/cards/sach-tap-chi.png";
-import imgTreEm from "@/assets/images/home/cards/tre-em.png";
+import imgGiaoDuc from "@/assets/images/home/cards/giao-duc-cong-nghe.webp";
+import imgTraiNghiem from "@/assets/images/home/cards/trai-nghiem-quoc-te.webp";
+import imgSach from "@/assets/images/home/cards/sach-tap-chi.webp";
+import imgTreEm from "@/assets/images/home/cards/tre-em.webp";
 
 const programs = [
   {

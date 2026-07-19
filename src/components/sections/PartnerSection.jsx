@@ -1,7 +1,7 @@
-import logoLDCVN from "@/assets/images/logos/ldcvn.png";
-import logoKingViet from "@/assets/images/logos/kingviet.png";
-import drJaneImg from "@/assets/images/home/Dr.Jane 1.png";
-import markWhiteImg from "@/assets/images/logos/mark-white.png";
+import logoLDCVN from "@/assets/images/logos/ldcvn.webp";
+import logoKingViet from "@/assets/images/logos/kingviet.webp";
+import drJaneImg from "@/assets/images/home/Dr.Jane 1.webp";
+import markWhiteImg from "@/assets/images/logos/mark-white.webp";
 const PartnerSection = () => {
   return (
     <section className="w-full flex flex-col mb-12 lg:mb-20">

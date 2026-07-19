@@ -1,9 +1,9 @@
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import InnerPageHero from "../../components/sections/InnerPageHero";
-import charImg from "../../assets/images/banners/banner-cong-nghe-giao-duc.png";
-import stemLogo from "../../assets/images/logos/stem.png";
-import trustMarkImg from "../../assets/images/logos/trustmark-stem.png";
+import charImg from "../../assets/images/banners/banner-cong-nghe-giao-duc.webp";
+import stemLogo from "../../assets/images/logos/stem.webp";
+import trustMarkImg from "../../assets/images/logos/trustmark-stem.webp";
 import chessupBoard from "../../assets/images/products/chessup.webp";
 import ImageGallerySection from "../../components/sections/ImageGallerySection";
 import {
