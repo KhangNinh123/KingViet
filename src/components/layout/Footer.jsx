@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone } from "lucide-react";
 import logoKV from "../../assets/icons/Logo KV 1.webp";
 
@@ -79,7 +80,7 @@ const Footer = () => {
 
             <div className="space-y-4 text-sm text-gray-300">
               <p className="font-bold text-white text-base">
-                Công ty trách nhiệm hữu hạn KingViet Education
+                Công ty TNHH KingViet Education
               </p>
               <div className="flex items-start gap-3">
                 <MapPin className="shrink-0 w-5 h-5 text-[#E5B034]" />
@@ -94,7 +95,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="shrink-0 w-5 h-5 text-[#E5B034]" />
-                <p>0835 090 797</p>
+                <p>0835 090 797 - 08 5959 0808</p>
               </div>
             </div>
           </div>
@@ -128,7 +129,9 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-gray-300">
               <li>
                 <a
-                  href="#"
+                  href="https://www.youtube.com/watch?v=g8FUtgb_YOw"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-[#E5B034] transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-[#E5B034] rounded-full"></span>
@@ -136,40 +139,40 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/collection"
                   className="hover:text-[#E5B034] transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-[#E5B034] rounded-full"></span>
                   Bộ sưu tập KingViet Edu
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/tin-tuc"
                   className="hover:text-[#E5B034] transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-[#E5B034] rounded-full"></span>
                   Tin tức
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/cong-nghe-giao-duc"
                   className="hover:text-[#E5B034] transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-[#E5B034] rounded-full"></span>
                   Công nghệ trong giáo dục
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/về-chúng-tôi"
                   className="hover:text-[#E5B034] transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 bg-[#E5B034] rounded-full"></span>
                   Về KingViet
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -181,28 +184,36 @@ const Footer = () => {
             </h3>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/kingvietedu"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E5B034] hover:text-[#22305C] hover:-translate-y-1 transition-all duration-300"
                 title="Facebook"
               >
                 <FacebookIcon />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@KingVietEducation"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E5B034] hover:text-[#22305C] hover:-translate-y-1 transition-all duration-300"
                 title="Youtube"
               >
                 <YoutubeIcon />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@kingviet.education"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E5B034] hover:text-[#22305C] hover:-translate-y-1 transition-all duration-300"
                 title="Tiktok"
               >
                 <TiktokIcon />
               </a>
               <a
-                href="#"
+                href="https://zalo.me/0859590808"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E5B034] hover:text-[#22305C] hover:-translate-y-1 transition-all duration-300"
                 title="Zalo"
               >
