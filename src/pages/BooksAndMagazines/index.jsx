@@ -5,7 +5,6 @@ import InnerPageHero from "../../components/sections/InnerPageHero";
 import bannerSach from "../../assets/images/banners/banner-sach-tap-chi.webp";
 import routledgeLogo from "../../assets/images/logos/routledge.webp";
 import bookUSFDImg from "../../assets/images/products/sach-usfd.webp";
-import videoUSFD from "../../assets/videos/VIDEO PROMOTE BOOK USFD.mp4";
 import {
   BookOpen,
   BookMarked,
@@ -741,13 +740,9 @@ const BooksAndMagazines = () => {
 
               {/* Right: USFD Video */}
               <div className="flex-1 w-full max-w-[800px] aspect-video rounded-[32px] overflow-hidden shadow-xl bg-black/5">
-                <video 
-                  src={videoUSFD} 
-                  controls 
-                  playsInline 
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                />
+                <div className="w-full h-full flex items-center justify-center bg-[#E5E7EB]">
+                  <span className="text-[#9CA3AF] font-bold text-xl md:text-2xl tracking-wider">VIDEO TAO GỬI</span>
+                </div>
               </div>
             </div>
           </div>

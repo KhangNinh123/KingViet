@@ -4,6 +4,7 @@ import Footer from "../../components/layout/Footer";
 import InnerPageHero from "../../components/sections/InnerPageHero";
 import { StandardNewsCard } from "../../components/ui/StandardNewsCard";
 import { api } from "../../services/api";
+import bannerTinTuc from "../../assets/images/banners/banner-tin-tuc.webp";
 
 const NewsPage = () => {
   const [news, setNews] = useState([]);
@@ -34,6 +35,7 @@ const NewsPage = () => {
         <InnerPageHero
           title="Tin Tức KingViet"
           description="Cập nhật những thông tin, sự kiện và bài viết mới nhất về các giải đấu, chương trình đào tạo và hoạt động của KingViet."
+          backgroundImage={bannerTinTuc}
           breadcrumbs={[
             { label: "Trang chủ", path: "/" },
             { label: "Tin tức", path: "" },
