@@ -441,7 +441,7 @@ const InternationalExperience = () => {
         </section>
 
         {/* Roadmap Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-24 text-center border-t border-gray-200">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-10 md:pt-12 md:pb-24 text-center border-t border-gray-200">
 
           {/* Mobile: vertical stepper */}
           <div className="md:hidden flex flex-col gap-0 mb-10">
@@ -505,7 +505,7 @@ const InternationalExperience = () => {
           </div>
 
           {/* Desktop: original zigzag layout */}
-          <div className="hidden md:block relative pt-8 pb-32 mb-8">
+          <div className="hidden md:block relative pt-8 pb-48 mb-8">
             {/* SVG Connecting Lines */}
             <div className="hidden md:block absolute top-[4rem] md:top-[4.5rem] lg:top-[5rem] h-[8rem] left-[12.5%] right-[12.5%] z-0 pointer-events-none">
               <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
