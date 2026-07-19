@@ -103,7 +103,7 @@ const EmpoweringChildren = () => {
             className="hidden lg:block"
             style={{
               position: "absolute",
-              left: "36%",
+              left: "32%",
               top: "50%",
               transform: "translateY(-50%)",
               height: "90%",
@@ -122,7 +122,7 @@ const EmpoweringChildren = () => {
             className="hidden lg:block"
             style={{
               position: "absolute",
-              left: "63%",
+              left: "58%",
               top: "50%",
               transform: "translateY(-50%)",
               height: "90%",
@@ -135,17 +135,17 @@ const EmpoweringChildren = () => {
             }}
           />
 
-          <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-16">
+          <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 relative z-10">
+            <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-start gap-10 lg:gap-16 xl:gap-20">
               
-              <div className="w-full lg:w-1/3 flex items-center justify-center lg:justify-start lg:pl-10">
-                <h2 className="text-4xl md:text-[2.75rem] font-black text-[#F4C150] uppercase tracking-wide text-center lg:text-left leading-[1.4]">
+              <div className="flex-shrink-0 flex items-center justify-center lg:justify-start">
+                <h2 className="text-4xl md:text-[2.75rem] font-black text-[#F4C150] uppercase tracking-wide text-left leading-[1.4]">
                   Tại sao lại là<br />
-                  <span className="text-white">Cờ Vua &<br className="hidden lg:block"/> Zumba?</span>
+                  <span className="text-white whitespace-nowrap">Cờ Vua & Zumba?</span>
                 </h2>
               </div>
 
-              <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12 lg:pr-10">
+              <div className="flex-1 max-w-[950px] grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-10">
                 {/* Cờ Vua Card */}
                 <div className="bg-[#2B3864]/80 backdrop-blur-sm border-[2px] border-[#38467A] shadow-[0_15px_40px_rgba(0,0,0,0.3)] rounded-3xl p-8 transition-transform hover:-translate-y-1">
                   <p className="text-white leading-[1.8] text-[15px] font-medium">
