@@ -94,7 +94,7 @@ const Contact = () => {
                 <h3 className="font-bold text-[#1E2954] text-xl mb-4">Số điện thoại</h3>
                 <div className="mb-8 flex-grow">
                   <p className="text-gray-700 font-medium mb-1">
-                    0835 090 797
+                    0835 090 797 - 08 5959 0808
                   </p>
                   <p className="italic text-gray-500 text-sm">
                     Thứ 2 - Thứ 7 (8:00 - 17:30)

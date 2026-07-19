@@ -598,7 +598,7 @@ const InternationalExperience = () => {
             </div>
           </div>
 
-          <ImageGallerySection title="Hình ảnh trải nghiệm quốc tế" images={galleryImages} />
+          <ImageGallerySection title="Hình ảnh trải nghiệm trao đổi quốc tế" images={galleryImages} />
         </section>
 
         {/* FAQ Section */}
