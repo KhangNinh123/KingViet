@@ -1,4 +1,4 @@
-import homepageVideo from "../../assets/videos/0607.mp4";
+
 
 const HeroSection = () => {
   return (
@@ -10,7 +10,7 @@ const HeroSection = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-contain md:object-cover pointer-events-none"
       >
-        <source src={homepageVideo} type="video/mp4" />
+        <source src="https://brvllgovveaxteagqcti.supabase.co/storage/v1/object/public/kingviet-assets/0607.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </section>

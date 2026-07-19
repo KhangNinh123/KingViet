@@ -740,9 +740,13 @@ const BooksAndMagazines = () => {
 
               {/* Right: USFD Video */}
               <div className="flex-1 w-full max-w-[800px] aspect-video rounded-[32px] overflow-hidden shadow-xl bg-black/5">
-                <div className="w-full h-full flex items-center justify-center bg-[#E5E7EB]">
-                  <span className="text-[#9CA3AF] font-bold text-xl md:text-2xl tracking-wider">VIDEO TAO GỬI</span>
-                </div>
+                <video 
+                  src="https://brvllgovveaxteagqcti.supabase.co/storage/v1/object/public/kingviet-assets/usfd-compressed.mp4" 
+                  controls 
+                  playsInline 
+                  preload="metadata"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

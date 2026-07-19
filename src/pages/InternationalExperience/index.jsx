@@ -505,7 +505,7 @@ const InternationalExperience = () => {
           </div>
 
           {/* Desktop: original zigzag layout */}
-          <div className="hidden md:block relative pt-8 pb-16 mb-16">
+          <div className="hidden md:block relative pt-8 pb-32 mb-8">
             {/* SVG Connecting Lines */}
             <div className="hidden md:block absolute top-[4rem] md:top-[4.5rem] lg:top-[5rem] h-[8rem] left-[12.5%] right-[12.5%] z-0 pointer-events-none">
               <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
