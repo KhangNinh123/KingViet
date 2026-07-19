@@ -171,7 +171,7 @@ const EducationTech = () => {
                 <img
                   src={trustMarkImg}
                   alt="STEM.org Authenticated"
-                  className="w-2/3 sm:w-1/2 lg:w-3/4 max-w-md h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                  className="w-[55%] sm:w-[40%] lg:w-[60%] max-w-sm h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
@@ -316,7 +316,7 @@ const EducationTech = () => {
         </section>
 
         {/* --- CHESSUP V2 SECTION --- */}
-        <section className="bg-white py-20 lg:py-28">
+        <section className="bg-white pt-20 lg:pt-28 pb-6 lg:pb-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             {/* Row 1: Image + Intro */}
@@ -462,7 +462,7 @@ const EducationTech = () => {
         </section>
 
         {/* --- IMAGE GALLERY SECTION --- */}
-        <section className="bg-white py-10 lg:py-16">
+        <section className="bg-white pt-4 pb-16 lg:pb-24">
           <ImageGallerySection title="Hình ảnh lớp học thực tế" />
         </section>
       </main>

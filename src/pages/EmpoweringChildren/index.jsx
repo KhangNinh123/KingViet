@@ -139,7 +139,7 @@ const EmpoweringChildren = () => {
             <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-16">
               
               <div className="w-full lg:w-1/3 flex items-center justify-center lg:justify-start lg:pl-10">
-                <h2 className="text-4xl md:text-[2.75rem] font-black text-[#F4C150] uppercase tracking-wide text-center lg:text-left leading-[1.2]">
+                <h2 className="text-4xl md:text-[2.75rem] font-black text-[#F4C150] uppercase tracking-wide text-center lg:text-left leading-[1.4]">
                   Tại sao lại là<br />
                   <span className="text-white">Cờ Vua &<br className="hidden lg:block"/> Zumba?</span>
                 </h2>

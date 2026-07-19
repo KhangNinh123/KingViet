@@ -4,7 +4,7 @@ import drJaneImg from "@/assets/images/home/Dr.Jane 1.png";
 import markWhiteImg from "@/assets/images/logos/mark-white.png";
 const PartnerSection = () => {
   return (
-    <section className="w-full flex flex-col">
+    <section className="w-full flex flex-col mb-12 lg:mb-20">
       {/* Top Banner (Dark Blue) */}
       <div className="py-8 md:py-16 bg-[#22305C] flex justify-center px-4 md:px-8">
         <div className="max-w-6xl w-full flex flex-col items-start gap-6 md:gap-12 mx-auto">

@@ -61,7 +61,7 @@ const ImageGallerySection = ({ title, images }) => {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22305C] mb-12 mt-16 md:mt-32 text-center">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22305C] mb-12 mt-4 md:mt-8 text-center">
         {title}
       </h2>
 
