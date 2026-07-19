@@ -5,6 +5,7 @@ import InnerPageHero from "../../components/sections/InnerPageHero";
 import bannerSach from "../../assets/images/banners/banner-sach-tap-chi.png";
 import routledgeLogo from "../../assets/images/logos/routledge.png";
 import bookUSFDImg from "../../assets/images/products/sach-usfd.png";
+import videoUSFD from "../../assets/videos/VIDEO PROMOTE BOOK USFD.mp4";
 import {
   BookOpen,
   BookMarked,
@@ -39,22 +40,7 @@ import {
 } from "lucide-react";
 
 const BooksAndMagazines = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    interest: "",
-  });
 
-  const handleFormChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    alert("Đăng ký thành công! Cảm ơn bạn đã quan tâm.");
-    setFormData({ name: "", email: "", interest: "" });
-  };
 
   const highlights = [
     { icon: <BookOpen size={28} strokeWidth={1.5} />, label: "Sách chuyên khảo" },
@@ -194,52 +180,6 @@ const BooksAndMagazines = () => {
           </div>
         </section>
 
-        {/* Featured Publication: USFD Book */}
-        <section className="w-full bg-white py-16 md:py-24">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-              {/* Left Content */}
-              <div className="flex flex-col items-start">
-                <div className="inline-block bg-[#22305C] text-white px-5 py-1.5 rounded-full text-sm font-bold tracking-wide mb-6">
-                  Ấn phẩm nổi bật
-                </div>
-                <h3 className="text-[#FFC107] text-2xl md:text-3xl font-bold mb-2">
-                  Ra mắt sách
-                </h3>
-                <h2 className="text-[#22305C] text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                  A UNIFIED SYSTEM FITNESS DESIGN
-                  <br />
-                  (USFD)
-                </h2>
-                <div className="mb-8 w-full">
-                  <img src={routledgeLogo} alt="Routledge" className="float-right h-16 md:h-20 object-contain ml-6 mb-2" />
-                  <p className="text-[#333333] text-base leading-relaxed text-justify">
-                    Chắp bút bởi TS. Nguyễn Trà Giang (Dr. Jane) và chuyên gia Oliver N. Gomez, "USFD" mang đến mô hình giáo dục thể chất toàn diện và cá nhân hóa. Sách tự hào được phát hành bởi Routledge – nhà xuất bản học thuật danh giá toàn cầu, bảo chứng cho chất lượng khoa học chuẩn quốc tế.
-                  </p>
-                </div>
-                
-                <div className="flex flex-wrap gap-4">
-                  <button className="bg-[#22305C] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#1A2548] transition-colors shadow-md">
-                    Tìm hiểu thêm
-                  </button>
-                  <button className="bg-[#FFC107] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#F5B000] transition-colors shadow-md">
-                    Liên hệ mua ngay
-                  </button>
-                </div>
-              </div>
-              
-              {/* Right Content - Book Image */}
-              <div className="flex justify-center md:justify-end relative">
-                <img 
-                  src={bookUSFDImg} 
-                  alt="USFD Book Cover" 
-                  className="w-[280px] md:w-[380px] drop-shadow-[15px_15px_25px_rgba(0,0,0,0.35)] hover:scale-105 transition-transform duration-500" 
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* 2. Giới thiệu hoạt động xuất bản */}
         <section className="w-full bg-[#22305C] py-16 md:py-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -317,6 +257,52 @@ const BooksAndMagazines = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Publication: USFD Book */}
+        <section className="w-full bg-white py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+              {/* Left Content */}
+              <div className="flex flex-col items-start">
+                <div className="inline-block bg-[#22305C] text-white px-5 py-1.5 rounded-full text-sm font-bold tracking-wide mb-6">
+                  Ấn phẩm nổi bật
+                </div>
+                <h3 className="text-[#FFC107] text-2xl md:text-3xl font-bold mb-2">
+                  Ra mắt sách
+                </h3>
+                <h2 className="text-[#22305C] text-3xl md:text-4xl font-bold mb-6 leading-tight">
+                  A UNIFIED SYSTEM FITNESS DESIGN
+                  <br />
+                  (USFD)
+                </h2>
+                <div className="mb-8 w-full">
+                  <img src={routledgeLogo} alt="Routledge" className="float-right h-16 md:h-20 object-contain ml-6 mb-2" />
+                  <p className="text-[#333333] text-base leading-relaxed text-justify">
+                    Chắp bút bởi TS. Nguyễn Trà Giang (Dr. Jane) và chuyên gia Oliver N. Gomez, "USFD" mang đến mô hình giáo dục thể chất toàn diện và cá nhân hóa. Sách tự hào được phát hành bởi Routledge – nhà xuất bản học thuật danh giá toàn cầu, bảo chứng cho chất lượng khoa học chuẩn quốc tế.
+                  </p>
+                </div>
+                
+                <div className="flex flex-wrap gap-4">
+                  <button className="bg-[#22305C] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#1A2548] transition-colors shadow-md">
+                    Tìm hiểu thêm
+                  </button>
+                  <button className="bg-[#FFC107] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#F5B000] transition-colors shadow-md">
+                    Liên hệ mua ngay
+                  </button>
+                </div>
+              </div>
+              
+              {/* Right Content - Book Image */}
+              <div className="flex justify-center md:justify-end relative">
+                <img 
+                  src={bookUSFDImg} 
+                  alt="USFD Book Cover" 
+                  className="w-[280px] md:w-[380px] drop-shadow-[15px_15px_25px_rgba(0,0,0,0.35)] hover:scale-105 transition-transform duration-500" 
+                />
               </div>
             </div>
           </div>
@@ -710,6 +696,63 @@ const BooksAndMagazines = () => {
           </>
         )}
 
+        <style>
+          {`
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+              animation: marquee 20s linear infinite;
+              display: flex;
+              width: max-content;
+            }
+          `}
+        </style>
+
+        {/* USFD Marquee */}
+        <div className="w-full bg-[#22305C] py-3 overflow-hidden">
+          <div className="animate-marquee text-white font-bold tracking-widest text-sm md:text-base">
+            {Array(20).fill("A UNIFIED SYSTEM FITNESS DESIGN (USFD)").map((text, i) => (
+              <span key={i} className="flex items-center shrink-0 mx-4">
+                {text}
+                <span className="w-2.5 h-2.5 bg-white rounded-full mx-8"></span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* USFD Open Sale Section */}
+        <section className="w-full bg-white py-16 md:py-24 border-b-8 border-[#22305C]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-left mb-12 md:mb-16 leading-[1.4] text-[#22305C]">
+              USFD hiện đang được mở bán tại <span className="text-[#F4C150]">hàng trăm hiệu sách</span><br />
+              trên toàn thế giới
+            </h2>
+
+            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+              {/* Left: USFD 2025 Logo Mockup */}
+              <div className="flex flex-col items-center shrink-0">
+                <div className="font-black italic leading-none">
+                  <div className="text-[#2B3864] text-[100px] md:text-[130px] tracking-tighter">USFD</div>
+                  <div className="text-[#D32F2F] text-[80px] md:text-[100px] tracking-tight -mt-6 md:-mt-8 text-center">2025</div>
+                </div>
+              </div>
+
+              {/* Right: USFD Video */}
+              <div className="flex-1 w-full max-w-[800px] aspect-video rounded-[32px] overflow-hidden shadow-xl bg-black/5">
+                <video 
+                  src={videoUSFD} 
+                  controls 
+                  playsInline 
+                  preload="metadata"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 8. Hợp tác xuất bản */}
         <section className="w-full bg-[#F1F3F5] py-16 md:py-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -783,123 +826,7 @@ const BooksAndMagazines = () => {
           </div>
         </section>
 
-        {/* 9. Đăng ký nhận thông tin xuất bản */}
-        <section
-          id="subscribe"
-          className="relative w-full py-16 md:py-24"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, rgba(34, 48, 92, 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(34, 48, 92, 0.08) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-            backgroundPosition: "center center",
-            backgroundColor: "#F8F9FA",
-          }}
-        >
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
-              <div className="text-center mb-10">
-                <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#22305C] to-[#3a4f8a] rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg">
-                  <Mail size={32} strokeWidth={1.5} />
-                </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#22305C] mb-3">
-                  Đăng ký nhận thông tin xuất bản
-                </h2>
-                <p className="text-gray-500 text-sm md:text-base max-w-md mx-auto">
-                  Nhận thông báo sách mới và ấn phẩm mới nhất từ KingViet Education
-                </p>
-              </div>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label className="block text-sm font-semibold text-[#22305C] mb-2">
-                    Họ và tên
-                  </label>
-                  <div className="relative">
-                    <User
-                      size={18}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                    />
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleFormChange}
-                      placeholder="Nhập họ và tên"
-                      className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-100 rounded-xl text-sm font-medium text-[#22305C] placeholder-gray-300 focus:border-[#22305C] focus:outline-none transition-colors bg-[#F8F9FA] focus:bg-white"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-[#22305C] mb-2">
-                    Email
-                  </label>
-                  <div className="relative">
-                    <Mail
-                      size={18}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleFormChange}
-                      placeholder="Nhập email"
-                      className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-100 rounded-xl text-sm font-medium text-[#22305C] placeholder-gray-300 focus:border-[#22305C] focus:outline-none transition-colors bg-[#F8F9FA] focus:bg-white"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-[#22305C] mb-2">
-                    Lĩnh vực quan tâm
-                  </label>
-                  <div className="relative">
-                    <Heart
-                      size={18}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                    />
-                    <select
-                      name="interest"
-                      value={formData.interest}
-                      onChange={handleFormChange}
-                      className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-100 rounded-xl text-sm font-medium text-[#22305C] focus:border-[#22305C] focus:outline-none transition-colors bg-[#F8F9FA] focus:bg-white appearance-none cursor-pointer"
-                      required
-                    >
-                      <option value="">Chọn lĩnh vực</option>
-                      <option value="education">Giáo dục</option>
-                      <option value="sports">Khoa học thể thao</option>
-                      <option value="technology">Công nghệ giáo dục</option>
-                      <option value="management">Quản lý thể thao</option>
-                      <option value="all">Tất cả lĩnh vực</option>
-                    </select>
-                    <ChevronRight
-                      size={16}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 rotate-90 pointer-events-none"
-                    />
-                  </div>
-                </div>
-
-                <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                  <button
-                    type="submit"
-                    className="flex-1 inline-flex items-center justify-center gap-2 bg-[#22305C] text-white font-semibold px-8 py-4 rounded-xl hover:bg-[#161D30] transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-                  >
-                    <Send size={18} strokeWidth={2} />
-                    Đăng ký nhận tin
-                  </button>
-                  <button
-                    type="button"
-                    className="flex-1 inline-flex items-center justify-center gap-2 bg-[#E5B034] text-white font-semibold px-8 py-4 rounded-xl hover:bg-[#d4a02e] transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-                  >
-                    <BookOpen size={18} strokeWidth={2} />
-                    Nhận thông báo sách mới
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
