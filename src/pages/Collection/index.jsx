@@ -12,7 +12,7 @@ const Collection = () => {
     {
         "id": 1,
         "name": "Bàn cờ thông minh ChessUp Version 2",
-        "price": "13.500.000đ",
+        "price": "14.040.000đ",
         "desc": "Bàn cờ thông minh tích hợp AI đến từ Mỹ phân tích nước đi tức thời bằng hệ thống đèn LED, hỗ trợ chơi online, chơi với máy mượt mà đa thể loại.",
         "imgDefault": "/images/products/ban-co-thong-minh-chessup-v2.webp"
     },
@@ -51,7 +51,7 @@ const Collection = () => {
     {
         "id": 6,
         "name": "Áo Rise - Đỏ",
-        "price": "290.000đ",
+        "price": "190.000đ",
         "desc": "Áo polo phối màu đỏ trắng, chất liệu cotton thoáng mát, lưu niệm Giải Vô địch Cúp Cờ vua Quốc gia năm 2026.",
         "imgDefault": "/images/products/ao-rise-do-1.webp",
         "imgHover": "/images/products/ao-rise-do-2.webp"
@@ -67,7 +67,7 @@ const Collection = () => {
     {
         "id": 8,
         "name": "Áo Knight Move - Trắng",
-        "price": "150.000đ",
+        "price": "190.000đ",
         "desc": "Áo polo trắng lưu niệm Giải vô địch Cờ vua Cúp CLB Quốc gia Năm 2026, chất liệu cotton cao cấp thoáng mát, phù hợp đi học và thi đấu.",
         "imgDefault": "/images/products/ao-knight-move-trang-1.webp",
         "imgHover": "/images/products/ao-knight-move-trang-2.webp"
@@ -75,7 +75,7 @@ const Collection = () => {
     {
         "id": 9,
         "name": "Áo Knight Move - Xanh dương",
-        "price": "150.000đ",
+        "price": "190.000đ",
         "desc": "Áo polo xanh lưu niệm Giải vô địch Cờ vua Cúp CLB Quốc gia Năm 2026, chất liệu cá sấu bền bỉ, thoáng mát, phù hợp đi học và thi đấu.",
         "imgDefault": "/images/products/ao-knight-move-xanh-duong-1.webp",
         "imgHover": "/images/products/ao-knight-move-xanh-duong-2.webp"
@@ -83,7 +83,7 @@ const Collection = () => {
     {
         "id": 10,
         "name": "Áo Knight Move - Xanh lá",
-        "price": "150.000đ",
+        "price": "190.000đ",
         "desc": "Áo cổ tròn xanh lá lưu niệm Giải vô địch Cờ vua Cúp CLB Quốc gia Năm 2026, chất liệu cotton thoáng mát, dễ mặc, phù hợp đi chơi, đi thi đấu.",
         "imgDefault": "/images/products/ao-knight-move-xanh-la-1.webp",
         "imgHover": "/images/products/ao-knight-move-xanh-la-2.webp"
