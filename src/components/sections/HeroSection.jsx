@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <section className="relative w-full aspect-video md:aspect-auto md:h-[980px] bg-black overflow-hidden">
+    <section className="relative w-full aspect-video md:aspect-auto md:h-[98. 0px] bg-black overflow-hidden">
       <video
         autoPlay
         loop

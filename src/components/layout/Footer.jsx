@@ -95,7 +95,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="shrink-0 w-5 h-5 text-[#E5B034]" />
-                <p>0835 090 797 - 08 5959 0808</p>
+                <p>0835 090 797</p>
               </div>
             </div>
           </div>
@@ -211,7 +211,7 @@ const Footer = () => {
                 <TiktokIcon />
               </a>
               <a
-                href="https://zalo.me/0859590808"
+                href="https://zalo.me/0835090797"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E5B034] hover:text-[#22305C] hover:-translate-y-1 transition-all duration-300"

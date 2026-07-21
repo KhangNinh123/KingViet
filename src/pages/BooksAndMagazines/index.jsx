@@ -5,6 +5,14 @@ import InnerPageHero from "../../components/sections/InnerPageHero";
 import bannerSach from "../../assets/images/banners/banner-sach-tap-chi.webp";
 import routledgeLogo from "../../assets/images/logos/routledge.webp";
 import bookUSFDImg from "../../assets/images/products/sach-usfd.webp";
+import routledgeBookStoreLogo from "../../assets/images/logos/Logo hieu sach/logo routledge.webp";
+import amazonLogo from "../../assets/images/logos/Logo hieu sach/amazon-seeklogo.webp";
+import bookshopLogo from "../../assets/images/logos/Logo hieu sach/bookshop.svg";
+import rakutenLogo from "../../assets/images/logos/Logo hieu sach/rakuten.webp";
+import vitalSourceLogo from "../../assets/images/logos/Logo hieu sach/VitalSource_Logo.webp";
+import barnesAndNobleLogo from "../../assets/images/logos/Logo hieu sach/Barnes_and_Noble_logo.svg";
+import margersLogo from "../../assets/images/logos/Logo hieu sach/margers.webp";
+import usfdLogoImg from "../../assets/images/logos/logo usfd 1.webp";
 import {
   BookOpen,
   BookMarked,
@@ -729,17 +737,14 @@ const BooksAndMagazines = () => {
               trên toàn thế giới
             </h2>
 
-            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-              {/* Left: USFD 2025 Logo Mockup */}
-              <div className="flex flex-col items-center shrink-0">
-                <div className="font-black italic leading-none">
-                  <div className="text-[#2B3864] text-[100px] md:text-[130px] tracking-tighter">USFD</div>
-                  <div className="text-[#D32F2F] text-[80px] md:text-[100px] tracking-tight -mt-6 md:-mt-8 text-center">2025</div>
-                </div>
+            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-20">
+              {/* Left: USFD 2025 Logo Image */}
+              <div className="flex flex-col items-center shrink-0 w-full md:w-[250px] lg:w-[320px] pr-0 md:pr-4">
+                <img src={usfdLogoImg} alt="USFD 2025" className="w-full max-w-[250px] md:max-w-none h-auto object-contain hover:scale-105 transition-transform duration-300" />
               </div>
 
               {/* Right: USFD Video */}
-              <div className="flex-1 w-full max-w-[800px] aspect-video rounded-[32px] overflow-hidden shadow-xl bg-black/5">
+              <div className="flex-1 w-full max-w-none aspect-video rounded-[32px] overflow-hidden shadow-xl bg-black/5">
                 <video 
                   src="https://brvllgovveaxteagqcti.supabase.co/storage/v1/object/public/kingviet-assets/usfd-compressed.mp4" 
                   controls 
@@ -747,6 +752,37 @@ const BooksAndMagazines = () => {
                   preload="metadata"
                   className="w-full h-full object-cover"
                 />
+              </div>
+            </div>
+
+            {/* Book Store Logos */}
+            <div className="mt-16 md:mt-20 flex flex-col items-center gap-8 md:gap-12">
+              {/* Top Row: 3 Logos */}
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
+                <a href="https://www.routledge.com/A-Unified-System-Fitness-Design-Concepts-of-Holistic-and-Inclusive-Fitness-Framework/Nguyen-Gomez/p/book/9781032821054" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform block">
+                  <img src={routledgeBookStoreLogo} alt="Routledge" className="h-12 md:h-16 object-contain" />
+                </a>
+                <a href="https://www.amazon.com/Unified-System-Fitness-Design/dp/1032821051" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform block">
+                  <img src={amazonLogo} alt="Amazon" className="h-10 md:h-12 object-contain" />
+                </a>
+                <a href="https://bookshop.org/p/books/a-unified-system-fitness-design-concepts-of-holistic-and-inclusive-fitness-framework-oliver-napila-gomez/8ad8986e36545b5a?ean=9781032817453" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform block">
+                  <img src={bookshopLogo} alt="Bookshop.org" className="h-10 md:h-12 object-contain" />
+                </a>
+              </div>
+              {/* Bottom Row: 4 Logos */}
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
+                <a href="https://www.kobo.com/fi/fi/ebook/a-unified-system-fitness-design" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform block">
+                  <img src={rakutenLogo} alt="Rakuten" className="h-8 md:h-10 object-contain" />
+                </a>
+                <a href="https://www.vitalsource.com/products/a-unified-system-fitness-design-tra-giang-nguyen-oliver-v9781040124840" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform block">
+                  <img src={vitalSourceLogo} alt="VitalSource" className="h-12 md:h-16 object-contain" />
+                </a>
+                <a href="https://www.barnesandnoble.com/w/a-unified-system-fitness-design-tra-giang-nguyen/1146330907" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform block">
+                  <img src={barnesAndNobleLogo} alt="Barnes & Noble" className="h-12 md:h-16 object-contain" />
+                </a>
+                <a href="https://www.magersandquinn.com/product/UNIFIED-SYSTEM-FITNESS-DESIGN/26606741" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform block">
+                  <img src={margersLogo} alt="Magers & Quinn Booksellers" className="h-16 md:h-20 object-contain" />
+                </a>
               </div>
             </div>
           </div>

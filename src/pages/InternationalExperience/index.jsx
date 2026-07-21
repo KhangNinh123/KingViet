@@ -220,63 +220,95 @@ const InternationalExperience = () => {
         </section>
 
         {/* Degree Levels Section */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12">
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             {/* Bachelor's Degree */}
-            <div className="border-2 border-[#22305C] rounded-2xl overflow-hidden bg-white">
-              <div className="bg-[#22305C] py-4 px-6 md:py-6 md:px-8 relative overflow-hidden">
+            <div className="border-2 border-[#22305C] rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+              <div className="bg-[#22305C] py-4 px-6 md:py-6 md:px-8 relative overflow-hidden shrink-0">
                 <h3 className="text-white text-lg md:text-2xl font-bold uppercase relative z-10">
                   Bậc tiến sĩ
                 </h3>
-                <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none text-white">
+                <div className="absolute right-[-5%] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none text-white">
                   <Globe size={80} strokeWidth={1} />
                 </div>
               </div>
-              <div className="p-5 md:p-8">
-                <ul className="space-y-4 text-[#22305C] font-semibold text-base md:text-lg">
-                  <li className="flex items-start gap-2">
-                    <CheckIcon dark={false} />
-                    <span>Thời gian đào tạo: 3 – 5 năm</span>
+              <div className="p-6 md:p-8 flex-grow">
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0"><CheckIcon dark={false} /></div>
+                    <span className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <strong className="text-[#22305C]">Thời gian đào tạo:</strong> 03 năm (6 học kỳ).
+                    </span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon dark={false} />
-                    <span>Nghiên cứu chuyên sâu & Công bố quốc tế</span>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0"><CheckIcon dark={false} /></div>
+                    <span className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <strong className="text-[#22305C]">Hình thức học tập:</strong> Học toàn thời gian trực tiếp 01 năm tại Thái Lan, thời gian còn lại làm đề tài trực tiếp tại Thái Lan hoặc trực tuyến tại Việt Nam.
+                    </span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon dark={false} />
-                    <span>Cơ hội nhận học bổng toàn phần (Full funding)</span>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0"><CheckIcon dark={false} /></div>
+                    <span className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <strong className="text-[#22305C]">Ngôn ngữ giảng dạy:</strong> Bằng tiếng Việt và tiếng Anh (có hỗ trợ phiên dịch trong giờ học).
+                    </span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon dark={false} />
-                    <span>Định hướng trở thành Giảng viên/Chuyên gia</span>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0"><CheckIcon dark={false} /></div>
+                    <span className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <strong className="text-[#22305C]">Học bổng:</strong> Cơ hội nhận học bổng lên đến 690.000 Baht Thái (khoảng 550.000.000 VNĐ).
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0"><CheckIcon dark={false} /></div>
+                    <span className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <strong className="text-[#22305C]">Giá trị văn bằng:</strong> Nằm trong danh sách được Cục Quản lý Chất lượng (Bộ Giáo dục Đào tạo Việt Nam) công nhận.
+                    </span>
                   </li>
                 </ul>
               </div>
             </div>
 
             {/* Master's Degree */}
-            <div className="border-2 border-[#22305C] rounded-2xl overflow-hidden bg-white">
-              <div className="bg-[#22305C] py-4 px-6 md:py-6 md:px-8 relative overflow-hidden">
+            <div className="border-2 border-[#22305C] rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+              <div className="bg-[#22305C] py-4 px-6 md:py-6 md:px-8 relative overflow-hidden shrink-0">
                 <h3 className="text-white text-lg md:text-2xl font-bold uppercase relative z-10">
                   Bậc thạc sĩ
                 </h3>
-                <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none text-white">
+                <div className="absolute right-[-5%] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none text-white">
                   <Globe size={80} strokeWidth={1} />
                 </div>
               </div>
-              <div className="p-5 md:p-8">
-                <ul className="space-y-4 text-[#22305C] font-semibold text-base md:text-lg">
-                  <li className="flex items-start gap-2">
-                    <CheckIcon dark={false} />
-                    <span>Thời gian đào tạo: 1 – 2 năm</span>
+              <div className="p-6 md:p-8 flex-grow">
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0"><CheckIcon dark={false} /></div>
+                    <span className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <strong className="text-[#22305C]">Thời gian đào tạo:</strong> 02 năm (4 học kỳ).
+                    </span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon dark={false} />
-                    <span>Chương trình đào tạo chuyên sâu</span>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0"><CheckIcon dark={false} /></div>
+                    <span className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <strong className="text-[#22305C]">Hình thức học tập:</strong> Học toàn thời gian trực tiếp 01 năm tại Thái Lan, 01 năm làm đề tài trực tiếp tại Thái Lan hoặc trực tuyến tại Việt Nam.
+                    </span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckIcon dark={false} />
-                    <span>Phù hợp cho người đi làm</span>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0"><CheckIcon dark={false} /></div>
+                    <span className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <strong className="text-[#22305C]">Ngôn ngữ giảng dạy:</strong> Bằng tiếng Việt và tiếng Anh (có hỗ trợ phiên dịch trong giờ học).
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0"><CheckIcon dark={false} /></div>
+                    <span className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <strong className="text-[#22305C]">Học bổng:</strong> Cơ hội nhận học bổng lên đến 690.000 Baht Thái (khoảng 550.000.000 VNĐ).
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 shrink-0"><CheckIcon dark={false} /></div>
+                    <span className="text-gray-700 text-sm md:text-base leading-relaxed">
+                      <strong className="text-[#22305C]">Giá trị văn bằng:</strong> Nằm trong danh sách được Cục Quản lý Chất lượng (Bộ Giáo dục Đào tạo Việt Nam) công nhận.
+                    </span>
                   </li>
                 </ul>
               </div>

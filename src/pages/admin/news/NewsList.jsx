@@ -74,9 +74,9 @@ const NewsList = () => {
       <div className="bg-white shadow-sm rounded-lg border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left text-gray-500">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50 border-b border-gray-200">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50 border-b">
               <tr>
-                <th scope="col" className="px-6 py-3 w-16 text-center">ID</th>
+                <th scope="col" className="px-6 py-3 w-16 text-center">STT</th>
                 <th scope="col" className="px-6 py-3 w-20">Ảnh</th>
                 <th scope="col" className="px-6 py-3 max-w-xs">Tiêu đề</th>
                 <th scope="col" className="px-6 py-3">Ngày tạo</th>
@@ -98,16 +98,16 @@ const NewsList = () => {
                   </td>
                 </tr>
               ) : (
-                news.map((item) => (
+                news.map((item, index) => (
                   <tr key={item.id} className="bg-white border-b hover:bg-gray-50">
-                    <td className="px-6 py-4 font-medium text-gray-900 text-center">{item.id}</td>
+                    <td className="px-6 py-4 font-medium text-gray-900 text-center">{(page - 1) * 10 + index + 1}</td>
                     <td className="px-6 py-4">
                       {item.thumbnail ? (
                         <img 
-                          src={`http://localhost:5001${item.thumbnail}`} 
+                          src={item.thumbnail.startsWith("http") ? item.thumbnail : `http://localhost:5001${item.thumbnail}`} 
                           alt="thumbnail" 
                           className="w-12 h-12 object-cover rounded"
-                          onError={(e) => { e.target.src = "https://via.placeholder.com/150"; }}
+                          onError={(e) => { e.target.src = "https://placehold.co/150x150.png"; }}
                         />
                       ) : (
                         <div className="w-12 h-12 bg-gray-200 rounded flex items-center justify-center text-gray-400 text-xs">
@@ -122,21 +122,15 @@ const NewsList = () => {
                       {new Date(item.created_at).toLocaleDateString('vi-VN')}
                     </td>
                     <td className="px-6 py-4 text-center">
-                      <button
-                        onClick={() => togglePublish(item.id, item.is_published)}
-                        className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${
-                          item.is_published 
-                            ? "bg-green-100 text-green-800" 
-                            : "bg-yellow-100 text-yellow-800"
-                        }`}
-                        title="Bấm để đổi trạng thái"
-                      >
-                        {item.is_published ? (
-                          <><Eye size={12} className="mr-1" /> Đã xuất bản</>
-                        ) : (
-                          <><EyeOff size={12} className="mr-1" /> Bản nháp</>
-                        )}
-                      </button>
+                      <label className="inline-flex items-center cursor-pointer" title="Bấm để đổi trạng thái">
+                        <input 
+                          type="checkbox" 
+                          className="sr-only peer"
+                          checked={item.is_published}
+                          onChange={() => togglePublish(item.id, item.is_published)}
+                        />
+                        <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                      </label>
                     </td>
                     <td className="px-6 py-4 text-right space-x-2 whitespace-nowrap">
                       <Link

@@ -41,7 +41,7 @@ const NewsForm = () => {
         is_published: newsItem.is_published,
       });
       if (newsItem.thumbnail) {
-        setImagePreview(`http://localhost:5001${newsItem.thumbnail}`);
+        setImagePreview(newsItem.thumbnail.startsWith("http") ? newsItem.thumbnail : `http://localhost:5001${newsItem.thumbnail}`);
       }
     } catch (err) {
       setError("Không thể tải thông tin bài viết.");
@@ -80,7 +80,7 @@ const NewsForm = () => {
         try {
           // Upload lên server
           const response = await api.post("/news/upload-image", formData);
-          const url = `http://localhost:5001${response.url}`; // Nối domain backend
+          const url = response.url; // URL từ backend giờ đã là link Supabase public hoàn chỉnh
           
           // Chèn link ảnh vào editor
           const quill = quillRef.current.getEditor();
