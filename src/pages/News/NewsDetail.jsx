@@ -74,7 +74,7 @@ const NewsDetail = () => {
         {article.thumbnail && (
           <div className="w-full h-[30vh] md:h-[50vh] relative bg-gray-900">
             <img 
-              src={article.thumbnail.startsWith("http") ? article.thumbnail : `http://localhost:5001${article.thumbnail}`} 
+              src={article.thumbnail.startsWith("http") ? article.thumbnail : `https://api.kingvietedu.vn${article.thumbnail}`} 
               alt={article.title} 
               className="w-full h-full object-cover opacity-80"
             />

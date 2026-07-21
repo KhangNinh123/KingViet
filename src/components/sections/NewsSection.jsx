@@ -53,7 +53,7 @@ const NewsSection = () => {
             news.map((item) => (
               <NewsCard 
                 key={item.id}
-                image={item.thumbnail ? (item.thumbnail.startsWith("http") ? item.thumbnail : `http://localhost:5001${item.thumbnail}`) : "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"}
+                image={item.thumbnail ? (item.thumbnail.startsWith("http") ? item.thumbnail : `https://api.kingvietedu.vn${item.thumbnail}`) : "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"}
                 title={item.title}
                 slug={item.slug}
               />

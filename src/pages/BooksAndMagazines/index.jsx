@@ -294,12 +294,22 @@ const BooksAndMagazines = () => {
                 </div>
                 
                 <div className="flex flex-wrap gap-4">
-                  <button className="bg-[#22305C] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#1A2548] transition-colors shadow-md">
+                  <a 
+                    href="https://www.routledge.com/A-Unified-System-Fitness-Design-Concepts-of-Holistic-and-Inclusive-Fitness-Framework/Nguyen-Gomez/p/book/9781032821054" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-[#22305C] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#1A2548] transition-colors shadow-md inline-block text-center"
+                  >
                     Tìm hiểu thêm
-                  </button>
-                  <button className="bg-[#FFC107] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#F5B000] transition-colors shadow-md">
+                  </a>
+                  <a 
+                    href="https://zalo.me/0835090797" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-[#FFC107] text-white px-6 py-2.5 rounded-lg font-bold hover:bg-[#F5B000] transition-colors shadow-md inline-block text-center"
+                  >
                     Liên hệ mua ngay
-                  </button>
+                  </a>
                 </div>
               </div>
               

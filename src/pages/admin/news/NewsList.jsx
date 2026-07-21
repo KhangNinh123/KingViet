@@ -104,7 +104,7 @@ const NewsList = () => {
                     <td className="px-6 py-4">
                       {item.thumbnail ? (
                         <img 
-                          src={item.thumbnail.startsWith("http") ? item.thumbnail : `http://localhost:5001${item.thumbnail}`} 
+                          src={item.thumbnail.startsWith("http") ? item.thumbnail : `https://api.kingvietedu.vn${item.thumbnail}`} 
                           alt="thumbnail" 
                           className="w-12 h-12 object-cover rounded"
                           onError={(e) => { e.target.src = "https://placehold.co/150x150.png"; }}

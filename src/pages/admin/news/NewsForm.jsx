@@ -41,7 +41,7 @@ const NewsForm = () => {
         is_published: newsItem.is_published,
       });
       if (newsItem.thumbnail) {
-        setImagePreview(newsItem.thumbnail.startsWith("http") ? newsItem.thumbnail : `http://localhost:5001${newsItem.thumbnail}`);
+        setImagePreview(newsItem.thumbnail.startsWith("http") ? newsItem.thumbnail : `https://api.kingvietedu.vn${newsItem.thumbnail}`);
       }
     } catch (err) {
       setError("Không thể tải thông tin bài viết.");
